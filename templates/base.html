@@ -45,6 +45,7 @@
             nav= 1;
             $(document).ready(function(){
                 $(".searchenabled").toggle();
+                $("#menu").toggle();
                 $("#search").click(function(){
                     nav= (nav+1)%2;
                     if(nav==0){
@@ -61,6 +62,10 @@
                     }
                 });
             });
+            function openmenu(option_value){
+                $("#menu").toggle();
+                $(".menu-option-"+option_value).addClass("bg-white");
+            }
         </script>
     </body>
 </html>
