@@ -1,4 +1,4 @@
-# HCD-IIITD Website  ![logo](https://hcd.iiitd.ac.in/wp-content/uploads/2019/06/cropped-HCD-Logo-15081-2-192x192.png)
+# HCD-IIITD Website  <img src="https://hcd.iiitd.ac.in/wp-content/uploads/2019/06/cropped-HCD-Logo-15081.png" height="50">
 
 ### About this Repository
 
