@@ -29,6 +29,7 @@
         <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,700" rel="stylesheet">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/fontawesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"></link>
         <link rel="stylesheet" type="text/css" href="../static/css/main.css">
     </head>
     <body>
@@ -36,8 +37,8 @@
         {% block content %}
         {% endblock %}
         {% include "footer.html" %}
-        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/esm/popper.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
         {% block scripts %}
         {% endblock %}
@@ -48,6 +49,7 @@
                 $("#menu").toggle();
                 $("#search").click(function(){
                     nav= (nav+1)%2;
+                    $("#menu").hide();
                     if(nav==0){
                         $(".searchenabled").toggle();
                         $("#searchdisabled").toggle();
@@ -58,13 +60,28 @@
                         $(".searchenabled").toggle();
                         $("#searchdisabled").toggle();
                         $(".searchdisabled").addClass("d-md-block");
-                        $("input").focus();
                     }
                 });
             });
+            function menu_icon(){
+                if(($("#menu").is(":visible"))){
+                    $("#nav_menu").attr('src', '');
+                }
+                else{
+                    $("#nav_menu").attr('src', '../static/images/menu.svg');
+                }
+                if($("input").is(":visible")){
+                    $("input").focus();
+                }
+            }
             function openmenu(option_value){
+                $("#menu").show();
+                $(".menu-option-" + option_value).addClass("bg-white");
+                menu_icon();
+            }
+            function togglemenu(){
                 $("#menu").toggle();
-                $(".menu-option-"+option_value).addClass("bg-white");
+                menu_icon();
             }
         </script>
     </body>

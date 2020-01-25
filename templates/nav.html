@@ -1,8 +1,8 @@
 <nav class="fixed-top" style="z-index: 998; background: white; height: 60px;">
     <div class="container-fluid px-5 mt-2">
         <div class="d-flex align-items-center justify-content-between">
-            <a onclick="openmenu('1')" onmouseover="this.style.cursor='pointer'">
-                <img src="../static/images/menu.svg" height="35px" alt="Navigation Menu">
+            <a onclick="togglemenu()" onmouseover="this.style.cursor='pointer'">
+                <img id="nav_menu" src="../static/images/menu.svg" height="35px" alt="Navigation Menu">
             </a>
             <a onclick="openmenu('1')" class="searchdisabled d-none d-md-block font-weight-bold text-gray">Academics</a>
             <a onclick="openmenu('2')" class="searchdisabled d-none d-md-block font-weight-bold text-gray">Research</a>
@@ -10,7 +10,7 @@
             <a id="searchdisabled" href="/">
                 <img src="../static/images/logo.png" style="max-height: 50px;">
             </a>
-            <input id="input" class="searchenabled btn btn-lg bg-white btn-outline-success border no-transform text-gray w-100" style="max-width: 320px;" type="text">
+            <input id="input" class="animated fadeIn faster searchenabled btn btn-lg bg-white btn-outline-success border no-transform text-gray w-100" style="max-width: 320px;" type="text">
             <a onclick="openmenu('4')" class="searchdisabled d-none d-md-block font-weight-bold text-gray">Events</a>
             <a onclick="openmenu('5')" class="searchdisabled d-none d-md-block font-weight-bold text-gray">Facilities</a>
             <a onclick="openmenu('6')" class="searchdisabled d-none d-md-block font-weight-bold text-gray">Courses</a>
@@ -20,20 +20,24 @@
             </ul>
         </div>
     </div>
-    <div id="menu" class="container-fluid bg-green px-5 py-2" style="position: absolute; top: 60px;">
-        <div class="col-2">
-            <ul class="list-unstyled py-2 mt-2">
-                {% for option in menu_value %}
-                    <li class="mt-3"> 
-                        <button class="menu-option-{{option.number}} btn btn-white btn-block btn-lg border">
-                            {{option.categories}}
-                        </button>
-                    </li>
-                {% endfor %}
-            </ul>
-        </div>
-        <div class="col-8">
+    <div id="menu" class="animated fadeIn faster container-fluid bg-green px-5 py-2" style="position: absolute; top: 60px;">
+        <div class="row">
+            <div class="col-12 col-sm-4 col-lg-3">
+                <ul class="list-unstyled py-2 mt-2">
+                    {% for option in menu_value %}
+                        <li class="mt-3"> 
+                            <button class="menu-option-{{option.number}} btn btn-white btn-block btn-lg border">
+                                {{option.categories}}
+                            </button>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="col-12 col-sm-8 col-lg-9">
+                <div class="bg-white rounded w-100 h-100">
 
+                </div>
+            </div>
         </div>
     </div>
 </nav>

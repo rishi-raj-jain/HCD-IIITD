@@ -6,7 +6,7 @@ app.config['TEMPLATES_AUTO_RELOAD'] = True
 
 @app.route("/")
 def index():
-    return render_template('index.html')
+    return render_template('index.html', menu_value= menuJson)
 
 @app.errorhandler(404)
 def page_not_found(e):
