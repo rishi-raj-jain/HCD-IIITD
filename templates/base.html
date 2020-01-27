@@ -36,6 +36,9 @@
             ::-webkit-scrollbar-track{ box-shadow:inset 0 0 1px #d5d7da; border-radius:10px}
             ::-webkit-scrollbar-thumb{background:#d5d7da;border-radius:10px}
             ::-webkit-scrollbar-thumb:hover{background:#d5d7da}
+            .text-pointer{
+                cursor: pointer;
+            }
         </style>
     </head>
     <body>
@@ -82,7 +85,16 @@
             }
             function openmenu(option_value){
                 $("#menu").show();
-                $(".menu-option-" + option_value).addClass("bg-green text-white");
+                console.log(option_value.toString()+"HI");
+                for(let i_menu=1; i_menu<=6; i_menu++){
+                    if(i_menu.toString()===option_value.toString()){
+                        console.log(i_menu.toString()+"HI");
+                        $(".menu-option-" + i_menu.toString()).attr('class', "menu-option-" +  i_menu.toString() +  " btn btn-block btn-lg bg-green text-white");
+                    }
+                    else{
+                        $(".menu-option-" + i_menu.toString()).attr('class', "menu-option-" +  i_menu.toString() +  " btn btn-block btn-lg text-dark");
+                    }
+                }
                 menu_icon();
             }
             function togglemenu(){
