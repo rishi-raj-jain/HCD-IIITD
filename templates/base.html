@@ -65,7 +65,7 @@
             });
             function menu_icon(){
                 if(($("#menu").is(":visible"))){
-                    $("#nav_menu").attr('src', '');
+                    $("#nav_menu").attr('src', '../static/images/close.jpg');
                 }
                 else{
                     $("#nav_menu").attr('src', '../static/images/menu.svg');
@@ -76,11 +76,14 @@
             }
             function openmenu(option_value){
                 $("#menu").show();
-                $(".menu-option-" + option_value).addClass("bg-white");
+                $(".menu-option-" + option_value).addClass("bg-green text-white");
                 menu_icon();
             }
             function togglemenu(){
                 $("#menu").toggle();
+                if(($("#menu").is(":visible"))){
+                    openmenu('4');
+                }
                 menu_icon();
             }
         </script>
