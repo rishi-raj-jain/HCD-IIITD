@@ -31,10 +31,10 @@ function menu_icon(){
 }
 function openmenu(option_value){
     $("#menu").show();
-    console.log(option_value.toString()+"HI");
+    // console.log(option_value.toString()+"HI");
     for(let i_menu=1; i_menu<=6; i_menu++){
         if(i_menu.toString()===option_value.toString()){
-            console.log(i_menu.toString()+"HI");
+            // console.log(i_menu.toString()+"HI");
             $(".menu-option-" + i_menu.toString()).attr('class', "menu-option-" +  i_menu.toString() +  " btn btn-block btn-lg bg-green text-white");
         }
         else{
