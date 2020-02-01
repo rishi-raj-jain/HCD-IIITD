@@ -31,10 +31,8 @@ function menu_icon(){
 }
 function openmenu(option_value){
     $("#menu").show();
-    // console.log(option_value.toString()+"HI");
     for(let i_menu=1; i_menu<=6; i_menu++){
         if(i_menu.toString()===option_value.toString()){
-            // console.log(i_menu.toString()+"HI");
             $(".menu-option-" + i_menu.toString()).attr('class', "menu-option-" +  i_menu.toString() +  " btn btn-block btn-lg bg-green text-white");
         }
         else{
@@ -43,10 +41,14 @@ function openmenu(option_value){
     }
     menu_icon();
 }
-function togglemenu(){
-    $("#menu").toggle();
-    if(($("#menu").is(":visible"))){
-        openmenu('4');
+check_menu_id= "";
+function togglemenu(param_id){
+    console.log(param_id + ' ' + check_menu_id);
+    if(param_id.toString()!==check_menu_id.toString()){
+        openmenu(param_id);
     }
-    menu_icon();
+    else{
+        $("#menu").hide();
+    }
+    check_menu_id= param_id.toString();
 }

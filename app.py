@@ -1,3 +1,4 @@
+import random
 from flask import Flask, render_template, request, jsonify, abort
 from hcd_menu import menuJson
 
@@ -13,4 +14,4 @@ def page_not_found(e):
     return render_template('404.html', menu_value= menuJson), 404
 
 if(__name__ == "__main__"):
-    app.run(host='0.0.0.0', port=8080)
+    app.run(host='0.0.0.0', port= random.randint(1000, 8000))

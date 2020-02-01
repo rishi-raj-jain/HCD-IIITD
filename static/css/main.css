@@ -1,5 +1,5 @@
 *{
-    font-family: 'Poppins' !important;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
 }
 .text-gray{
     color: #707173 !important;
@@ -12,4 +12,7 @@
 }
 .bg-green{
     background: #40ADA7 !important;
+}
+.shadow_{
+    box-shadow:0 .5rem 1rem #40ADA7 !important;
 }
