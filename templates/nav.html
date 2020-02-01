@@ -1,19 +1,24 @@
-<nav class="fixed-top" style="z-index: 998; background: white; height: 60px;">
+<div style="z-index: 998; background: white; height: 90px;"></div>
+<nav class="fixed-top" style="z-index: 998; background: white; height: 90px;">
     <div class="container-fluid px-5 mt-2">
         <div class="d-flex align-items-center justify-content-between">
-            <a onclick="togglemenu()" onmouseover="this.style.cursor='pointer'">
+            <a onclick="togglemenu()" class="d-md-none" onmouseover="this.style.cursor='pointer'">
                 <img id="nav_menu" src="../static/images/menu.svg" height="35px" alt="Navigation Menu">
             </a>
-            <a onclick="openmenu('1')" class="searchdisabled d-none d-md-block font-weight-bold text-gray">Academics</a>
-            <a onclick="openmenu('2')" class="searchdisabled d-none d-md-block font-weight-bold text-gray">Research</a>
-            <a onclick="openmenu('3')" class="searchdisabled d-none d-md-block font-weight-bold text-gray">People</a>
             <a id="searchdisabled" href="/">
-                <img src="../static/images/logo.png" style="max-height: 50px;">
+                <img src="../static/images/logo_footer.png" style="max-height: 80px;">
             </a>
+            <a onclick="openmenu('1')" class="searchdisabled d-none d-md-block font-weight-bold text-gray" style="font-size: 1.2em;">Academics</a>
+            <a onclick="openmenu('2')" class="searchdisabled d-none d-md-block font-weight-bold text-gray" style="font-size: 1.2em;">Research</a>
+            <a onclick="openmenu('3')" class="searchdisabled d-none d-md-block font-weight-bold text-gray" style="font-size: 1.2em;">People</a>
             <input id="input" class="animated fadeIn faster searchenabled btn btn-lg bg-white btn-outline-success border no-transform text-gray w-100" style="max-width: 320px;" type="text">
-            <a onclick="openmenu('4')" class="searchdisabled d-none d-md-block font-weight-bold text-gray">Events</a>
-            <a onclick="openmenu('5')" class="searchdisabled d-none d-md-block font-weight-bold text-gray">Facilities</a>
-            <a onclick="openmenu('6')" class="searchdisabled d-none d-md-block font-weight-bold text-gray">Courses</a>
+            <a onclick="openmenu('4')" class="searchdisabled d-none d-md-block font-weight-bold text-gray" style="font-size: 1.2em;">Events</a>
+            <a onclick="openmenu('5')" class="searchdisabled d-none d-md-block font-weight-bold text-gray" style="font-size: 1.2em;">Facilities</a>
+            <a onclick="openmenu('6')" class="searchdisabled d-none d-md-block font-weight-bold text-gray" style="font-size: 1.2em;">Courses</a>
+            <a class="d-none d-md-block"></a>
+            <a class="d-none d-md-block"></a>
+            <a class="d-none d-md-block"></a>
+            <a class="d-none d-md-block"></a>
             <a id="search" onmouseover="this.style.cursor='pointer'">
                 <img src="../static/images/search.svg" height="35px" alt="Search Bar">
             </a>
