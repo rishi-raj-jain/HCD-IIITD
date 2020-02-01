@@ -43,13 +43,19 @@ function openmenu(option_value){
 }
 check_menu_id= "";
 function togglemenu(param_id){
-    console.log(param_id + ' ' + check_menu_id);
-    if(param_id.toString()!==check_menu_id.toString()){
-        openmenu(param_id);
-        check_menu_id= param_id.toString();
+    if(param_id === 'null'){
+        $("#menu").toggle();
+        menu_icon();
     }
     else{
-        $("#menu").hide();
-        check_menu_id="";
+        if(param_id.toString()!==check_menu_id.toString()){
+            openmenu(param_id);
+            check_menu_id= param_id.toString();
+        }
+        else{
+            $("#menu").hide();
+            check_menu_id="";
+        }
     }
+    console.log(param_id + ' ' + check_menu_id);
 }

@@ -16,3 +16,6 @@
 .shadow_{
     box-shadow:0 .5rem 1rem #40ADA7 !important;
 }
+.border-gray{
+    border-color: #707173 !important;
+}
