@@ -46,9 +46,10 @@ function togglemenu(param_id){
     console.log(param_id + ' ' + check_menu_id);
     if(param_id.toString()!==check_menu_id.toString()){
         openmenu(param_id);
+        check_menu_id= param_id.toString();
     }
     else{
         $("#menu").hide();
+        check_menu_id="";
     }
-    check_menu_id= param_id.toString();
 }
