@@ -90,6 +90,9 @@ function replace(string_home){
     else if(string_home==='publications'){ $(".home_submain").toggle(); $(".home_main").toggle();}
     else if(string_home===''){ $(".home_submain").toggle(); $(".home_main").toggle();}
     $(".toexpand").height($(".onexpand").height());
+    if(($(".toexpand").is(":visible"))){
+        $('html, body').animate({scrollTop: $('.home_submain').offset().top}, 1000);
+    }
 }
 </script>
 {% endblock %}
