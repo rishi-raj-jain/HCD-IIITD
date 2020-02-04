@@ -21,8 +21,31 @@
 <div class="container-fluid bg-light py-5">
     <div class="container">
         <div class="row">
+            <div class="home_submain animated fadeIn col-12 mt-5 mt-md-0">
+                <div onmouseover="this.style.cursor='pointer'" class="shadow w-100 h-100 bg-light p-5" style="border-style: dashed; border-color: #707070;">
+                    <div class="row">
+                        <div onclick="replace('')" class="onexpand col-12 col-md-4">
+                            <div class="d-flex justify-content-center align-items-center">
+                                <img src="../static/images/news.svg" style="max-width: 70px;">
+                            </div>
+                            <div class="row-content text-center">
+                                <h4 class="mt-3">News</h4>
+                                <p class="mt-1">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua</p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-8 toexpand" style="overflow: scroll;">
+                            <div class="row-content text-center">
+                                <h5 class="mt-1">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua</h5>
+                                <h5 class="mt-1">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua</h5>
+                                <h5 class="mt-1">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua</h5>
+                                <h5 class="mt-1">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua</h5>    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="col-12 col-md-4 mt-5 mt-md-0">
-                <div onmouseout="this.classList.remove('shadow_');" onmouseover="this.classList.add('shadow_');this.style.cursor='pointer'" class="shadow w-100 h-100 bg-light p-5" style="border-style: dashed; border-color: #707070;">
+                <div onclick="replace('news')" onmouseout="this.classList.remove('shadow_');" onmouseover="this.classList.add('shadow_');this.style.cursor='pointer'" class="home_main shadow w-100 h-100 bg-light p-5" style="border-style: dashed; border-color: #707070;">
                     <div class="d-flex justify-content-center align-items-center">
                         <img src="../static/images/news.svg" style="max-width: 70px;">
                     </div>
@@ -33,7 +56,7 @@
                 </div>
             </div>
             <div class="col-12 col-md-4 mt-5 mt-md-0">
-                <div onmouseout="this.classList.remove('shadow_');" onmouseover="this.classList.add('shadow_');this.style.cursor='pointer'" class="w-100 h-100 bg-light p-5" style="border-style: dashed; border-color: #707070;">
+                <div onclick="replace('events')" onmouseout="this.classList.remove('shadow_');" onmouseover="this.classList.add('shadow_');this.style.cursor='pointer'" class="home_main w-100 h-100 bg-light p-5" style="border-style: dashed; border-color: #707070;">
                     <div class="d-flex justify-content-center align-items-center">
                         <img src="../static/images/events.svg" style="max-width: 50px;">
                     </div>
@@ -44,7 +67,7 @@
                 </div>
             </div>
             <div class="col-12 col-md-4 mt-5 mt-md-0">
-                <div onmouseout="this.classList.remove('shadow_');" onmouseover="this.classList.add('shadow_');this.style.cursor='pointer'" class="w-100 h-100 bg-light p-5" style="border-style: dashed; border-color: #707070;">
+                <div onclick="replace('publications')" onmouseout="this.classList.remove('shadow_');" onmouseover="this.classList.add('shadow_');this.style.cursor='pointer'" class="home_main w-100 h-100 bg-light p-5" style="border-style: dashed; border-color: #707070;">
                     <div class="d-flex justify-content-center align-items-center">
                         <img src="../static/images/publications.svg" style="max-width: 50px;">
                     </div>
@@ -60,5 +83,13 @@
 {% endblock %}
 {% block scripts %}
 <script type="text/javascript">
+$(".home_submain").toggle();
+function replace(string_home){
+    if(string_home==='news'){ $(".home_submain").toggle(); $(".home_main").toggle();}
+    else if(string_home==='events'){ $(".home_submain").toggle(); $(".home_main").toggle();}
+    else if(string_home==='publications'){ $(".home_submain").toggle(); $(".home_main").toggle();}
+    else if(string_home===''){ $(".home_submain").toggle(); $(".home_main").toggle();}
+    $(".toexpand").height($(".onexpand").height());
+}
 </script>
 {% endblock %}
