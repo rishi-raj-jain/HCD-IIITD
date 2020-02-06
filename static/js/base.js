@@ -20,7 +20,7 @@ $(document).ready(function(){
 });
 function menu_icon(){
     if(($("#menu").is(":visible"))){
-        $("#nav_menu").attr('src', '../static/images/close.jpg');
+        $("#nav_menu").attr('src', '../static/images/close.svg');
     }
     else{
         $("#nav_menu").attr('src', '../static/images/menu.svg');
@@ -57,5 +57,5 @@ function togglemenu(param_id){
             check_menu_id="";
         }
     }
-    console.log(param_id + ' ' + check_menu_id);
+    // console.log(param_id + ' ' + check_menu_id);
 }

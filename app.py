@@ -9,6 +9,10 @@ app.config['TEMPLATES_AUTO_RELOAD'] = True
 def index():
     return render_template('index.html', menu_value= menuJson)
 
+@app.route("/contact/")
+def contact():
+    return render_template('contact.html', menu_value= menuJson)
+
 @app.errorhandler(404)
 def page_not_found(e):
     return render_template('404.html', menu_value= menuJson), 404
