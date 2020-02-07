@@ -1,31 +1,29 @@
 <div style="height: 90px;"></div>
 <nav class="fixed-top" style="z-index: 998; background: black; height: 90px;">
-    <div class="container-fluid px-5 mt-2">
+    <div class="container-fluid px-5 mt-3">
         <div class="d-flex align-items-center justify-content-between">
-            <a id="" href="/">
-                <img src="../static/images/logo_footer.png" class="p-1 d-block d-sm-block" style="max-height: 75px;">
-            </a>
+            <a href="/"><img src="../static/images/logo-white.svg" style="width: 120px;" alt="Human Centered Design"></a>
             <div class="d-flex">
-                <a onclick="togglemenu('1');" onmouseover="this.style.cursor='pointer'" class="px-4 searchdisabled d-none d-md-block font-weight-bold text-white" style="font-size: 1.2em;">Academics</a>
-                <a onclick="togglemenu('2')" onmouseover="this.style.cursor='pointer'" class="px-4 searchdisabled d-none d-md-block font-weight-bold text-white" style="font-size: 1.2em;">Research</a>
-                <a onclick="togglemenu('3')" onmouseover="this.style.cursor='pointer'" class="px-4 searchdisabled d-none d-md-block font-weight-bold text-white" style="font-size: 1.2em;">People</a>
-                <a onclick="togglemenu('4')"  onmouseover="this.style.cursor='pointer'" class="px-4 searchdisabled d-none d-md-block font-weight-bold text-white" style="font-size: 1.2em;">Events</a>
-                <a onclick="togglemenu('5')"  onmouseover="this.style.cursor='pointer'" class="px-4 searchdisabled d-none d-md-block font-weight-bold text-white" style="font-size: 1.2em;">Facilities</a>
-                <a onclick="togglemenu('6')"  onmouseover="this.style.cursor='pointer'" class="px-4 searchdisabled d-none d-md-block font-weight-bold text-white" style="font-size: 1.2em;">Courses</a>
-                <!-- <input id="input" class="animated fadeIn faster searchenabled shadow btn btn-lg btn-white bg-white no-transform text-gray" style="width: 500px; border-radius: 10px;" type="text"> -->
-                <form class="searchenabled" style="margin:0px; margin-top:4px; width: 550px;" action="https://search.freefind.com/find.html" method="get" accept-charset="utf-8" target="_self">
-                    <input type="hidden" name="si" value="10569528">
-                    <input type="hidden" name="pid" value="r">
-                    <input type="hidden" name="n" value="0">
-                    <input type="hidden" name="_charset_" value="">
-                    <input type="hidden" name="bcd" value="&#247;">
-                    <input class="animated fadeIn faster searchenabled shadow btn btn-lg btn-white bg-white no-transform text-gray" style="width: 550px; border-radius: 10px;" type="text" name="query" placeholder="Search for humans">
-                    <input class="d-none" type="submit" value="search" id="tosearch">
-                </form>
-    
+                <a onclick="togglemenu('1');" onmouseover="this.style.cursor='pointer'" class="px-4 d-none d-md-block font-weight-bold text-white font-12">Academics</a>
+                <a onclick="togglemenu('2');" onmouseover="this.style.cursor='pointer'" class="px-4 d-none d-md-block font-weight-bold text-white font-12">Research</a>
+                <a onclick="togglemenu('3');" onmouseover="this.style.cursor='pointer'" class="px-4 d-none d-md-block font-weight-bold text-white font-12">People</a>
+                <a onclick="togglemenu('4');"  onmouseover="this.style.cursor='pointer'" class="px-4 d-none d-md-block font-weight-bold text-white font-12">Events</a>
+                <a onclick="togglemenu('5');"  onmouseover="this.style.cursor='pointer'" class="px-4 d-none d-md-block font-weight-bold text-white font-12">Facilities</a>
+                <a onclick="togglemenu('6');"  onmouseover="this.style.cursor='pointer'" class="px-4 d-none d-md-block font-weight-bold text-white font-12">Courses</a>
             </div>
             <a class="d-md-block d-none" id="search" onmouseover="this.style.cursor='pointer'">
-                <img src="../static/images/search.svg" height="35px" alt="Search Bar">
+                <div class="d-flex rounded input" style="position: relative;">
+                    <form style="margin:0px; margin-top:4px; width: 300px;" action="https://search.freefind.com/find.html" method="get" accept-charset="utf-8" target="_self">
+                        <input type="hidden" name="si" value="10569528">
+                        <input type="hidden" name="pid" value="r">
+                        <input type="hidden" name="n" value="0">
+                        <input type="hidden" name="_charset_" value="">
+                        <input type="hidden" name="bcd" value="&#247;">
+                        <input class="animated fadeIn faster shadow btn btn-lg btn-white bg-white no-transform text-gray w-100" style="border-radius: 10px;" type="text" name="query" placeholder="Search">
+                        <input class="d-none" type="submit" value="search" id="tosearch">
+                    </form>
+                    <img src="../static/images/search.svg" height="30px" style="margin-top: 0.8em; position: absolute; left: 10px;" alt="Search Bar">
+                </div>
             </a>
             <a onclick="togglemenu('null')" class="d-md-none" onmouseover="this.style.cursor='pointer'">
                 <img id="nav_menu" src="../static/images/menu.svg" height="35px" alt="Navigation Menu">
@@ -35,17 +33,20 @@
     </div>
     <div id="menu" class="animated fadeIn faster container-fluid px-5 py-2" style="position: absolute; top: 90px; overflow: scroll;background: black;">
         <div class="row">
-            <div class="col-12 mt-3 d-sm-none text-center bg-white" style="border-radius: 10px;">
+            <div class="col-12 mt-3 d-md-none text-center bg-white" style="border-radius: 10px;">
                 <div class="row py-2" style="background: black;">
-                    <form class="w-100" style="margin:0px; margin-top:4px;" action="https://search.freefind.com/find.html" method="get" accept-charset="utf-8" target="_self">
-                        <input type="hidden" name="si" value="10569528">
-                        <input type="hidden" name="pid" value="r">
-                        <input type="hidden" name="n" value="0">
-                        <input type="hidden" name="_charset_" value="">
-                        <input type="hidden" name="bcd" value="&#247;">
-                        <input class="animated fadeIn faster shadow btn btn-lg btn-white bg-white no-transform text-gray" style="width: 100%; border-radius: 10px;" type="text" name="query" placeholder="Search">
-                        <input class="d-none" type="submit" value="search" id="tosearch">
-                    </form>
+                    <div class="d-flex rounded input w-100" style="position: relative;">
+                        <form style="margin:0px; margin-top:4px; width: 100%;" action="https://search.freefind.com/find.html" method="get" accept-charset="utf-8" target="_self">
+                            <input type="hidden" name="si" value="10569528">
+                            <input type="hidden" name="pid" value="r">
+                            <input type="hidden" name="n" value="0">
+                            <input type="hidden" name="_charset_" value="">
+                            <input type="hidden" name="bcd" value="&#247;">
+                            <input class="animated fadeIn faster shadow btn btn-lg btn-white bg-white no-transform text-gray w-100" style="border-radius: 10px;" type="text" name="query" placeholder="Search">
+                            <input class="d-none" type="submit" value="search" id="tosearch">
+                        </form>
+                        <img src="../static/images/search.svg" height="30px" style="margin-top: 0.8em; position: absolute; left: 10px;" alt="Search Bar">
+                    </div>
                 </div>
             </div>
             <div class="col-12 col-sm-4 col-lg-3 py-1 mt-3 mt-sm-0" style="background-color: #E1E1E1; border-radius: 10px;">
