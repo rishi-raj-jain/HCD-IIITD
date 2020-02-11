@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container py-5">
+    <h3 class="animated flipInX font-weight-light">Courses</h3>
+    <h4 class="font-weight-bold animated flipInX">Department of Human Centered Design</h4>
+    <div class="py-2 owl-carousel owl-theme">
+        {% for option in courses_list %}
+        <div class="item bg-white text-dark p-4" style="-webkit-box-shadow: 0 0 10px rgb(195, 195, 195);
+        box-shadow: 0 0 10px rgb(195, 195, 195);">
+            <h5 class="font-weight-bold">
+                {{option.Course_Name}}
+            </h5>
+            <h7 class="font-weight-bold">
+                {{option.Code}}
+            </h7>
+            <p class="mt-1 font-weight-light">
+                {{option.Course_Text}}
+            </p>
+        </div>
+        {% endfor %}
+    </div>
+    <p>
+        For the list of all courses offered by Department of Human-Centered Design at IIIT-Delhi <a class="text-primary" href="">click here</a> to check ‘DES’ code discipline courses.
+    </p>
+</div>
+{% endblock %}
+{% block scripts %}
+<script>
+    $(document).ready(function(){
+        $('.owl-carousel').owlCarousel({
+            items:4,
+            center: true,
+            lazyLoad:true,
+            loop:true,
+            // margin:10,
+            responsive:{
+                0:{
+                    items: 1,
+                },
+                400:{
+                    items:2,
+                    // nav:true
+                },
+                500:{
+                    items:2,
+                    // nav:true
+                },
+                800:{
+                    items:3,
+                    // nav:true
+                },
+                900:{
+                    items:4,
+                    // nav:true
+                }
+            }
+        });
+    });
+</script>
+{% endblock %}
