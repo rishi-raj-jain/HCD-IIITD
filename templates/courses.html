@@ -1,5 +1,19 @@
 {% extends "base.html" %}
 {% block content %}
+<style>
+    .active.center {
+        z-index: 998;
+        transform: scale(1.01);
+        -webkit-filter: grayscale(0); /* Safari 6.0 - 9.0 */
+        filter: grayscale(0);
+    }
+    .active {
+        transform: scale(1);
+        transition: .6s ease;
+        -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+        filter: grayscale(100%);
+    }
+</style>
 <div class="container py-5">
     <h3 class="animated flipInX font-weight-light">Courses</h3>
     <h4 class="font-weight-bold animated flipInX">Department of Human Centered Design</h4>
@@ -20,7 +34,7 @@
         {% endfor %}
     </div>
     <p>
-        For the list of all courses offered by Department of Human-Centered Design at IIIT-Delhi <a class="text-primary" href="">click here</a> to check ‘DES’ code discipline courses.
+        For the list of all courses offered by Department of Human-Centered Design at IIIT-Delhi <a class="text-primary" href="https://iiitd.ac.in/academics/courses/institute" target="_blank">click here</a> to check ‘DES’ code discipline courses.
     </p>
 </div>
 {% endblock %}
