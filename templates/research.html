@@ -9,10 +9,10 @@
     }
 </style>
 <div class="container py-5">
-    <h3 class="animated flipInX font-weight-light">Courses</h3>
+    <h3 class="animated flipInX font-weight-light">Research</h3>
     <h4 class="font-weight-bold animated flipInX">Department of Human Centered Design</h4>
     <div class="p-4 p-md-0 mt-3 owl-carousel owl-theme">
-        {% for option in courses_list %}
+        {% for option in research_list %}
         <div class="border item bg-white text-dark p-4">
             <h4 class="font-weight-bold" style="font-size: 22px;">
                 {{option.Course_Name}}
@@ -31,6 +31,28 @@
         For the list of all courses offered by Department of Human-Centered Design at IIIT-Delhi <a class="text-primary" href="https://iiitd.ac.in/academics/courses/institute" target="_blank">click here</a> to check ‘DES’ code discipline courses.
     </p>
 </div>
+
+<div class="container py-5">
+    <h3 class="animated flipInX font-weight-bold">Research Labs</h3>
+    <div class="p-4 p-md-0 mt-3">
+        {% for option in labs_list %}
+        <div class="item bg-white text-dark py-4">
+            <h4 class="font-weight-normal" style="font-size: 25px;">
+                {{option.Lab_Name}}
+            </h4>
+            <h7 style="font-size: 25px;">
+                {{option.Lab_Location}}
+            </h7>
+            <p></p>
+            <h7 class="mt-1 gara-proreg" style="font-size: 25px;">
+                {{option.Lab_Description}}
+            </h7>
+        </div>
+        <hr>
+        {% endfor %}
+    </div>
+</div>
+
 {% endblock %}
 {% block scripts %}
 <script>

@@ -2,6 +2,8 @@ import random
 from flask import Flask, render_template, request, jsonify, abort
 from hcd_menu import menuJson
 from course_list import courseJson
+from research_list import researchJson
+from research_list import labsJSON
 
 app = Flask(__name__)
 app.config['TEMPLATES_AUTO_RELOAD'] = True
@@ -13,6 +15,10 @@ def index():
 @app.route("/courses/")
 def courses():
     return render_template('courses.html', menu_value= menuJson, courses_list= courseJson)
+
+@app.route("/research/")
+def research():
+    return render_template('research.html', menu_value= menuJson, research_list= researchJson, labs_list= labsJSON)
 
 @app.route("/contact/")
 def contact():
