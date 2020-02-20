@@ -4,12 +4,16 @@
         <div class="d-flex align-items-center justify-content-between">
             <a href="/"><img src="../static/images/logo-white.svg" style="width: 120px;" alt="Human Centered Design"></a>
             <div class="d-flex">
+                {% for option in menu_value %}
+                    <a href=".{{option.link}}/" class="text-pointer px-3 d-none d-md-block text-white font-12">{{option.categories}}</a>
+                {% endfor %}
+                <!-- <a onclick="togglemenu('1');" onmouseover="this.style.cursor='pointer'" class="px-4 d-none d-md-block text-white font-12">Academics</a>
                 <a onclick="togglemenu('1');" onmouseover="this.style.cursor='pointer'" class="px-4 d-none d-md-block text-white font-12">Academics</a>
                 <a onclick="togglemenu('2');" href="/research" class="px-4 d-none d-md-block text-white font-12">Research</a>
                 <a onclick="togglemenu('3');" onmouseover="this.style.cursor='pointer'" class="px-4 d-none d-md-block text-white font-12">People</a>
                 <a onclick="togglemenu('4');"  onmouseover="this.style.cursor='pointer'" class="px-4 d-none d-md-block text-white font-12">Events</a>
                 <a onclick="togglemenu('5');"  onmouseover="this.style.cursor='pointer'" class="px-4 d-none d-md-block text-white font-12">Facilities</a>
-                <a onclick="togglemenu('6');" href="/courses" class="px-4 d-none d-md-block text-white font-12">Courses</a>
+                <a onclick="togglemenu('6');" href="/courses" class="px-4 d-none d-md-block text-white font-12">Courses</a> -->
             </div>
             <a class="d-md-block d-none" id="search" onmouseover="this.style.cursor='pointer'">
                 <div class="d-flex rounded input" style="position: relative;">
@@ -53,7 +57,7 @@
                 <ul class="list-unstyled py-2 text-center">
                     {% for option in menu_value %}
                         <li class="mt-3"> 
-                            <button onclick="openmenu('{{option.number}}')" class="menu-option-{{option.number}} btn btn-block btn-white btn-lg text-pointer" style="border-radius: 10px;">
+                            <button onclick="location.href='.{{option.link}}/';" class="menu-option-{{option.number}} btn btn-block btn-white btn-lg text-pointer" style="border-radius: 10px;">
                                 {{option.categories}}
                             </button>
                         </li>

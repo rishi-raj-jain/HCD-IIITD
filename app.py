@@ -1,4 +1,4 @@
-import random
+import webbrowser, random
 from flask import Flask, render_template, request, jsonify, abort
 from hcd_menu import menuJson
 from course_list import courseJson
@@ -28,5 +28,10 @@ def contact():
 def page_not_found(e):
     return render_template('404.html', menu_value= menuJson), 404
 
+def open_browser(a):
+    webbrowser.open_new('http://127.0.0.1:'+str(a))
+
 if(__name__ == "__main__"):
-    app.run(host='0.0.0.0', port= random.randint(1000, 8000))
+    prto_num= random.randint(1000, 8000)
+    open_browser(prto_num)
+    app.run(host='0.0.0.0', port= prto_num)
