@@ -11,9 +11,9 @@ function menu_icon(){
         $("#nav_menu").attr('src', '../static/images/menu.svg');
         $("#nav_menu").attr('height', '35px');
     }
-    if($("input").is(":visible")){
-        $("input").focus();
-    }
+    // if($("input").is(":visible")){
+    //     $("input").focus();
+    // }
 }
 function openmenu(option_value){
     $("#menu").show();
