@@ -22,7 +22,7 @@
                 {{option.Code}}
             </h7>
             <p></p>
-            <h7 class="mt-1 gara-proreg" style="font-size: 18px;">
+            <h7 class="mt-1 gara-proreg ellipis-4" style="font-size: 18px;">
                 {{option.Course_Text}}
             </h7>
         </div>
@@ -32,20 +32,7 @@
 
 <div class="container py-5">
     <h3 class="animated flipInX font-weight-bold">Research Interests</h3>
-    <div class="p-4 p-md-0 mt-3 text-center">
-        <b class="btn btn-lg rounded-0 shadow-sm mt-3" style="border: solid 1px rgba(0, 0, 0, 0.096);">Lorem Ipsum</b>
-        <b class="btn btn-lg rounded-0 shadow-sm mt-3" style="border: solid 1px rgba(0, 0, 0, 0.096);">Lorem Ipsum</b>
-        <b class="btn btn-lg rounded-0 shadow-sm mt-3" style="border: solid 1px rgba(0, 0, 0, 0.096);">Lorem Ipsum</b>
-        <b class="btn btn-lg rounded-0 shadow-sm mt-3" style="border: solid 1px rgba(0, 0, 0, 0.096);">Lorem Ipsum</b>
-        <b class="btn btn-lg rounded-0 shadow-sm mt-3" style="border: solid 1px rgba(0, 0, 0, 0.096);">Lorem Ipsum</b>
-        <b class="btn btn-lg rounded-0 shadow-sm mt-3" style="border: solid 1px rgba(0, 0, 0, 0.096);">Lorem Ipsum</b>
-        <b class="btn btn-lg rounded-0 shadow-sm mt-3" style="border: solid 1px rgba(0, 0, 0, 0.096);">Lorem Ipsum</b>
-        <b class="btn btn-lg rounded-0 shadow-sm mt-3" style="border: solid 1px rgba(0, 0, 0, 0.096);">Lorem Ipsum</b>
-        <b class="btn btn-lg rounded-0 shadow-sm mt-3" style="border: solid 1px rgba(0, 0, 0, 0.096);">Lorem Ipsum</b>
-        <b class="btn btn-lg rounded-0 shadow-sm mt-3" style="border: solid 1px rgba(0, 0, 0, 0.096);">Lorem Ipsum</b>
-        <b class="btn btn-lg rounded-0 shadow-sm mt-3" style="border: solid 1px rgba(0, 0, 0, 0.096);">Lorem Ipsum</b>
-        <b class="btn btn-lg rounded-0 shadow-sm mt-3" style="border: solid 1px rgba(0, 0, 0, 0.096);">Lorem Ipsum</b>
-    </div>
+    <div class="list_interest p-4 p-md-0 mt-3 text-center"></div>
     <p class="mt-5 text-center">
         For the list of all Research Labs offered by Department of Human-Centered Design at IIIT-Delhi <a class="text-primary" href="/research-labs">click here</a>.
     </p>
@@ -55,6 +42,55 @@
 {% block scripts %}
 <script>
     $(document).ready(function(){
+
+        let interests_list= [
+            {
+                'value': 'Maker-Oriented Learning'
+            },
+            {
+                'value': 'HCI'
+            },
+            {
+                'value': 'Wearable Computing'
+            },
+            {
+                'value': 'Interactive Product Design'
+            },
+            {
+                'value': 'Operating Systems'
+            },
+            {
+                'value': 'Computer Networks'
+            },
+            {
+                'value': 'Mobile Computing'
+            },
+            {
+                'value': 'Deep learning-based multimedia systems'
+            },
+            {
+                'value': 'Communication design'
+            },
+            {
+                'value': 'Human Aspects of Software Engineering'
+            },
+            {
+                'value': 'Intertemporal Preferences in Technical Debt'
+            },
+            {
+                'value': 'Animation Film Making'
+            },
+            {
+                'value': 'Gaming, Concept Arts'
+            },
+            {
+                'value': 'Cyberbullying, social and emotional well-being, and implementation science, etc.'
+            },
+        ];
+
+        for(let i in interests_list) 
+            $(".list_interest").append('<b onmouseout="this.classList.remove('+"'bg-green', 'text-white'"+');this.classList.add('+"'bg-white', 'text-dark'"+');" onmouseover="this.classList.add('+"'bg-green', 'text-white'"+');this.classList.remove('+"'bg-white', 'text-dark'"+');" class="hover-cursor btn btn-lg rounded-0 text-dark bg-white shadow-sm mt-3 ml-3" style="border: solid 1px rgba(0, 0, 0, 0.096);">'+interests_list[i].value+'</b>');  
+
         $('.owl-carousel').owlCarousel({
             items:4,
             // center: true,
@@ -73,6 +109,16 @@
                     items:4
                 }
             }
+        });
+        let maxs= 0;
+        $(".owl-item").each(function()
+        {
+            maxs= Math.max(maxs, $(this).height());
+            console.log("next <p> element with id: " + maxs);
+        });
+        $(".owl-item").each(function()
+        {
+            $(this).height(maxs);
         });
     });
 </script>

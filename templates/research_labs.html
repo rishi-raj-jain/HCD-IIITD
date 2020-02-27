@@ -6,16 +6,16 @@
     <div class="p-4 p-md-0 mt-3">
         <div class="row d-md-flex align-items-center justify-content-center">
             {% for option in labs_list %}
-            <div class="col-12 col-md-4 mt-5">
+            <div class="col-12 col-md-4 mt-5 itemlab">
                 <div onmouseout="this.classList.remove('shadow_');this.classList.add('shadow');" onmouseover="this.classList.add('shadow_');this.classList.remove('shadow');" class="home_main shadow w-100 bg-white h-100 p-5" style="border-style: dashed; border-color: #707070; border-width: 0.02cm;">
                     <div class="d-flex justify-content-center align-items-center">
-                        <img src="../static/images/events.svg" style="max-width: 50px;">
+                        <img src="../static/images/logos/{{option.logo}}" style="max-width: calc( 100vw / 8 );">
                     </div>
-                    <div class="row-content text-center">
+                    <div class="mt-5 row-content text-center">
                         <h4 class="font-weight-bolder mt-3 gara-proreg">{{option.Lab_Name}}</h4>
                         <h6 class="font-weight-bold">{{option.Lab_Location}}</h6>
-                        <p class="mt-3 gara-proreg">
-                            sed in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to hav
+                        <p class="mt-3 gara-proreg ellipis-3">
+                            {{option.Lab_Description}}
                         </p>
                     </div>
                     <div onclick="replace('events')" class="d-flex justify-content-center align-items-center">
@@ -30,4 +30,20 @@
         </div>
     </div>
 </div>
+{% endblock %}
+{% block scripts %}
+<script>
+    $(document).ready(function(){
+        let maxs= 0;
+        $(".itemlab").each(function()
+        {
+            maxs= Math.max(maxs, $(this).height());
+            console.log("next <p> element with id: " + maxs);
+        });
+        $(".itemlab").each(function()
+        {
+            $(this).height(maxs);
+        });
+    });
+</script>
 {% endblock %}

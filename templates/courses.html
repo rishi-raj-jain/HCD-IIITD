@@ -21,7 +21,7 @@
                 {{option.Code}}
             </h7>
             <p></p>
-            <h7 class="mt-1 gara-proreg" style="font-size: 18px;">
+            <h7 class="mt-1 gara-proreg ellipis-4" style="font-size: 18px;">
                 {{option.Course_Text}}
             </h7>
         </div>
@@ -40,6 +40,7 @@
             // center: true,
             lazyLoad:true,
             loop:true,
+            autoHeight:true,
             margin:10,
             responsive:{
                 0:{
@@ -53,6 +54,16 @@
                     items:4
                 }
             }
+        });
+        let maxs= 0;
+        $(".owl-item").each(function()
+        {
+            maxs= Math.max(maxs, $(this).height());
+            console.log("next <p> element with id: " + maxs);
+        });
+        $(".owl-item").each(function()
+        {
+            $(this).height(maxs);
         });
     });
 </script>
