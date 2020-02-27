@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container py-5 bg-white">
+    <h3 class="animated flipInX font-weight-light">Students</h3>
+    <h4 class="font-weight-bold animated flipInX">Department of Human Centered Design</h4>
+    <div class="p-4 p-md-0 mt-3">
+        <div class="row d-md-flex align-items-center justify-content-center">
+            {% for option in students_list %}
+                <div class="col-12 col-md-4 mt-5 itemlab">
+                    <div onmouseout="this.classList.remove('shadow_');this.classList.add('shadow');" onmouseover="this.classList.add('shadow_');this.classList.remove('shadow');" class="home_main shadow text-pointer w-100 bg-white h-100 p-5" style="border-style: dashed; border-color: #707070; border-width: 0.02cm; border-radius: 10px;">
+                        <div class="d-flex justify-content-center align-items-center" style="height: calc( 100vh /5 );" >
+                            <img src="../static/images/faculty/{{option.image}}" style="max-height: 100%; max-width: 100%;">
+                        </div>
+                        <div class="mt-5 row-content text-center">
+                            <h3 class="font-weight-bolder mt-3 gara-proreg text-dark">{{option.Name}}</h3>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block scripts %}
+<script>
+    $(document).ready(function(){
+        let maxs= 0;
+        $(".itemlab").each(function()
+        {
+            maxs= Math.max(maxs, $(this).height());
+            console.log("next <p> element with id: " + maxs);
+        });
+        $(".itemlab").each(function()
+        {
+            $(this).height(maxs);
+        });
+    });
+</script>
+{% endblock %}

@@ -5,6 +5,7 @@ from course_list import courseJson
 from research_list import researchJson
 from research_list import facultyJson
 from research_list import labsJSON
+from research_list import studentsJSON
 
 app = Flask(__name__)
 app.config['TEMPLATES_AUTO_RELOAD'] = True
@@ -32,6 +33,10 @@ def contact():
 @app.route("/faculty/")
 def faculty():
     return render_template('faculty.html', menu_value= menuJson, faculty_list= facultyJson)
+
+@app.route("/students/")
+def students():
+    return render_template('students.html', menu_value= menuJson, students_list= studentsJSON)
 
 @app.errorhandler(404)
 def page_not_found(e):
