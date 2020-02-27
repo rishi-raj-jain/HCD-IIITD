@@ -8,6 +8,7 @@
         box-shadow: 0 0 3px rgba(218, 218, 218, 0.739);
     }
 </style>
+
 <div class="container py-5">
     <h3 class="animated flipInX font-weight-light">Research</h3>
     <h4 class="font-weight-bold animated flipInX">Department of Human Centered Design</h4>
@@ -27,30 +28,27 @@
         </div>
         {% endfor %}
     </div>
-    <p>
-        For the list of all courses offered by Department of Human-Centered Design at IIIT-Delhi <a class="text-primary" href="https://iiitd.ac.in/academics/courses/institute" target="_blank">click here</a> to check ‘DES’ code discipline courses.
-    </p>
 </div>
 
 <div class="container py-5">
-    <h3 class="animated flipInX font-weight-bold">Research Labs</h3>
-    <div class="p-4 p-md-0 mt-3">
-        {% for option in labs_list %}
-        <div class="item bg-white text-dark py-4">
-            <h4 class="font-weight-normal" style="font-size: 25px;">
-                {{option.Lab_Name}}
-            </h4>
-            <h7 style="font-size: 25px;">
-                {{option.Lab_Location}}
-            </h7>
-            <p></p>
-            <h7 class="mt-1 gara-proreg" style="font-size: 25px;">
-                {{option.Lab_Description}}
-            </h7>
-        </div>
-        <hr>
-        {% endfor %}
+    <h3 class="animated flipInX font-weight-bold">Research Interests</h3>
+    <div class="p-4 p-md-0 mt-3 text-center">
+        <b class="btn btn-lg rounded-0 shadow-sm mt-3" style="border: solid 1px rgba(0, 0, 0, 0.096);">Lorem Ipsum</b>
+        <b class="btn btn-lg rounded-0 shadow-sm mt-3" style="border: solid 1px rgba(0, 0, 0, 0.096);">Lorem Ipsum</b>
+        <b class="btn btn-lg rounded-0 shadow-sm mt-3" style="border: solid 1px rgba(0, 0, 0, 0.096);">Lorem Ipsum</b>
+        <b class="btn btn-lg rounded-0 shadow-sm mt-3" style="border: solid 1px rgba(0, 0, 0, 0.096);">Lorem Ipsum</b>
+        <b class="btn btn-lg rounded-0 shadow-sm mt-3" style="border: solid 1px rgba(0, 0, 0, 0.096);">Lorem Ipsum</b>
+        <b class="btn btn-lg rounded-0 shadow-sm mt-3" style="border: solid 1px rgba(0, 0, 0, 0.096);">Lorem Ipsum</b>
+        <b class="btn btn-lg rounded-0 shadow-sm mt-3" style="border: solid 1px rgba(0, 0, 0, 0.096);">Lorem Ipsum</b>
+        <b class="btn btn-lg rounded-0 shadow-sm mt-3" style="border: solid 1px rgba(0, 0, 0, 0.096);">Lorem Ipsum</b>
+        <b class="btn btn-lg rounded-0 shadow-sm mt-3" style="border: solid 1px rgba(0, 0, 0, 0.096);">Lorem Ipsum</b>
+        <b class="btn btn-lg rounded-0 shadow-sm mt-3" style="border: solid 1px rgba(0, 0, 0, 0.096);">Lorem Ipsum</b>
+        <b class="btn btn-lg rounded-0 shadow-sm mt-3" style="border: solid 1px rgba(0, 0, 0, 0.096);">Lorem Ipsum</b>
+        <b class="btn btn-lg rounded-0 shadow-sm mt-3" style="border: solid 1px rgba(0, 0, 0, 0.096);">Lorem Ipsum</b>
     </div>
+    <p class="mt-5 text-center">
+        For the list of all Research Labs offered by Department of Human-Centered Design at IIIT-Delhi <a class="text-primary" href="/research-labs">click here</a>.
+    </p>
 </div>
 
 {% endblock %}

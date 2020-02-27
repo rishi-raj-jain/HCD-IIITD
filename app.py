@@ -16,9 +16,13 @@ def index():
 def courses():
     return render_template('courses.html', menu_value= menuJson, courses_list= courseJson)
 
-@app.route("/research/")
-def research():
-    return render_template('research.html', menu_value= menuJson, research_list= researchJson, labs_list= labsJSON)
+@app.route("/research-publications/")
+def research_publications():
+    return render_template('research_publications.html', menu_value= menuJson, research_list= researchJson)
+
+@app.route("/research-labs/")
+def research_labs():
+    return render_template('research_labs.html', menu_value= menuJson, labs_list= labsJSON)
 
 @app.route("/contact/")
 def contact():
