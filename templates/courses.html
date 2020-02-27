@@ -7,27 +7,71 @@
         -webkit-box-shadow: 0 0 3px rgba(218, 218, 218, 0.739);
         box-shadow: 0 0 3px rgba(218, 218, 218, 0.739);
     }
+    .main-content {
+        position: relative;
+    }
+    .main-content .owl-theme .custom-nav {
+        position: absolute;
+        top: 30%;
+        left: 0;
+        right: 0;
+    }
+    .main-content .owl-theme .custom-nav .owl-prev, .main-content .owl-theme .custom-nav .owl-next {
+        position: absolute;
+        height: 100px;
+        color: inherit;
+        background: none;
+        border: none;
+        z-index: 100;
+    }
+    .main-content .owl-theme .custom-nav .owl-prev i, .main-content .owl-theme .custom-nav .owl-next i {
+        font-size: 2.5rem;
+        color: #cecece;
+    }
+    .main-content .owl-theme .custom-nav .owl-prev {
+        right: 100%;
+    }
+    .main-content .owl-theme .custom-nav .owl-next {
+        left: 100%;
+    }
+    @media screen and (max-width: 900px){
+        .main-content .owl-theme .custom-nav .owl-prev {
+            left: 0;
+            right: unset;
+        }
+        .main-content .owl-theme .custom-nav .owl-next {
+            right: 0;
+            left: unset;
+        }
+    }
 </style>
 <div class="container py-5">
     <h3 class="animated flipInX font-weight-light">Courses</h3>
     <h4 class="font-weight-bold animated flipInX">Department of Human Centered Design</h4>
-    <div class="p-4 p-md-0 mt-3 owl-carousel owl-theme">
-        {% for option in courses_list %}
-        <div class="border item bg-white text-dark p-4">
-            <h4 class="font-weight-bold" style="font-size: 22px;">
-                {{option.Course_Name}}
-            </h4>
-            <h7 class="font-weight-bold">
-                {{option.Code}}
-            </h7>
-            <p></p>
-            <h7 class="mt-1 gara-proreg ellipis-4" style="font-size: 18px;">
-                {{option.Course_Text}}
-            </h7>
+    <div class="row main-content">
+        <div class="p-4 p-md-0 mt-3 owl-carousel owl-theme">
+            {% for option in courses_list %}
+            <div onmouseout="this.classList.remove('bg-green', 'text-white');this.classList.add('bg-white', 'text-dark');" onmouseover="this.classList.add('bg-green', 'text-white');this.classList.remove('bg-white', 'text-dark');" class="border item bg-white text-dark p-4">
+                <h4 class="font-weight-bold" style="font-size: 22px;">
+                    {{option.Course_Name}}
+                </h4>
+                <h7 class="font-weight-bold">
+                    {{option.Code}}
+                </h7>
+                <p></p>
+                <h7 class="mt-1 gara-proreg ellipis-4" style="font-size: 18px;">
+                    {{option.Course_Text}}
+                </h7>
+            </div>
+            {% endfor %}
         </div>
-        {% endfor %}
+        <div class="owl-theme">
+            <div class="owl-controls">
+                <div class="custom-nav owl-nav"></div>
+            </div>
+        </div>
     </div>
-    <p>
+    <p class="mt-5">
         For the list of all courses offered by Department of Human-Centered Design at IIIT-Delhi <a class="text-primary" href="https://iiitd.ac.in/academics/courses/institute" target="_blank">click here</a> to check ‘DES’ code discipline courses.
     </p>
 </div>
@@ -41,14 +85,16 @@
             lazyLoad:true,
             loop:true,
             autoHeight:true,
-            margin:10,
+            dots: false,
+            navText: ['<svg width="30" aria-hidden="true" focusable="false" data-prefix="fad" data-icon="chevron-circle-left" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="shadow rounded-pill"><g class="fa-group"><path fill="#ffffff" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm72.5 349.6a23.9 23.9 0 0 1 0 33.9l-17 17a23.9 23.9 0 0 1-33.9 0L142.1 273a24 24 0 0 1 0-34l135.5-135.5a23.9 23.9 0 0 1 33.9 0l17 17a23.9 23.9 0 0 1 0 33.9L226.9 256z" class="fa-white"></path><path fill="#40ADA7" d="M142.1 239l135.5-135.5a23.9 23.9 0 0 1 33.9 0l17 17a23.9 23.9 0 0 1 0 33.9L226.9 256l101.6 101.6a23.9 23.9 0 0 1 0 33.9l-17 17a23.9 23.9 0 0 1-33.9 0L142.1 273a24 24 0 0 1 0-34z"></path></g></svg>', '<svg width="30" aria-hidden="true" focusable="false" data-prefix="fad" data-icon="chevron-circle-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="shadow rounded-pill"><g class="fa-group"><path fill="#ffffff" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm113.9 265L234.4 408.5a23.9 23.9 0 0 1-33.9 0l-17-17a23.9 23.9 0 0 1 0-33.9L285.1 256 183.5 154.4a23.9 23.9 0 0 1 0-33.9l17-17a23.9 23.9 0 0 1 33.9 0L369.9 239a24 24 0 0 1 0 34z"></path><path fill="#40ADA7" d="M369.9 273L234.4 408.5a23.9 23.9 0 0 1-33.9 0l-17-17a23.9 23.9 0 0 1 0-33.9L285.1 256 183.5 154.4a23.9 23.9 0 0 1 0-33.9l17-17a23.9 23.9 0 0 1 33.9 0L369.9 239a24 24 0 0 1 0 34z"></path></g></svg>'],
+            navContainer: '.main-content .custom-nav',
+            margin:1,
             responsive:{
                 0:{
                     items: 1,
                 },
                 900:{
                     items:3,
-                    // nav:true
                 },
                 1080:{
                     items:4
@@ -61,7 +107,7 @@
             maxs= Math.max(maxs, $(this).height());
             console.log("next <p> element with id: " + maxs);
         });
-        $(".owl-item").each(function()
+        $(".item").each(function()
         {
             $(this).height(maxs);
         });

@@ -3,6 +3,7 @@ from flask import Flask, render_template, request, jsonify, abort
 from hcd_menu import menuJson
 from course_list import courseJson
 from research_list import researchJson
+from research_list import facultyJson
 from research_list import labsJSON
 
 app = Flask(__name__)
@@ -27,6 +28,10 @@ def research_labs():
 @app.route("/contact/")
 def contact():
     return render_template('contact.html', menu_value= menuJson)
+
+@app.route("/faculty/")
+def faculty():
+    return render_template('faculty.html', menu_value= menuJson, faculty_list= facultyJson)
 
 @app.errorhandler(404)
 def page_not_found(e):

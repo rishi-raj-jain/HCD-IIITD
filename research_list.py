@@ -88,3 +88,84 @@ labsJSON=[{
         'logo': 'melange.png'
     }
 ]
+
+
+facultyJson=[
+    {
+        'Name': 'Pushpendra Singh',
+        'Post': 'Head (HCD), Professor (CSE, HCD)',
+        'Degree': 'PhD, Inria-Rennes, University de Rennes 1, France',
+        'link': 'https://www.iiitd.ac.in/pushpendra',
+        'image': 'Pushpendra.JPG'
+    },
+    {
+        'Name': 'Aman Parnami',
+        'Post': 'Assistant Professor (HCD)',
+        'Degree': 'PhD, Georgia Institute of Technology, Atlanta',
+        'link': 'https://www.iiitd.ac.in/aman',
+        'image': 'amanparnami.jpg'
+    },
+    {
+        'Name': 'Aman Samuel',
+        'Post': 'Guest faculty, HCD',
+        'Degree': '',
+        'link': 'https://www.linkedin.com/in/aman-samuel-b5942a121/?originalSubdomain=in',
+        'image': 'Aman Samuel.jpeg'
+    },
+    {
+        'Name': 'Anoop Ratn',
+        'Post': 'Visiting faculty, HCD',
+        'Degree': '',
+        'link': 'https://www.iiitd.ac.in/people/visiting-faculty',
+        'image': 'Anoop.JPG'
+    },
+    {
+        'Name': 'Grace Eden',
+        'Post': 'Assitant Professor, HCD',
+        'Degree': 'DPhil, University of Oxford',
+        'link': 'https://www.iiitd.ac.in/grace',
+        'image': 'Grace.jpg'
+    },
+    {
+        'Name': 'Indrani De Parker',
+        'Post': 'Visiting Faculty (HCD)',
+        'Degree': '',
+        'link': 'https://www.iiitd.ac.in/people/visiting-faculty',
+        'image': 'Indrani.JPG'
+    },
+    {
+        'Name': 'Jainendra Shukla',
+        'Post': 'Assistant Professor (HCD)',
+        'Degree': 'PhD, Universitat Rovira i Virgili (URV), Spain',
+        'link': 'https://www.iiitd.ac.in/jainendra',
+        'image': 'Jainendra.JPG'
+    },
+    {
+        'Name': 'Manohar Khushalani',
+        'Post': 'Visiting Faculty (HCD)',
+        'Degree': 'PhD, Universitat Rovira i Virgili (URV), Spain',
+        'link': 'https://www.iiitd.ac.in/people/visiting-faculty',
+        'image': 'Manohar.JPG'
+    },
+    {
+        'Name': 'Rahul Mohanani',
+        'Post': 'Assistant Professor (CSE, HCD)',
+        'Degree': 'PhD, University of Oulu, Finland',
+        'link': 'https://www.iiitd.ac.in/rahulm',
+        'image': 'rahulm.jpg'
+    },
+    {
+        'Name': 'Rajiv Ratn Shah',
+        'Post': 'Assistant Professor (CSE, HCD)',
+        'Degree': 'PhD, National University of Singapore, Singapore',
+        'link': 'https://www.iiitd.ac.in/rajivratn',
+        'image': 'Rajiv.jpg'
+    },
+    {
+        'Name': 'Vibha Narula Gupta',
+        'Post': 'Guest Faculty, HCD',
+        'Degree': '',
+        'link': 'https://www.iiitd.ac.in/people/visiting-faculty',
+        'image': 'Vibha.JPG'
+    },
+]

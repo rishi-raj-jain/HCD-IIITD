@@ -44,6 +44,9 @@
 .no-transform{
     text-decoration: none;
 }
+.no-transform-imp{
+    text-decoration: none !important;
+}
 .hover-cursor{
     cursor: default;
 }

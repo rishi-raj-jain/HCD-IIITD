@@ -26,7 +26,7 @@ menuJson=[{
     },
     {
         'categories': 'People',
-        'link': './people',
+        'link': './faculty',
         'number': '3',
         'sub_menu': [
             {
