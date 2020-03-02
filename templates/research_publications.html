@@ -52,7 +52,7 @@
     <div class="row main-content">
         <div class="p-4 p-md-0 mt-3 owl-carousel owl-theme">
             {% for option in research_list %}
-            <div onmouseout="this.classList.remove('bg-green', 'text-white');this.classList.add('bg-white', 'text-dark');" onmouseover="this.classList.add('bg-green', 'text-white');this.classList.remove('bg-white', 'text-dark');" class="border item bg-white text-dark p-4">
+            <div onmouseout="this.classList.remove('bg-green', 'text-white');this.classList.add('bg-white', 'text-dark');" onmouseover="this.classList.add('bg-green', 'text-white');this.classList.remove('bg-white', 'text-dark');" class="border item text-dark p-4">
                 <h4 class="font-weight-bold" style="font-size: 22px;">
                     {{option.Course_Name}}
                 </h4>
@@ -137,7 +137,7 @@
 
         $('.main-content .owl-carousel').owlCarousel({
             items:4,
-            // center: true,
+            center: true,
             lazyLoad:true,
             loop:true,
             margin: 1,
@@ -166,6 +166,28 @@
         $(".item").each(function()
         {
             $(this).height(maxs);
+        });
+        $(".active .item").each(function()
+            {
+                $(this).removeClass('bg-green');
+                $(this).addClass('bg-white');
+                $(this).removeClass('text-white');
+                $(this).addClass('text-dark');
+            });
+            $(".center .item").addClass('bg-green');
+            $(".center .item").removeClass('text-dark');
+            $(".center .item").addClass('text-white');
+        $(".owl-next").click(function(){
+            $(".active .item").each(function()
+            {
+                $(this).removeClass('bg-green');
+                $(this).addClass('bg-white');
+                $(this).removeClass('text-white');
+                $(this).addClass('text-dark');
+            });
+            $(".center .item").addClass('bg-green');
+            $(".center .item").removeClass('text-dark');
+            $(".center .item").addClass('text-white');
         });
     });
 </script>
