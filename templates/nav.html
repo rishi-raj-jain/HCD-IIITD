@@ -1,21 +1,22 @@
-<div style="height: 90px;"></div>
-<nav class="fixed-top" style="z-index: 998; background: black; height: 90px;">
-    <div class="container-fluid px-5 mt-3">
+<div style="height: 70px;"></div>
+<nav class="fixed-top" style="z-index: 998; background: black; height: 70px;">
+    <div class="container mt-2">
         <div class="d-flex align-items-center justify-content-between">
-            <a href="/"><img src="../static/images/logo-white.svg" style="width: 120px;" alt="Human Centered Design"></a>
+            <a href="/"><img onclick="window.location='https://iiitd.ac.in'" src="../static/images/logoleft.png" style="height: 60px;" alt="Indraprastha Institute Of Information Technology, Delhi"><img class="ml-2" src="../static/images/logo-white.svg" style="width: 100px;" alt="Human Centered Design"></a>
             <div class="d-flex">
                 {% for option in menu_value %}
-                    <a href=".{{option.link}}/" class="text-pointer px-3 d-none d-md-block text-white font-12">{{option.categories}}</a>
+                    {% if 'Research' in option.categories  %}
+                        <a href=".{{option.link}}/" class="text-pointer px-3 d-none d-md-block text-white font-12">{{option.categories}}</a>
+                    {% endif %}
+                    {% if 'People' in option.categories  %}
+                        <a href=".{{option.link}}/" class="text-pointer px-3 d-none d-md-block text-white font-12">{{option.categories}}</a>
+                    {% endif %}
+                    {% if 'Academics' in option.categories  %}
+                        <a href=".{{option.link}}/" class="text-pointer px-3 d-none d-md-block text-white font-12">{{option.categories}}</a>
+                    {% endif %}
                 {% endfor %}
-                <!-- <a onclick="togglemenu('1');" onmouseover="this.style.cursor='pointer'" class="px-4 d-none d-md-block text-white font-12">Academics</a>
-                <a onclick="togglemenu('1');" onmouseover="this.style.cursor='pointer'" class="px-4 d-none d-md-block text-white font-12">Academics</a>
-                <a onclick="togglemenu('2');" href="/research" class="px-4 d-none d-md-block text-white font-12">Research</a>
-                <a onclick="togglemenu('3');" onmouseover="this.style.cursor='pointer'" class="px-4 d-none d-md-block text-white font-12">People</a>
-                <a onclick="togglemenu('4');"  onmouseover="this.style.cursor='pointer'" class="px-4 d-none d-md-block text-white font-12">Events</a>
-                <a onclick="togglemenu('5');"  onmouseover="this.style.cursor='pointer'" class="px-4 d-none d-md-block text-white font-12">Facilities</a>
-                <a onclick="togglemenu('6');" href="/courses" class="px-4 d-none d-md-block text-white font-12">Courses</a> -->
             </div>
-            <a class="d-md-block d-none" id="search" onmouseover="this.style.cursor='pointer'">
+            <a class="d-md-block d-none mb-2" id="search" onmouseover="this.style.cursor='pointer'">
                 <div class="d-flex rounded input" style="position: relative;">
                     <form style="margin:0px; margin-top:4px; width: 300px;" action="https://search.freefind.com/find.html" method="get" accept-charset="utf-8" target="_self">
                         <input type="hidden" name="si" value="10569528">
@@ -23,7 +24,7 @@
                         <input type="hidden" name="n" value="0">
                         <input type="hidden" name="_charset_" value="">
                         <input type="hidden" name="bcd" value="&#247;">
-                        <input class="animated fadeIn faster shadow btn btn-lg btn-white bg-white no-transform text-gray w-100" style="border-radius: 10px;" type="text" name="query" placeholder="Search">
+                        <input class="animated fadeIn faster shadow btn btn-lg btn-white bg-white rounded no-transform text-gray w-100" type="text" name="query" placeholder="Search">
                         <input class="d-none" type="submit" value="search" id="tosearch">
                     </form>
                     <img src="../static/images/search.svg" height="30px" style="margin-top: 0.8em; position: absolute; left: 10px;" alt="Search Bar">
@@ -35,7 +36,7 @@
             </ul>
         </div>
     </div>
-    <div id="menu" class="animated fadeIn faster container-fluid px-5 py-2" style="position: absolute; top: 90px; overflow: scroll;background: black;">
+    <div id="menu" class="animated fadeIn faster container-fluid px-5 py-2" style="position: absolute; top: 70px; overflow: scroll;background: black;">
         <div class="row">
             <div class="col-12 mt-3 d-md-none text-center bg-white" style="border-radius: 10px;">
                 <div class="row py-2" style="background: black;">
