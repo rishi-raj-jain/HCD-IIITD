@@ -34,6 +34,39 @@
     .main-content .owl-theme .custom-nav .owl-next {
         left: 100%;
     }
+    .year-content .owl-theme .custom-nav {
+        position: absolute;
+        top: 22%;
+        left: 0;
+        right: 0;
+    }
+    .year-content .owl-theme .custom-nav .owl-prev, .year-content .owl-theme .custom-nav .owl-next {
+        position: absolute;
+        height: 100px;
+        color: inherit;
+        background: none;
+        border: none;
+        z-index: 100;
+    }
+    .year-content .owl-theme .custom-nav .owl-prev i, .year-content .owl-theme .custom-nav .owl-next i {
+        font-size: 2.5rem;
+        color: #cecece;
+    }
+    .year-content .owl-theme .custom-nav .owl-prev {
+        right: 82%;
+    }
+    .year-content .owl-theme .custom-nav .owl-next {
+        left: 82%;
+    }
+    
+    @media screen and (max-width: 1200px){
+        .year-content .owl-theme .custom-nav .owl-prev {
+            right: 92%;
+        }
+        .year-content .owl-theme .custom-nav .owl-next {
+            left: 92%;
+        }
+    }
     @media screen and (max-width: 900px){
         .main-content .owl-theme .custom-nav .owl-prev {
             left: 0;
@@ -43,11 +76,57 @@
             right: 0;
             left: unset;
         }
+        .year-content .owl-theme .custom-nav .owl-prev {
+            left: 0;
+            right: unset;
+        }
+        .year-content .owl-theme .custom-nav .owl-next {
+            right: 0;
+            left: unset;
+        }
     }
 </style>
-
 <div class="container py-5">
-    <h3 class="animated flipInX font-weight-bold">Research</h3>
+    <h3 class="animated flipInX font-weight-bold">Research Publications</h3>
+    <div class="row year-content">
+        <div class="p-4 p-md-0 mt-3 owl-carousel owl-theme">
+            <div onmouseout="this.classList.remove('bg-green', 'text-white');this.classList.add('bg-white', 'text-dark');" onmouseover="this.classList.add('bg-green', 'text-white'); this.classList.remove('bg-white', 'text-dark');" class="border year item text-dark p-5">
+                <div class="h-100 w-100 d-flex align-items-center justify-content-center">
+                    <h2 class="font-weight-bold">
+                        2020
+                    </h2>
+                </div>
+            </div>
+            <div onmouseout="this.classList.remove('bg-green', 'text-white');this.classList.add('bg-white', 'text-dark');" onmouseover="this.classList.add('bg-green', 'text-white'); this.classList.remove('bg-white', 'text-dark');" class="border year item text-dark p-5">
+                <div class="h-100 w-100 d-flex align-items-center justify-content-center">
+                    <h2 class="font-weight-bold">
+                        2019
+                    </h2>
+                </div>
+            </div>
+            <div onmouseout="this.classList.remove('bg-green', 'text-white');this.classList.add('bg-white', 'text-dark');" onmouseover="this.classList.add('bg-green', 'text-white'); this.classList.remove('bg-white', 'text-dark');" class="border year item text-dark p-5">
+                <div class="h-100 w-100 d-flex align-items-center justify-content-center">
+                    <h2 class="font-weight-bold">
+                        2018
+                    </h2>
+                </div>
+            </div>
+            <div onmouseout="this.classList.remove('bg-green', 'text-white');this.classList.add('bg-white', 'text-dark');" onmouseover="this.classList.add('bg-green', 'text-white'); this.classList.remove('bg-white', 'text-dark');" class="border year item text-dark p-5">
+                <div class="h-100 w-100 d-flex align-items-center justify-content-center">
+                    <h2 class="font-weight-bold">
+                        2017
+                    </h2>
+                </div>
+            </div>
+        </div>
+        <div class="owl-theme">
+            <div class="owl-controls">
+                <div class="custom-nav owl-nav"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container py-5">
     <div class="row main-content">
         <div class="p-4 p-md-0 mt-3 owl-carousel owl-theme">
             {% for option in research_list %}
@@ -72,68 +151,32 @@
         </div>
     </div>
 </div>
-
-<div class="container py-5">
-    <h3 class="animated flipInX font-weight-bold">Research Interests</h3>
-    <div class="list_interest p-4 p-md-0 mt-3 text-center"></div>
-    <p class="mt-5 text-center">
-        For the list of all Research Labs offered by Department of Human-Centered Design at IIIT-Delhi <a class="text-primary" href="/research-labs">click here</a>.
-    </p>
-</div>
-
 {% endblock %}
 {% block scripts %}
 <script>
     $(document).ready(function(){
-
-        let interests_list= [
-            {
-                'value': 'Maker-Oriented Learning'
-            },
-            {
-                'value': 'HCI'
-            },
-            {
-                'value': 'Wearable Computing'
-            },
-            {
-                'value': 'Interactive Product Design'
-            },
-            {
-                'value': 'Operating Systems'
-            },
-            {
-                'value': 'Computer Networks'
-            },
-            {
-                'value': 'Mobile Computing'
-            },
-            {
-                'value': 'Deep learning-based multimedia systems'
-            },
-            {
-                'value': 'Communication design'
-            },
-            {
-                'value': 'Human Aspects of Software Engineering'
-            },
-            {
-                'value': 'Intertemporal Preferences in Technical Debt'
-            },
-            {
-                'value': 'Animation Film Making'
-            },
-            {
-                'value': 'Gaming, Concept Arts'
-            },
-            {
-                'value': 'Cyberbullying, social and emotional well-being, and implementation science, etc.'
-            },
-        ];
-
-        for(let i in interests_list) 
-            $(".list_interest").append('<b onmouseout="this.classList.remove('+"'bg-green', 'text-white'"+');this.classList.add('+"'bg-white', 'text-dark'"+');" onmouseover="this.classList.add('+"'bg-green', 'text-white'"+');this.classList.remove('+"'bg-white', 'text-dark'"+');" class="hover-cursor btn btn-lg rounded-0 text-dark bg-white shadow-sm mt-3 ml-3" style="border: solid 1px rgba(0, 0, 0, 0.096);">'+interests_list[i].value+'</b>');  
-
+        $('.year-content .owl-carousel').owlCarousel({
+            items:4,
+            //center: true,
+            lazyLoad:true,
+            loop:true,
+            margin: 1,
+            dots: false,
+            nav: true,
+            navText: ['<svg width="30" aria-hidden="true" focusable="false" data-prefix="fad" data-icon="chevron-circle-left" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="shadow rounded-pill"><g class="fa-group"><path fill="#ffffff" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm72.5 349.6a23.9 23.9 0 0 1 0 33.9l-17 17a23.9 23.9 0 0 1-33.9 0L142.1 273a24 24 0 0 1 0-34l135.5-135.5a23.9 23.9 0 0 1 33.9 0l17 17a23.9 23.9 0 0 1 0 33.9L226.9 256z" class="fa-white"></path><path fill="#40ADA7" d="M142.1 239l135.5-135.5a23.9 23.9 0 0 1 33.9 0l17 17a23.9 23.9 0 0 1 0 33.9L226.9 256l101.6 101.6a23.9 23.9 0 0 1 0 33.9l-17 17a23.9 23.9 0 0 1-33.9 0L142.1 273a24 24 0 0 1 0-34z"></path></g></svg>', '<svg width="30" aria-hidden="true" focusable="false" data-prefix="fad" data-icon="chevron-circle-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="shadow rounded-pill"><g class="fa-group"><path fill="#ffffff" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm113.9 265L234.4 408.5a23.9 23.9 0 0 1-33.9 0l-17-17a23.9 23.9 0 0 1 0-33.9L285.1 256 183.5 154.4a23.9 23.9 0 0 1 0-33.9l17-17a23.9 23.9 0 0 1 33.9 0L369.9 239a24 24 0 0 1 0 34z"></path><path fill="#40ADA7" d="M369.9 273L234.4 408.5a23.9 23.9 0 0 1-33.9 0l-17-17a23.9 23.9 0 0 1 0-33.9L285.1 256 183.5 154.4a23.9 23.9 0 0 1 0-33.9l17-17a23.9 23.9 0 0 1 33.9 0L369.9 239a24 24 0 0 1 0 34z"></path></g></svg>'],
+            navContainer: '.year-content .custom-nav',
+            responsive:{
+                0:{
+                    items: 1,
+                },
+                900:{
+                    items:3,
+                },
+                1080:{
+                    items:4
+                }
+            }
+        });
         $('.main-content .owl-carousel').owlCarousel({
             items:4,
             //center: true,
@@ -164,7 +207,7 @@
         });
         $(".item").each(function()
         {
-            $(this).height(maxs);
+            if(!($(this).hasClass('year'))) $(this).height(maxs);
         });
         $(".active .item").each(function()
             {

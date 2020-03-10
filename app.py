@@ -14,9 +14,17 @@ app.config['TEMPLATES_AUTO_RELOAD'] = True
 def index():
     return render_template('index.html', menu_value= menuJson)
 
-@app.route("/courses/")
+@app.route("/student-policy/")
+def policy():
+    return render_template('policy.html', menu_value= menuJson)
+
+@app.route("/btech-courses/")
 def courses():
     return render_template('courses.html', menu_value= menuJson, courses_list= courseJson)
+
+@app.route("/research/")
+def research():
+    return render_template('research.html', menu_value= menuJson)
 
 @app.route("/research-publications/")
 def research_publications():

@@ -6,7 +6,7 @@
         <div class="row d-md-flex align-items-center justify-content-center">
             {% for option in students_list %}
                 <div class="col-12 col-md-4 mt-5 itemlab">
-                    <div onmouseout="this.classList.remove('shadow_');this.classList.add('shadow');" onmouseover="this.classList.add('shadow_');this.classList.remove('shadow');" class="home_main shadow text-pointer w-100 bg-white h-100 p-5" style="border-style: dashed; border-color: #707070; border-width: 0.02cm; border-radius: 10px;">
+                    <div onmouseout="this.classList.remove('shadow_'); this.classList.add('shadow');" onmouseover="this.classList.add('shadow_');this.classList.remove('shadow');" class="home_main shadow text-pointer w-100 bg-white h-100 p-5 rounded" style="border-style: dashed; border-color: #707070; border-width: 0.02cm;">
                         <div class="d-flex justify-content-center align-items-center" style="height: calc( 100vh /5 );" >
                             <img src="../static/images/faculty/{{option.image}}" style="max-height: 100%; max-width: 100%;">
                         </div>

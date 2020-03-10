@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
-<div class="container">
-    <img src="https://www.iiitd.ac.in/sites/all/themes/impact_theme/images/riise.jpg" class="w-100 h-100">
+<div class="container" style="background: url('https://www.iiitd.ac.in/sites/all/themes/impact_theme/images/riise.jpg'); background-size: cover; background-position: center;">
+    <img src="https://www.iiitd.ac.in/sites/all/themes/impact_theme/images/riise.jpg" style="opacity: 0;" class="w-100 h-100">
 </div>
 <div class="container-fluid bg-white py-5">
     <div class="container">
@@ -48,7 +48,7 @@
                 </div>
             </div>
             <div class="col-12 col-md-4 mt-5 mt-md-0">
-                <div onmouseout="this.classList.remove('shadow_');this.classList.add('shadow');" onmouseover="this.classList.add('shadow_');this.classList.remove('shadow');" class="home_main shadow w-100 bg-white h-100 p-5" style="border-style: dashed; border-color: #707070; border-width: 0.02cm;">
+                <div onmouseout="this.classList.remove('shadow_'); this.classList.add('shadow');" onmouseover="this.classList.add('shadow_');this.classList.remove('shadow');" class="home_main shadow w-100 bg-white h-100 p-5" style="border-style: dashed; border-color: #707070; border-width: 0.02cm;">
                     <div class="d-flex justify-content-center align-items-center">
                         <img src="../static/images/news.svg" style="max-width: 70px;">
                     </div>
@@ -67,7 +67,7 @@
                 </div>
             </div>
             <div class="col-12 col-md-4 mt-5 mt-md-0">
-                <div onmouseout="this.classList.remove('shadow_');this.classList.add('shadow');" onmouseover="this.classList.add('shadow_');this.classList.remove('shadow');" class="home_main shadow w-100 bg-white h-100 p-5" style="border-style: dashed; border-color: #707070; border-width: 0.02cm;">
+                <div onmouseout="this.classList.remove('shadow_'); this.classList.add('shadow');" onmouseover="this.classList.add('shadow_');this.classList.remove('shadow');" class="home_main shadow w-100 bg-white h-100 p-5" style="border-style: dashed; border-color: #707070; border-width: 0.02cm;">
                     <div class="d-flex justify-content-center align-items-center">
                         <img src="../static/images/events.svg" style="max-width: 50px;">
                     </div>
@@ -86,7 +86,7 @@
                 </div>
             </div>
             <div class="col-12 col-md-4 mt-5 mt-md-0">
-                <div onmouseout="this.classList.remove('shadow_');this.classList.add('shadow');" onmouseover="this.classList.add('shadow_');this.classList.remove('shadow');" onmouseover="this.classList.add('shadow_');this.classList.remove('shadow');" class="home_main shadow w-100 bg-white h-100 p-5" style="border-style: dashed; border-color: #707070; border-width: 0.02cm;">
+                <div onmouseout="this.classList.remove('shadow_'); this.classList.add('shadow');" onmouseover="this.classList.add('shadow_');this.classList.remove('shadow');" onmouseover="this.classList.add('shadow_');this.classList.remove('shadow');" class="home_main shadow w-100 bg-white h-100 p-5" style="border-style: dashed; border-color: #707070; border-width: 0.02cm;">
                     <div class="d-flex justify-content-center align-items-center">
                         <img src="../static/images/publications.svg" style="max-width: 50px;">
                     </div>
@@ -109,17 +109,17 @@
 </div>
 {% endblock %}
 {% block scripts %}
-<script type="text/javascript">
-$(".home_submain").toggle();
-function replace(string_home){
-    if(string_home==='news'){ $(".home_submain").toggle(); $(".home_main").toggle();}
-    else if(string_home==='events'){ $(".home_submain").toggle(); $(".home_main").toggle();}
-    else if(string_home==='publications'){ $(".home_submain").toggle(); $(".home_main").toggle();}
-    else if(string_home===''){ $(".home_submain").toggle(); $(".home_main").toggle();}
-    $(".toexpand").height($(".onexpand").height());
-    if(($(".toexpand").is(":visible"))){
-        $('html, body').animate({scrollTop: $('.home_submain').offset().top}, 1000);
-    }
-}
-</script>
+        <script type="text/javascript">
+            $(".home_submain").toggle();
+            function replace(string_home){
+                if(string_home==='news'){ $(".home_submain").toggle(); $(".home_main").toggle();}
+                else if(string_home==='events'){ $(".home_submain").toggle(); $(".home_main").toggle();}
+                else if(string_home==='publications'){ $(".home_submain").toggle(); $(".home_main").toggle();}
+                else if(string_home===''){ $(".home_submain").toggle(); $(".home_main").toggle();}
+                $(".toexpand").height($(".onexpand").height());
+                if(($(".toexpand").is(":visible"))){
+                    $('html, body').animate({scrollTop: $('.home_submain').offset().top}, 1000);
+                }
+            }
+        </script>
 {% endblock %}
