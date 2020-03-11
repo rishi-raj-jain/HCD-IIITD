@@ -100,14 +100,14 @@ facultyJson=[
     {
         'Name': 'Pushpendra Singh',
         'Post': 'Head (HCD), Professor (CSE, HCD)',
-        'Degree': 'PhD, Inria-Rennes, University de Rennes 1, France',
+        'Degree': 'PhD, Inria-Rennes, University de Rennes 1',
         'link': 'https://www.iiitd.ac.in/pushpendra',
         'image': 'Pushpendra-min.jpg'
     },
     {
         'Name': 'Aman Parnami',
         'Post': 'Assistant Professor (HCD)',
-        'Degree': 'PhD, Georgia Institute of Technology, Atlanta',
+        'Degree': 'PhD, Georgia Institute of Technology',
         'link': 'https://www.iiitd.ac.in/aman',
         'image': 'amanparnami-min.jpg'
     },
@@ -142,28 +142,28 @@ facultyJson=[
     {
         'Name': 'Jainendra Shukla',
         'Post': 'Assistant Professor (HCD)',
-        'Degree': 'PhD, Universitat Rovira i Virgili (URV), Spain',
+        'Degree': 'PhD, Universitat Rovira i Virgili (URV)',
         'link': 'https://www.iiitd.ac.in/jainendra',
         'image': 'Jainendra-min.jpg'
     },
     {
         'Name': 'Manohar Khushalani',
         'Post': 'Visiting Faculty (HCD)',
-        'Degree': 'PhD, Universitat Rovira i Virgili (URV), Spain',
+        'Degree': 'PhD, Universitat Rovira i Virgili (URV)',
         'link': 'https://www.iiitd.ac.in/people/visiting-faculty',
         'image': 'Manohar-min.JPG'
     },
     {
         'Name': 'Rahul Mohanani',
         'Post': 'Assistant Professor (CSE, HCD)',
-        'Degree': 'PhD, University of Oulu, Finland',
+        'Degree': 'PhD, University of Oulu',
         'link': 'https://www.iiitd.ac.in/rahulm',
         'image': 'rahulm-min.jpg'
     },
     {
         'Name': 'Rajiv Ratn Shah',
         'Post': 'Assistant Professor (CSE, HCD)',
-        'Degree': 'PhD, National University of Singapore, Singapore',
+        'Degree': 'PhD, National University of Singapore',
         'link': 'https://www.iiitd.ac.in/rajivratn',
         'image': 'Rajiv-min.jpg'
     },
@@ -220,5 +220,60 @@ studentsJSON=[
     {
         'Name': 'Vibha Narula Gupta',
         'image': 'Vibha-min.jpG'
+    },
+]
+
+publicationsJSON= [
+    {
+        'Year_Publication': '20',
+        'List': [
+            {
+                'Owner': 'Mrinmoy Chakrabarty, Makoto Wada',
+                'Text': '"Perceptual effects of fast and automatic visual ensemble statistics from faces in individuals with typical development and autism spectrum conditions", in Scientific Reports, February 2020 [Nature Publishing Group]. (Published)'
+            },
+            {
+                'Owner': 'Mrinmoy Chakrabarty, Makoto Wada',
+                'Text': '"Perceptual effects of fast and automatic visual ensemble statistics from faces in individuals with typical development and autism spectrum conditions", in Scientific Reports, February 2020 [Nature Publishing Group]. (Published)'
+            },
+        ]
+    },
+    {
+        'Year_Publication': '19',
+        'List': [
+            {
+                'Owner': 'Mrinmoy Chakrabarty, Makoto Wada',
+                'Text': '"Perceptual effects of fast and automatic visual ensemble statistics from faces in individuals with typical development and autism spectrum conditions", in Scientific Reports, February 2020 [Nature Publishing Group]. (Published)'
+            },
+            {
+                'Owner': 'Mrinmoy Chakrabarty, Makoto Wada',
+                'Text': '"Perceptual effects of fast and automatic visual ensemble statistics from faces in individuals with typical development and autism spectrum conditions", in Scientific Reports, February 2020 [Nature Publishing Group]. (Published)'
+            },
+        ]
+    },
+    {
+        'Year_Publication': '18',
+        'List': [
+            {
+                'Owner': 'Mrinmoy Chakrabarty, Makoto Wada',
+                'Text': '"Perceptual effects of fast and automatic visual ensemble statistics from faces in individuals with typical development and autism spectrum conditions", in Scientific Reports, February 2020 [Nature Publishing Group]. (Published)'
+            },
+            {
+                'Owner': 'Mrinmoy Chakrabarty, Makoto Wada',
+                'Text': '"Perceptual effects of fast and automatic visual ensemble statistics from faces in individuals with typical development and autism spectrum conditions", in Scientific Reports, February 2020 [Nature Publishing Group]. (Published)'
+            },
+        ]
+    },
+    {
+        'Year_Publication': '17',
+        'List': [
+            {
+                'Owner': 'Mrinmoy Chakrabarty, Makoto Wada',
+                'Text': '"Perceptual effects of fast and automatic visual ensemble statistics from faces in individuals with typical development and autism spectrum conditions", in Scientific Reports, February 2020 [Nature Publishing Group]. (Published)'
+            },
+            {
+                'Owner': 'Mrinmoy Chakrabarty, Makoto Wada',
+                'Text': '"Perceptual effects of fast and automatic visual ensemble statistics from faces in individuals with typical development and autism spectrum conditions", in Scientific Reports, February 2020 [Nature Publishing Group]. (Published)'
+            },
+        ]
     },
 ]

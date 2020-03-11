@@ -13,7 +13,7 @@ menuJson=[{
     },
     {
         'categories': 'Research',
-        'link': './research-publications',
+        'link': './research',
         'number': '2',
         'sub_menu': [
             {

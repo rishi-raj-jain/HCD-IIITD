@@ -2,17 +2,17 @@
 {% block content %}
 <div class="container py-5 bg-white">
     <h3 class="animated flipInX font-weight-bold">Faculty</h3>
-    <div class="p-4 p-md-0 mt-3">
-        <div class="row d-md-flex align-items-center justify-content-center">
+    <div class="p-4 p-md-0">
+        <div class="row d-md-flex align-items-center justify-content-start mt-4">
             {% for option_1 in faculty_list %}
                 {% if 'Pushpendra' in option_1.Name %}
-                <div class="col-12 col-md-4 mt-5 itemlab">
-                    <a href="{{option_1.link}}">
-                        <div onmouseout="this.classList.remove('shadow_'); this.classList.add('shadow');" onmouseover="this.classList.add('shadow_');this.classList.remove('shadow');" class="home_main shadow text-pointer w-100 bg-white h-100 p-3 rounded" style="border-style: dashed; border-color: #707070; border-width: 0.02cm;">
+                <div class="col-12 col-md-4 itemlab">
+                    <a target="_blank" href="{{option_1.link}}">
+                        <div onmouseout="this.classList.remove('shadow_'); this.classList.add('shadow');" onmouseover="this.classList.add('shadow_');this.classList.remove('shadow');" class="home_main shadow text-pointer w-100 bg-white h-100 p-3 rounded">
                             <div class="d-flex justify-content-center align-items-center" style="height: calc( 100vh /5 );" >
                                 <img src="../static/images/faculty/{{option_1.image}}" style="max-height: 100%; max-width: 100%;">
                             </div>
-                            <div class="mt-5 row-content text-center">
+                            <div class="mt-4 row-content text-center">
                                 <h4 class="font-weight-bolder mt-3 gara-proreg text-dark" >{{option_1.Name}}</h4>
                                 <h6 class="font-weight-bold text-dark">{{option_1.Post}}</h6>
                                 <p class="mt-3 gara-proreg ellipis-3 text-dark">
@@ -25,16 +25,16 @@
                 {% endif %}
             {% endfor %}
         </div>
-        <div class="row d-md-flex align-items-center justify-content-center">
+        <div class="row d-md-flex align-items-center justify-content-start">
             {% for option in faculty_list %}
                 {% if 'Pushpendra' not in option.Name  %}
-                    <div class="col-12 col-md-4 mt-5 itemlab">
-                        <a href="{{option.link}}">
-                            <div onmouseout="this.classList.remove('shadow_'); this.classList.add('shadow');" onmouseover="this.classList.add('shadow_');this.classList.remove('shadow');" class="home_main shadow text-pointer w-100 bg-white h-100 p-3 rounded" style="border-style: dashed; border-color: #707070; border-width: 0.02cm;">
+                    <div class="col-12 col-md-4 mt-3 itemlab">
+                        <a target="_blank" href="{{option.link}}">
+                            <div onmouseout="this.classList.remove('shadow_'); this.classList.add('shadow');" onmouseover="this.classList.add('shadow_');this.classList.remove('shadow');" class="home_main shadow text-pointer w-100 bg-white h-100 p-3 rounded">
                                 <div class="d-flex justify-content-center align-items-center" style="height: calc( 100vh /5 );" >
                                     <img src="../static/images/faculty/{{option.image}}" style="max-height: 100%; max-width: 100%;">
                                 </div>
-                                <div class="mt-5 row-content text-center">
+                                <div class="mt-4 row-content text-center">
                                     <h4 class="font-weight-bolder mt-3 gara-proreg text-dark" >{{option.Name}}</h4>
                                     <h6 class="font-weight-bold text-dark">{{option.Post}}</h6>
                                     <p class="mt-3 gara-proreg ellipis-3 text-dark">

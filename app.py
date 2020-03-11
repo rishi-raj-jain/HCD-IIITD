@@ -6,6 +6,7 @@ from research_list import researchJson
 from research_list import facultyJson
 from research_list import labsJSON
 from research_list import studentsJSON
+from research_list import publicationsJSON
 
 app = Flask(__name__)
 app.config['TEMPLATES_AUTO_RELOAD'] = True
@@ -28,7 +29,7 @@ def research():
 
 @app.route("/research-publications/")
 def research_publications():
-    return render_template('research_publications.html', menu_value= menuJson, research_list= researchJson)
+    return render_template('research_publications.html', menu_value= menuJson, research_list= publicationsJSON)
 
 @app.route("/research-labs/")
 def research_labs():
