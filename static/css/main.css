@@ -1,17 +1,17 @@
 /* Add the decaration on top */
-@font-face { 
+/* @font-face { 
     font-family: 'Segoe UI';
     src: url('../fonts/Segoe\ UI.ttf') format('woff');
 }
 @font-face { 
     font-family: 'AGaramondPro-Regular';
     src: url('../fonts/AGaramondPro-Regular.otf') format('woff');
-}
+} */
 *{
-    font-family: 'Segoe UI' !important;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
 }
 .gara-proreg{
-    font-family: 'AGaramondPro-Regular' !important;
+    font-family: 'Segoe UI' !important;
 }
 .font-12{
     font-size: 1.3em !important;

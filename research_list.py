@@ -60,38 +60,38 @@ labsJSON=[{
         'Lab_Location': 'A-102, Research & Development Block, IIITD',
         'Lab_Email': 'abhijeet@iiitd.ac.in',
         'Lab_Description': 'The audio-visual lab has a multi-channel sound driver by Focusrite and 10 speakers with individual control. Multiple projects related to audio space orientation, data sonification and interaction-based sound control have been done here by students. Students have done game development projects where they have placed sonic objects in the environment controlled by the multi-channel expansion which enhances the game experience. The lab can be used for a better experience in Virtual Reality by installing HTC Vive with the sonic architecture. A project called Hand.Cannot. Erase was using Xbox Kinect to track the movement of the hand and convert the position of the hand to the source of the sound making it seem like the user’s hand was the speaker.',
-        'logo': 'dail.png'
+        'logo': 'dail.svg'
     },
     {
         'Lab_Name': 'Computing & Design Lab (CODES Lab)',
         'Lab_Location': 'A-413, Research & Development Block, IIITD',
         'Lab_Email': 'abhijeet@iiitd.ac.in',
         'Lab_Description': 'At the Computing and Design (CODES) lab driven by Prof. Pushpendra Singh, we closely work with field practitioners and NGOs to support, leverage and/or extend Information Communication Technology for the development (ICT4D) of Indian society. We believe that technology as a catalyst has the potential to drive our society towards a better future – at the individual, community, and societal level. \n We primarily work in healthcare and education (both rural and urban settings), with a focus on women’s health and wellbeing. We use qualitative methods to study the context by collecting data through interviews, surveys, focus groups, discourse analysis, and other ethnographic methods. We follow a mix method approach, where we use feminism, culture, gender, or other design lenses to analyse the data, to identify the challenges and opportunities for Information Communication Technology (ICT). Based on our findings, we outline design guidelines, followed by choosing appropriate ICT/s, be it Interactive Voice Response (IVR) system, wearable devices, Internet of Things (IoT), crowdsourcing, Machine Learning (ML), Augmented Reality (AR), Virtual Reality (VR), or Artificial Intelligence (AI). \n Our active projects include training ASHAs in the domain of maternal health, leveraging ICT for menstrual health education, mHealth for managing Schizophrenia, and measuring digital literacy. We believe in working extensively with practitioners of the field. For our current research projects, we are collaborating with premier practitioners like AIIMS, SWACH, SachhiSaheli, Udayan Care, and HAIYYA.',
-        'logo': 'dail.png'
+        'logo': 'dail.svg'
     },{
         'Lab_Name': 'Design & Innovation Lab',
         'Lab_Location': 'B-004, Research & Development Block, IIITD',
         'Lab_Email': 'abhijeet@iiitd.ac.in',
         'Lab_Description': 'The Design & Innovation Lab gives Engineering students majoring in Electronics or IT to explore working with hand and power tools as well as various machines and thus helping them become better-rounded as engineers.',
-        'logo': 'dail.png'
+        'logo': 'dail.svg'
     },{
         'Lab_Name': 'Melange Lab',
         'Lab_Location': 'A-413, Research & Development Block, IIITD',
         'Lab_Email': 'melangelab@outlook.com',
         'Lab_Description': 'We are a group of Dynamic & Socially-committed Researchers working in Public Health & Mobile Computing for Technology based intervention.',
-        'logo': 'melange.png'
+        'logo': 'melange.svg'
     },{
         'Lab_Name': 'MIDAS Lab',
         'Lab_Location': 'A-415, Research & Development Block, IIITD',
         'Lab_Email': 'midas@iiitd.ac.in',
         'Lab_Description': 'MIDAS is a group of researchers at IIIT-Delhi who study, analyze, and build different multimedia systems for society leveraging multimodal information. MIDAS stands for Multimodal Digital Media Analysis Lab. \n MIDAS includes work on: \n · Machine Learning \n · Multimedia Content Processing \n · Natural Language Processing \n · Image Processing \n · Multimodal Computing \n · Data Science \n · Social Media Computing \n · Internet of Things',
-        'logo': 'midas.png'
+        'logo': 'midas.svg'
     },{
         'Lab_Name': 'WEAVE Lab',
         'Lab_Location': 'A-416, Research & Development Block, IIITD',
         'Lab_Email': 'weave-lab-admin@iiitd.ac.in',
         'Lab_Description': 'At Weave Lab we weave interactivity into everyday objects and experiences. We envision as well as discover through critical observations new opportunities for human-computer interactions. Through our extensive research on material and technologies, we prototype manifestations of our ideas, which we then iteratively improve. Our applied research approach interweaves basic research with which we contribute to the advancement of the technologies we leverage.',
-        'logo': 'weave.png'
+        'logo': 'weave.svg'
     }
 ]
 
@@ -102,124 +102,124 @@ facultyJson=[
         'Post': 'Head (HCD), Professor (CSE, HCD)',
         'Degree': 'PhD, Inria-Rennes, University de Rennes 1',
         'link': 'https://www.iiitd.ac.in/pushpendra',
-        'image': 'Pushpendra-min.jpg'
+        'image': 'Pushpendra-min.svg'
     },
     {
         'Name': 'Aman Parnami',
         'Post': 'Assistant Professor (HCD)',
         'Degree': 'PhD, Georgia Institute of Technology',
         'link': 'https://www.iiitd.ac.in/aman',
-        'image': 'amanparnami-min.jpg'
+        'image': 'amanparnami-min.svg'
     },
     {
         'Name': 'Aman Samuel',
         'Post': 'Guest faculty, HCD',
         'Degree': '',
         'link': 'https://www.linkedin.com/in/aman-samuel-b5942a121/?originalSubdomain=in',
-        'image': 'Aman Samuel-min.jpeg'
+        'image': 'Aman Samuel-min.svg'
     },
     {
         'Name': 'Anoop Ratn',
         'Post': 'Visiting faculty, HCD',
         'Degree': '',
         'link': 'https://www.iiitd.ac.in/people/visiting-faculty',
-        'image': 'Anoop-min.JPG'
+        'image': 'Anoop-min.svg'
     },
     {
         'Name': 'Grace Eden',
         'Post': 'Assitant Professor, HCD',
         'Degree': 'DPhil, University of Oxford',
         'link': 'https://www.iiitd.ac.in/grace',
-        'image': 'Grace-min.jpg'
+        'image': 'Grace-min.svg'
     },
     {
         'Name': 'Indrani De Parker',
         'Post': 'Visiting Faculty (HCD)',
         'Degree': '',
         'link': 'https://www.iiitd.ac.in/people/visiting-faculty',
-        'image': 'Indrani-min.JPG'
+        'image': 'Indrani-min.svg'
     },
     {
         'Name': 'Jainendra Shukla',
         'Post': 'Assistant Professor (HCD)',
         'Degree': 'PhD, Universitat Rovira i Virgili (URV)',
         'link': 'https://www.iiitd.ac.in/jainendra',
-        'image': 'Jainendra-min.jpg'
+        'image': 'Jainendra-min.svg'
     },
     {
         'Name': 'Manohar Khushalani',
         'Post': 'Visiting Faculty (HCD)',
         'Degree': 'PhD, Universitat Rovira i Virgili (URV)',
         'link': 'https://www.iiitd.ac.in/people/visiting-faculty',
-        'image': 'Manohar-min.JPG'
+        'image': 'Manohar-min.svg'
     },
     {
         'Name': 'Rahul Mohanani',
         'Post': 'Assistant Professor (CSE, HCD)',
         'Degree': 'PhD, University of Oulu',
         'link': 'https://www.iiitd.ac.in/rahulm',
-        'image': 'rahulm-min.jpg'
+        'image': 'rahulm-min.svg'
     },
     {
         'Name': 'Rajiv Ratn Shah',
         'Post': 'Assistant Professor (CSE, HCD)',
         'Degree': 'PhD, National University of Singapore',
         'link': 'https://www.iiitd.ac.in/rajivratn',
-        'image': 'Rajiv-min.jpg'
+        'image': 'Rajiv-min.svg'
     },
     {
         'Name': 'Vibha Narula Gupta',
         'Post': 'Guest Faculty, HCD',
         'Degree': '',
         'link': 'https://www.iiitd.ac.in/people/visiting-faculty',
-        'image': 'Vibha-min.jpg'
+        'image': 'Vibha-min.svg'
     },
 ]
 
 studentsJSON=[
     {
         'Name': 'Pushpendra Singh',
-        'image': 'Pushpendra-min.jpG'
+        'image': 'Pushpendra-min.svg'
     },
     {
         'Name': 'Aman Parnami',
-        'image': 'amanparnami-min.jpg'
+        'image': 'amanparnami-min.svg'
     },
     {
         'Name': 'Aman Samuel',
-        'image': 'Aman Samuel-min.jpeg'
+        'image': 'Aman Samuel-min.svg'
     },
     {
         'Name': 'Anoop Ratn',
-        'image': 'Anoop-min.jpG'
+        'image': 'Anoop-min.svg'
     },
     {
         'Name': 'Grace Eden',
-        'image': 'Grace-min.jpg'
+        'image': 'Grace-min.svg'
     },
     {
         'Name': 'Indrani De Parker',
-        'image': 'Indrani-min.jpG'
+        'image': 'Indrani-min.svg'
     },
     {
         'Name': 'Jainendra Shukla',
-        'image': 'Jainendra-min.jpG'
+        'image': 'Jainendra-min.svg'
     },
     {
         'Name': 'Manohar Khushalani',
-        'image': 'Manohar-min.jpG'
+        'image': 'Manohar-min.svg'
     },
     {
         'Name': 'Rahul Mohanani',
-        'image': 'rahulm-min.jpg'
+        'image': 'rahulm-min.svg'
     },
     {
         'Name': 'Rajiv Ratn Shah',
-        'image': 'Rajiv-min.jpg'
+        'image': 'Rajiv-min.svg'
     },
     {
         'Name': 'Vibha Narula Gupta',
-        'image': 'Vibha-min.jpG'
+        'image': 'Vibha-min.svg'
     },
 ]
 
