@@ -1,17 +1,17 @@
 /* Add the decaration on top */
-/* @font-face { 
-    font-family: 'Segoe UI';
-    src: url('../fonts/Segoe\ UI.ttf') format('woff');
-}
 @font-face { 
     font-family: 'AGaramondPro-Regular';
-    src: url('../fonts/AGaramondPro-Regular.otf') format('woff');
-} */
+    src: url('../fonts/AGaramondPro-Regular.eot'); /* IE9 Compat Modes */
+    src: 
+       url('../fonts/AGaramondPro-Regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/AGaramondPro-Regular.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../fonts/AGaramondPro-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
 *{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
 }
 .gara-proreg{
-    font-family: 'Segoe UI' !important;
+    font-family: 'AGaramondPro-Regular' !important;
 }
 .font-12{
     font-size: 1.3em !important;
