@@ -63,17 +63,23 @@ labsJSON=[{
         'logo': 'dail.png'
     },
     {
+        'Lab_Name': 'Computing & Design Lab (CODES Lab)',
+        'Lab_Location': 'A-413, Research & Development Block, IIITD',
+        'Lab_Email': 'abhijeet@iiitd.ac.in',
+        'Lab_Description': 'At the Computing and Design (CODES) lab driven by Prof. Pushpendra Singh, we closely work with field practitioners and NGOs to support, leverage and/or extend Information Communication Technology for the development (ICT4D) of Indian society. We believe that technology as a catalyst has the potential to drive our society towards a better future – at the individual, community, and societal level. \n We primarily work in healthcare and education (both rural and urban settings), with a focus on women’s health and wellbeing. We use qualitative methods to study the context by collecting data through interviews, surveys, focus groups, discourse analysis, and other ethnographic methods. We follow a mix method approach, where we use feminism, culture, gender, or other design lenses to analyse the data, to identify the challenges and opportunities for Information Communication Technology (ICT). Based on our findings, we outline design guidelines, followed by choosing appropriate ICT/s, be it Interactive Voice Response (IVR) system, wearable devices, Internet of Things (IoT), crowdsourcing, Machine Learning (ML), Augmented Reality (AR), Virtual Reality (VR), or Artificial Intelligence (AI). \n Our active projects include training ASHAs in the domain of maternal health, leveraging ICT for menstrual health education, mHealth for managing Schizophrenia, and measuring digital literacy. We believe in working extensively with practitioners of the field. For our current research projects, we are collaborating with premier practitioners like AIIMS, SWACH, SachhiSaheli, Udayan Care, and HAIYYA.',
+        'logo': 'dail.png'
+    },{
         'Lab_Name': 'Design & Innovation Lab',
         'Lab_Location': 'B-004, Research & Development Block, IIITD',
         'Lab_Email': 'abhijeet@iiitd.ac.in',
         'Lab_Description': 'The Design & Innovation Lab gives Engineering students majoring in Electronics or IT to explore working with hand and power tools as well as various machines and thus helping them become better-rounded as engineers.',
         'logo': 'dail.png'
     },{
-        'Lab_Name': 'Computing & Design Lab (CODES Lab)',
+        'Lab_Name': 'Melange Lab',
         'Lab_Location': 'A-413, Research & Development Block, IIITD',
-        'Lab_Email': 'abhijeet@iiitd.ac.in',
-        'Lab_Description': 'At the Computing and Design (CODES) lab driven by Prof. Pushpendra Singh, we closely work with field practitioners and NGOs to support, leverage and/or extend Information Communication Technology for the development (ICT4D) of Indian society. We believe that technology as a catalyst has the potential to drive our society towards a better future – at the individual, community, and societal level. \n We primarily work in healthcare and education (both rural and urban settings), with a focus on women’s health and wellbeing. We use qualitative methods to study the context by collecting data through interviews, surveys, focus groups, discourse analysis, and other ethnographic methods. We follow a mix method approach, where we use feminism, culture, gender, or other design lenses to analyse the data, to identify the challenges and opportunities for Information Communication Technology (ICT). Based on our findings, we outline design guidelines, followed by choosing appropriate ICT/s, be it Interactive Voice Response (IVR) system, wearable devices, Internet of Things (IoT), crowdsourcing, Machine Learning (ML), Augmented Reality (AR), Virtual Reality (VR), or Artificial Intelligence (AI). \n Our active projects include training ASHAs in the domain of maternal health, leveraging ICT for menstrual health education, mHealth for managing Schizophrenia, and measuring digital literacy. We believe in working extensively with practitioners of the field. For our current research projects, we are collaborating with premier practitioners like AIIMS, SWACH, SachhiSaheli, Udayan Care, and HAIYYA.',
-        'logo': 'dail.png'
+        'Lab_Email': 'melangelab@outlook.com',
+        'Lab_Description': 'We are a group of Dynamic & Socially-committed Researchers working in Public Health & Mobile Computing for Technology based intervention.',
+        'logo': 'melange.png'
     },{
         'Lab_Name': 'MIDAS Lab',
         'Lab_Location': 'A-415, Research & Development Block, IIITD',
@@ -86,12 +92,6 @@ labsJSON=[{
         'Lab_Email': 'weave-lab-admin@iiitd.ac.in',
         'Lab_Description': 'At Weave Lab we weave interactivity into everyday objects and experiences. We envision as well as discover through critical observations new opportunities for human-computer interactions. Through our extensive research on material and technologies, we prototype manifestations of our ideas, which we then iteratively improve. Our applied research approach interweaves basic research with which we contribute to the advancement of the technologies we leverage.',
         'logo': 'weave.png'
-    },{
-        'Lab_Name': 'Melange Lab',
-        'Lab_Location': 'A-413, Research & Development Block, IIITD',
-        'Lab_Email': 'melangelab@outlook.com',
-        'Lab_Description': 'We are a group of Dynamic & Socially-committed Researchers working in Public Health & Mobile Computing for Technology based intervention.',
-        'logo': 'melange.png'
     }
 ]
 

@@ -72,3 +72,6 @@
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 4; /* number of lines to show */
 }
+.container{
+    max-width: 1400px !important;
+}

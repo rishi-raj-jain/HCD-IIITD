@@ -23,6 +23,10 @@ def policy():
 def courses():
     return render_template('courses.html', menu_value= menuJson, courses_list= courseJson)
 
+@app.route("/phd/")
+def coursesphd():
+    return render_template('phd.html', menu_value= menuJson)
+
 @app.route("/research/")
 def research():
     return render_template('research.html', menu_value= menuJson)
