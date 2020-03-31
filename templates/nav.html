@@ -4,17 +4,9 @@
         <div class="d-flex align-items-center justify-content-between">
             <a href="/"><img src="../static/images/logoleft.svg" style="height: 50px;" alt="Indraprastha Institute Of Information Technology, Delhi"><img class="ml-2" src="../static/images/logo-white.svg" style="width: 100px;" alt="Human Centered Design"></a>
             <div class="d-flex">
-                {% for option in menu_value %}
-                    {% if 'Research' in option.categories  %}
-                        <a href=".{{option.link}}/" class="text-pointer px-3 d-none d-md-block text-white font-12">{{option.categories}}</a>
-                    {% endif %}
-                    {% if 'People' in option.categories  %}
-                        <a href=".{{option.link}}/" class="text-pointer px-3 d-none d-md-block text-white font-12">{{option.categories}}</a>
-                    {% endif %}
-                    {% if 'Academics' in option.categories  %}
-                        <a href=".{{option.link}}/" class="text-pointer px-3 d-none d-md-block text-white font-12">{{option.categories}}</a>
-                    {% endif %}
-                {% endfor %}
+                <a href="../academics/" class="text-pointer px-3 d-none d-md-block text-white font-12">Academics</a>    
+                <a href="../research/" class="text-pointer px-3 d-none d-md-block text-white font-12">Research</a>
+                <a href="../btech-courses/" class="text-pointer px-3 d-none d-md-block text-white font-12">Courses</a>
             </div>
             <a class="d-md-block d-none mb-2" id="search" onmouseover="this.style.cursor='pointer'">
                 <div class="d-flex rounded input" style="position: relative;">
@@ -56,29 +48,21 @@
             </div>
             <div class="col-12 col-sm-4 col-lg-3 py-1 mt-3 mt-sm-0 rounded" style="background-color: #E1E1E1;">
                 <ul class="list-unstyled py-2 text-center">
-                    {% for option in menu_value %}
-                        {% if 'Research' in option.categories  %}
-                        <li class="mt-3"> 
-                            <button onclick="location.href='.{{option.link}}/';" class="menu-option-{{option.number}} btn btn-block btn-white btn-lg text-pointer rounded">
-                                {{option.categories}}
-                            </button>
-                        </li>
-                        {% endif %}
-                        {% if 'People' in option.categories  %}
-                        <li class="mt-3"> 
-                            <button onclick="location.href='.{{option.link}}/';" class="menu-option-{{option.number}} btn btn-block btn-white btn-lg text-pointer rounded">
-                                {{option.categories}}
-                            </button>
-                        </li>
-                        {% endif %}
-                        {% if 'Academics' in option.categories  %}
-                        <li class="mt-3"> 
-                            <button onclick="location.href='.{{option.link}}/';" class="menu-option-{{option.number}} btn btn-block btn-white btn-lg text-pointer rounded">
-                                {{option.categories}}
-                            </button>
-                        </li>
-                        {% endif %}
-                    {% endfor %}
+                    <li class="mt-3"> 
+                        <button onclick="location.href='../academics/';" class="menu-option-1 btn btn-block btn-white btn-lg text-pointer rounded">
+                            Academics
+                        </button>
+                    </li>
+                    <li class="mt-3"> 
+                        <button onclick="location.href='../research/';" class="menu-option-2 btn btn-block btn-white btn-lg text-pointer rounded">
+                            Research
+                        </button>
+                    </li>
+                    <li class="mt-3"> 
+                        <button onclick="location.href='../faculty/';" class="menu-option-3 btn btn-block btn-white btn-lg text-pointer rounded">
+                            People
+                        </button>
+                    </li>
                 </ul>
                 <ul class="p-0 d-flex text-center align-items-end flex-column h-100 mt-2 mb-0" style="list-style: none;">
                     <li class="w-100">Follow Us</li>

@@ -22,22 +22,22 @@
     <div class="container mb-5">
         <div class="row">
             <div class="home_submain animated fadeIn col-12 mt-5 mt-md-0">
-                <div onmouseover="this.style.cursor='pointer'" class="shadow w-100 h-100 bg-light p-5" style="border-style: dashed; border-color: #707070;">
+                <div onmouseover="this.style.cursor='pointer'" class="shadow w-100 h-100 p-5" style="border-style: dashed; border-color: #707070; border-width: 0.02cm;">
                     <div class="row">
                         <div class="onexpand col-12 col-md-4">
                             <div class="d-flex justify-content-center align-items-start">
-                                <img src="../static/images/news.svg" style="max-width: 70px;">
+                                <img id='expanded_image' src="../static/images/news.svg" style="max-width: 70px;">
                             </div>
                             <div class="row-content text-center">
-                                <h4 class="mt-3">News</h4>
-                                <p class="mt-1">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua</p>
+                                <h4 id="expanded_header" class="mt-3">News</h4>
+                                <p id="expanded_text_left" class="mt-1">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua</p>
                             </div>
                             <div onclick="replace('')" class="d-flex justify-content-center align-items-center">
                                 <button class="border btn btn-lg bg-white text-dark">Back</button>
                             </div>
                         </div>
                         <div class="col-12 col-md-8 toexpand" style="overflow: scroll;">
-                            <div class="row-content text-center">
+                            <div id="expanded_text_main" class="row-content text-center">
                                 <h5 class="mt-1 gara-proreg">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua</h5>
                                 <h5 class="mt-1 gara-proreg">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua</h5>
                                 <h5 class="mt-1 gara-proreg">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua</h5>
@@ -58,7 +58,7 @@
                             In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Wikipedia
                         </p>
                     </div>
-                    <div onclick="replace('events')" class="d-flex justify-content-center align-items-center">
+                    <div onclick="replace('news')" class="d-flex justify-content-center align-items-center">
                         <button class="rounded-0 text-dark btn bg-white">
                             Open
                             <svg class="bi bi-arrow-right" fill="currentColor" height="2em" viewBox="0 0 20 20" width="2em" xmlns="http://www.w3.org/2000/svg"><path _ngcontent-c1="" clip-rule="evenodd" d="M12.146 6.646a.5.5 0 01.708 0l3 3a.5.5 0 010 .708l-3 3a.5.5 0 01-.708-.708L14.793 10l-2.647-2.646a.5.5 0 010-.708z" fill-rule="evenodd"></path><path  clip-rule="evenodd" d="M4 10a.5.5 0 01.5-.5H15a.5.5 0 010 1H4.5A.5.5 0 014 10z" fill-rule="evenodd"></path></svg>
@@ -96,7 +96,7 @@
                             In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Wikipedia
                         </p>
                     </div>
-                    <div onclick="replace('events')" class="d-flex justify-content-center align-items-center">
+                    <div onclick="replace('publications')" class="d-flex justify-content-center align-items-center">
                         <button class="rounded-0 text-dark btn bg-white">
                             Open
                             <svg class="bi bi-arrow-right" fill="currentColor" height="2em" viewBox="0 0 20 20" width="2em" xmlns="http://www.w3.org/2000/svg"><path _ngcontent-c1="" clip-rule="evenodd" d="M12.146 6.646a.5.5 0 01.708 0l3 3a.5.5 0 010 .708l-3 3a.5.5 0 01-.708-.708L14.793 10l-2.647-2.646a.5.5 0 010-.708z" fill-rule="evenodd"></path><path  clip-rule="evenodd" d="M4 10a.5.5 0 01.5-.5H15a.5.5 0 010 1H4.5A.5.5 0 014 10z" fill-rule="evenodd"></path></svg>
@@ -112,14 +112,25 @@
         <script type="text/javascript">
             $(".home_submain").toggle();
             function replace(string_home){
-                if(string_home==='news'){ $(".home_submain").toggle(); $(".home_main").toggle();}
-                else if(string_home==='events'){ $(".home_submain").toggle(); $(".home_main").toggle();}
-                else if(string_home==='publications'){ $(".home_submain").toggle(); $(".home_main").toggle();}
-                else if(string_home===''){ $(".home_submain").toggle(); $(".home_main").toggle();}
+                $(".home_submain").toggle(); $(".home_main").toggle();
+                if(string_home==='news'){
+                    handle_change('Latest News', 'news.svg', '\n\n\n\n');
+                }
+                else if(string_home==='events'){ 
+                    handle_change('Upcoming Events', 'events.svg', '\n\n\n\n');
+                }
+                else if(string_home==='publications'){ 
+                    handle_change('Recent Publications', 'publications.svg', '\n\n\n\n');
+                }
                 $(".toexpand").height($(".onexpand").height());
                 if(($(".toexpand").is(":visible"))){
                     $('html, body').animate({scrollTop: $('.home_submain').offset().top}, 1000);
                 }
+            }
+            function handle_change(header, imageSrc, leftText){
+                $('#expanded_header').text(header); 
+                $('#expanded_image').attr('src', '../static/images/'+imageSrc+'');
+                $('#expanded_text_left').text(leftText);
             }
         </script>
 {% endblock %}
