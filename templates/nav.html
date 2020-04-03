@@ -10,14 +10,14 @@
             </div>
             <a class="d-md-block d-none mb-2" id="search" onmouseover="this.style.cursor='pointer'">
                 <div class="d-flex rounded input" style="position: relative;">
-                    <form style="margin:0px; margin-top:4px; width: 300px;" action="https://search.freefind.com/find.html" method="get" accept-charset="utf-8" target="_self">
+                    <form aria-label="Desktop Search" style="margin:0px; margin-top:4px; width: 300px;" action="https://search.freefind.com/find.html" method="get" accept-charset="utf-8" target="_self">
                         <input type="hidden" name="si" value="10569528">
                         <input type="hidden" name="pid" value="r">
                         <input type="hidden" name="n" value="0">
                         <input type="hidden" name="_charset_" value="">
                         <input type="hidden" name="bcd" value="&#247;">
-                        <input class="animated fadeIn faster shadow btn btn-lg btn-white bg-white rounded no-transform text-gray w-100" type="text" name="query" placeholder="Search">
-                        <input class="d-none" type="submit" value="search" id="tosearch">
+                        <input aria-label="Search Desktop" class="animated fadeIn faster shadow btn btn-lg btn-white bg-white rounded no-transform text-gray w-100" type="text" name="query" placeholder="Search">
+                        <input class="d-none" type="submit" value="search" id="tosearch_desktop">
                     </form>
                     <img src="../static/images/search.svg" height="30px" style="margin-top: 0.8em; position: absolute; left: 10px;" alt="Search Bar">
                 </div>
@@ -40,7 +40,7 @@
                             <input type="hidden" name="_charset_" value="">
                             <input type="hidden" name="bcd" value="&#247;">
                             <input class="animated fadeIn faster shadow btn btn-lg btn-white bg-white no-transform text-gray w-100 rounded" type="text" name="query" placeholder="Search">
-                            <input class="d-none" type="submit" value="search" id="tosearch">
+                            <input class="d-none" type="submit" value="search" id="tosearch_mobile">
                         </form>
                         <img src="../static/images/search.svg" height="30px" style="margin-top: 0.8em; position: absolute; left: 10px;" alt="Search Bar">
                     </div>
@@ -67,13 +67,13 @@
                 <ul class="p-0 d-flex text-center align-items-end flex-column h-100 mt-2 mb-0" style="list-style: none;">
                     <li class="w-100">Follow Us</li>
                     <li class="w-100 mt-1">
-                        <a href="https://twitter.com/hcdiiitd" class="text-decoration-none" target="_blank">
+                        <a rel='noopener' href="https://twitter.com/hcdiiitd" class="text-decoration-none" target="_blank">
                             <img src="../static/images/twitter_svg.svg" height="40">
                         </a>
-                        <a href="https://www.facebook.com/hcdzine" class="text-decoration-none" target="_blank">
+                        <a rel='noopener' href="https://www.facebook.com/hcdzine" class="text-decoration-none" target="_blank">
                             <img src="../static/images/facebook_hcd.svg" height="40">
                         </a>
-                        <a href="https://www.linkedin.com/in/human-centered-design-hcd-43b3a7180/" class="text-decoration-none" target="_blank">
+                        <a rel='noopener' href="https://www.linkedin.com/in/human-centered-design-hcd-43b3a7180/" class="text-decoration-none" target="_blank">
                             <img src="../static/images/linkedin_hcd.svg" height="40">
                         </a>
                     </li>

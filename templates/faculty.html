@@ -5,12 +5,12 @@
     <div class="p-4 p-md-0">
         <div class="row d-md-flex align-items-center justify-content-start mt-4">
             {% for option_1 in faculty_list %}
-                {% if 'Pushpendra' in option_1.Name %}
+                {% if 'Parnami' in option_1.Name %}
                 <div class="col-12 col-md-4 itemlab">
-                    <a target="_blank" href="{{option_1.link}}">
+                    <a rel='noopener' target="_blank" href="{{option_1.link}}">
                         <div onmouseout="this.classList.remove('shadow_'); this.classList.add('shadow');" onmouseover="this.classList.add('shadow_');this.classList.remove('shadow');" class="home_main shadow text-pointer w-100 bg-white h-100 p-3 rounded">
                             <div class="d-flex justify-content-center align-items-center" style="height: calc( 100vh /5 );" >
-                                <img class="rounded-circle" src='' data-src="../static/images/faculty/{{option_1.image}}" style="max-height: 100%; max-width: 100%;">
+                                <img alt="{{option_1.image.split('.')[0]}}" class="rounded-circle" src='' data-src="../static/images/faculty/{{option_1.image}}" style="max-height: 100%; max-width: 100%;">
                             </div>
                             <div class="mt-4 row-content text-center">
                                 <h4 class="font-weight-bolder mt-3 gara-proreg text-dark" >{{option_1.Name}}</h4>
@@ -27,12 +27,12 @@
         </div>
         <div class="row d-md-flex align-items-center justify-content-start">
             {% for option in faculty_list %}
-                {% if 'Pushpendra' not in option.Name  %}
+                {% if 'Parnami' not in option.Name  %}
                     <div class="col-12 col-md-4 mt-3 itemlab">
-                        <a target="_blank" href="{{option.link}}">
+                        <a rel='noopener' target="_blank" href="{{option.link}}">
                             <div onmouseout="this.classList.remove('shadow_'); this.classList.add('shadow');" onmouseover="this.classList.add('shadow_');this.classList.remove('shadow');" class="home_main shadow text-pointer w-100 bg-white h-100 p-3 rounded">
                                 <div class="d-flex justify-content-center align-items-center" style="height: calc( 100vh /5 );" >
-                                    <img class="rounded-circle" src='' data-src="../static/images/faculty/{{option.image}}" style="max-height: 100%; max-width: 100%;">
+                                    <img alt="{{option.image.split('.')[0]}}" class="rounded-circle" src='' data-src="../static/images/faculty/{{option.image}}" style="max-height: 100%; max-width: 100%;">
                                 </div>
                                 <div class="mt-4 row-content text-center">
                                     <h4 class="font-weight-bolder mt-3 gara-proreg text-dark" >{{option.Name}}</h4>

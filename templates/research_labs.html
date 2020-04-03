@@ -5,10 +5,10 @@
     <div class="p-0 p-md-0">
         <div class="mt-0 mt-md-5 row d-md-flex align-items-center justify-content-center">
             {% for option in labs_list %}
-            <div id="{{option.Lab_Name.split(' ')[0]}}" class="col-12 col-md-4 itemlab mt-5 mt-md-{{option.spacing}}">
+            <div id="{{option.Lab_Name.split(' ')[0]}}" class="col-12 col-sm-6 col-md-4 itemlab mt-5 mt-md-{{option.spacing}}">
                 <div onmouseout="this.classList.remove('shadow_'); this.classList.add('shadow');" onmouseover="this.classList.add('shadow_');this.classList.remove('shadow');" class="rounded home_main shadow w-100 bg-white h-100 p-5" style="border-style: dashed; border-color: #707070; border-width: 0.02cm;">
                     <div class="d-flex justify-content-center align-items-center" style="height: calc( 100vh /5 );" >
-                        <img onerror="this.src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJcAAABkCAMAAAC8R1L8AAAAA1BMVEX///+nxBvIAAAAJUlEQVRoge3BAQEAAACCIP+vbkhAAQAAAAAAAAAAAAAAAADAjwE7YAAB7XL0DwAAAABJRU5ErkJggg=='" src="../static/images/logos/{{option.logo}}" style="max-height: 100%; max-width: 100%;">
+                        <img alt="{{option.logo.split('.')[0]}}" src="../static/images/logos/{{option.logo}}" style="max-height: 100%; max-width: 100%;">
                     </div>
                     <div class="mt-5 row-content text-center">
                         <h4 class="font-weight-bolder mt-3 gara-proreg">{{option.Lab_Name}}</h4>
@@ -20,7 +20,7 @@
                         </p>
                     </div>
                     <div onclick="replace({{option}})" class="d-flex justify-content-center align-items-center">
-                        <button id="{{option.Lab_Name.split(' ')[0]}}open_button" class="rounded-0 text-dark btn bg-white">
+                        <button id="{{option.Lab_Name.split(' ')[0]}}open_button" class="rounded text-dark btn bg-white">
                             Open
                             <svg class="bi bi-arrow-right" fill="currentColor" height="2em" viewBox="0 0 20 20" width="2em" xmlns="http://www.w3.org/2000/svg"><path _ngcontent-c1="" clip-rule="evenodd" d="M12.146 6.646a.5.5 0 01.708 0l3 3a.5.5 0 010 .708l-3 3a.5.5 0 01-.708-.708L14.793 10l-2.647-2.646a.5.5 0 010-.708z" fill-rule="evenodd"></path><path  clip-rule="evenodd" d="M4 10a.5.5 0 01.5-.5H15a.5.5 0 010 1H4.5A.5.5 0 014 10z" fill-rule="evenodd"></path></svg>
                         </button>
@@ -36,47 +36,47 @@
 <script>
     $(document).ready(function(){
         let maxs= 0;
-        $(".itemlab").each(function()
-        {
-            maxs= Math.max(maxs, $(this).height());
-            //console.log("next <p> element with id: " + maxs);
-        });
-        $(".itemlab").each(function()
-        {
-            $(this).height(maxs);
-        });
+        $(".itemlab").each(function(){ maxs= Math.max(maxs, $(this).height()); });
     });
     let last_lab_touched;
     function replace(a){
-        //console.log(a);
         let response= JSON.parse(JSON.stringify(a));
         $(".itemlab").each(function(){
             $(this).removeClass('col-md-4 col-md-6');
             $(this).addClass('col-md-4');
+            $(this).hide();
         });
         let buttontext= $('#'+response.Lab_Name.split(' ')[0]+'open_button').text().trim().toLowerCase();
-        //console.log(buttontext);
+        $("html, body").animate({ scrollTop: 0 }, "slow");
         if(buttontext==='close'){
+            $(".itemlab").each(function(){
+                $(this).show();
+            });
             $("#"+response.Lab_Name.split(' ')[0]).removeClass('col-md-4 co-md-6');
             $("#"+response.Lab_Name.split(' ')[0]).addClass('col-md-4');
             $("#"+response.Lab_Name.split(' ')[0]+"open_button").html('Open<svg class="bi bi-arrow-right" fill="currentColor" height="2em" viewBox="0 0 20 20" width="2em" xmlns="http://www.w3.org/2000/svg"><path _ngcontent-c1="" clip-rule="evenodd" d="M12.146 6.646a.5.5 0 01.708 0l3 3a.5.5 0 010 .708l-3 3a.5.5 0 01-.708-.708L14.793 10l-2.647-2.646a.5.5 0 010-.708z" fill-rule="evenodd"></path><path  clip-rule="evenodd" d="M4 10a.5.5 0 01.5-.5H15a.5.5 0 010 1H4.5A.5.5 0 014 10z" fill-rule="evenodd"></path></svg>');
-            //console.log('executed');
+            if(!($("#"+response.Lab_Name.split(' ')[0]+"desc_open_more").hasClass('ellipis-3'))){
+                $("#"+response.Lab_Name.split(' ')[0]+"desc_open_more").addClass('ellipis-3');
+            }
         }
         else{
-            //console.log(last_lab_touched);
+            $('#'+response.Lab_Name.split(' ')[0]).show();
             if(response.Lab_Name.split(' ')[0]!==last_lab_touched){
                 $("#"+last_lab_touched+"open_button").html('Open<svg class="bi bi-arrow-right" fill="currentColor" height="2em" viewBox="0 0 20 20" width="2em" xmlns="http://www.w3.org/2000/svg"><path _ngcontent-c1="" clip-rule="evenodd" d="M12.146 6.646a.5.5 0 01.708 0l3 3a.5.5 0 010 .708l-3 3a.5.5 0 01-.708-.708L14.793 10l-2.647-2.646a.5.5 0 010-.708z" fill-rule="evenodd"></path><path  clip-rule="evenodd" d="M4 10a.5.5 0 01.5-.5H15a.5.5 0 010 1H4.5A.5.5 0 014 10z" fill-rule="evenodd"></path></svg>');
+                if(!($("#"+last_lab_touched+"desc_open_more").hasClass('ellipis-3'))){
+                    $("#"+last_lab_touched+"desc_open_more").addClass('ellipis-3');
+                }
             }
             try{
                 last_lab_touched= response.Lab_Name.split(' ')[0];
                 $("#"+response.Lab_Name.split(' ')[0]).removeClass('col-md-4 co-md-6');
                 $("#"+response.Lab_Name.split(' ')[0]).addClass('col-md-6');
-                $("#"+response.Lab_Name.split(' ')[0]+"desc_open_more").text('col-md-6');
+                if($("#"+response.Lab_Name.split(' ')[0]+"desc_open_more").hasClass('ellipis-3')){
+                    $("#"+response.Lab_Name.split(' ')[0]+"desc_open_more").removeClass('ellipis-3');
+                }
                 $("#"+response.Lab_Name.split(' ')[0]+"open_button").html('Close<svg class="bi bi-arrow-right" fill="currentColor" height="2em" viewBox="0 0 20 20" width="2em" xmlns="http://www.w3.org/2000/svg"><path _ngcontent-c1="" clip-rule="evenodd" d="M12.146 6.646a.5.5 0 01.708 0l3 3a.5.5 0 010 .708l-3 3a.5.5 0 01-.708-.708L14.793 10l-2.647-2.646a.5.5 0 010-.708z" fill-rule="evenodd"></path><path  clip-rule="evenodd" d="M4 10a.5.5 0 01.5-.5H15a.5.5 0 010 1H4.5A.5.5 0 014 10z" fill-rule="evenodd"></path></svg>');
             }
-            catch{
-                //console.log('Error');
-            }
+            catch{}
         }
     }
 </script>

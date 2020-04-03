@@ -55,22 +55,15 @@ researchJson=[{
     }
 ]
 
-labsJSON=[{
+labsJSON=[
+    {
         'Lab_Name': 'Audio-Visual Lab',
         'Lab_Location': 'A-102, Research & Development Block, IIITD',
         'Lab_Email': 'abhijeet@iiitd.ac.in',
         'Lab_Description': 'The audio-visual lab has a multi-channel sound driver by Focusrite and 10 speakers with individual control. Multiple projects related to audio space orientation, data sonification and interaction-based sound control have been done here by students. Students have done game development projects where they have placed sonic objects in the environment controlled by the multi-channel expansion which enhances the game experience. The lab can be used for a better experience in Virtual Reality by installing HTC Vive with the sonic architecture. A project called Hand.Cannot. Erase was using Xbox Kinect to track the movement of the hand and convert the position of the hand to the source of the sound making it seem like the user’s hand was the speaker.',
-        'logo': '',
+        'logo': 'audio.svg',
         'spacing': '0'
-    },
-    # {
-    #     'Lab_Name': 'Computing & Design Lab (CODES Lab)',
-    #     'Lab_Location': 'A-413, Research & Development Block, IIITD',
-    #     'Lab_Email': 'abhijeet@iiitd.ac.in',
-    #     'Lab_Description': 'At the Computing and Design (CODES) lab driven by Prof. Pushpendra Singh, we closely work with field practitioners and NGOs to support, leverage and/or extend Information Communication Technology for the development (ICT4D) of Indian society. We believe that technology as a catalyst has the potential to drive our society towards a better future – at the individual, community, and societal level. \n We primarily work in healthcare and education (both rural and urban settings), with a focus on women’s health and wellbeing. We use qualitative methods to study the context by collecting data through interviews, surveys, focus groups, discourse analysis, and other ethnographic methods. We follow a mix method approach, where we use feminism, culture, gender, or other design lenses to analyse the data, to identify the challenges and opportunities for Information Communication Technology (ICT). Based on our findings, we outline design guidelines, followed by choosing appropriate ICT/s, be it Interactive Voice Response (IVR) system, wearable devices, Internet of Things (IoT), crowdsourcing, Machine Learning (ML), Augmented Reality (AR), Virtual Reality (VR), or Artificial Intelligence (AI). \n Our active projects include training ASHAs in the domain of maternal health, leveraging ICT for menstrual health education, mHealth for managing Schizophrenia, and measuring digital literacy. We believe in working extensively with practitioners of the field. For our current research projects, we are collaborating with premier practitioners like AIIMS, SWACH, SachhiSaheli, Udayan Care, and HAIYYA.',
-    #     'logo': 'dail.svg'
-    # },
-    {
+    },{
         'Lab_Name': 'Design & Innovation Lab',
         'Lab_Location': 'B-004, Research & Development Block, IIITD',
         'Lab_Email': 'abhijeet@iiitd.ac.in',
@@ -108,18 +101,17 @@ labsJSON=[{
     }
 ]
 
-
 facultyJson=[
     {
         'Name': 'Pushpendra Singh',
-        'Post': 'Head (HCD), Professor (CSE, HCD)',
+        'Post': 'Professor (CSE, HCD)',
         'Degree': 'PhD, Inria-Rennes, University de Rennes 1',
         'link': 'https://www.iiitd.ac.in/pushpendra',
         'image': 'Pushpendra-min.svg'
     },
     {
         'Name': 'Aman Parnami',
-        'Post': 'Assistant Professor (HCD)',
+        'Post': 'Head (HCD), Assistant Professor (HCD)',
         'Degree': 'PhD, Georgia Institute of Technology',
         'link': 'https://www.iiitd.ac.in/aman',
         'image': 'amanparnami-min.svg'
