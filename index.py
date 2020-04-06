@@ -1,14 +1,22 @@
-from flask import Flask, render_template, request, jsonify, abort
 from hcd_menu import menuJson
 from course_list import courseJson
-from research_list import researchJson
-from research_list import facultyJson
 from research_list import labsJSON
+from research_list import facultyJson
+from research_list import researchJson
 from research_list import studentsJSON
 from research_list import publicationsJSON
+from flask import Flask, render_template, request, jsonify, abort
 
 app = Flask(__name__)
 app.config['TEMPLATES_AUTO_RELOAD'] = True
+
+@app.before_request
+def clear_trailing():
+    from flask import redirect, request
+    rp = request.path
+    check_url= str(rp)
+    if rp != '/' and check_url.find('svg')!=-1 and check_url.find('png')!=-1 and check_url.find('jpg')!=-1: 
+        return redirect(rp+'/')
 
 @app.route("/")
 def index():
@@ -53,6 +61,14 @@ def students():
 @app.errorhandler(404)
 def page_not_found(e):
     return render_template('404.html', menu_value= menuJson), 404
+
+@app.route("/sitemap.xml/")
+def sitemap():
+    return render_template('sitemap.xml')
+
+@app.route("/robots.txt/")
+def toboots():
+    return render_template('robots.txt')
 
 if __name__ == "__main__":
     app.run(debug= True, port= 4000)

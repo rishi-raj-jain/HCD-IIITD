@@ -8,7 +8,7 @@
                 <a href="../research/" class="text-pointer px-3 d-none d-md-block text-white font-12">Research</a>
                 <a href="../btech-courses/" class="text-pointer px-3 d-none d-md-block text-white font-12">Courses</a>
             </div>
-            <a class="d-md-block d-none mb-2" id="search" onmouseover="this.style.cursor='pointer'">
+            <a class="d-lg-block d-none mb-2" id="search" onmouseover="this.style.cursor='pointer'">
                 <div class="d-flex rounded input" style="position: relative;">
                     <form aria-label="Desktop Search" style="margin:0px; margin-top:4px; width: 300px;" action="https://search.freefind.com/find.html" method="get" accept-charset="utf-8" target="_self">
                         <input type="hidden" name="si" value="10569528">
@@ -25,13 +25,12 @@
             <a onclick="togglemenu('null')" class="d-md-none" onmouseover="this.style.cursor='pointer'">
                 <img id="nav_menu" src="../static/images/menu.svg" height="35px" alt="Navigation Menu">
             </a>
-            </ul>
         </div>
     </div>
-    <div id="menu" class="animated fadeIn faster container-fluid px-5 py-2" style="position: absolute; top: 70px; overflow: scroll;background: black;">
+    <div id="menu" class="animated fadeIn faster container-fluid px-5 py-2" style="position: absolute; top: 70px; overflow: scroll; background: #E1E1E1;">
         <div class="row">
-            <div class="col-12 mt-3 d-md-none text-center bg-white rounded">
-                <div class="row py-2" style="background: black;">
+            <div class="col-12 mt-3 d-lg-none text-center rounded">
+                <div class="row py-2">
                     <div class="d-flex rounded input w-100" style="position: relative;">
                         <form style="margin:0px; margin-top:4px; width: 100%;" action="https://search.freefind.com/find.html" method="get" accept-charset="utf-8" target="_self">
                             <input type="hidden" name="si" value="10569528">
@@ -39,28 +38,28 @@
                             <input type="hidden" name="n" value="0">
                             <input type="hidden" name="_charset_" value="">
                             <input type="hidden" name="bcd" value="&#247;">
-                            <input class="animated fadeIn faster shadow btn btn-lg btn-white bg-white no-transform text-gray w-100 rounded" type="text" name="query" placeholder="Search">
+                            <input class="animated fadeIn faster shadow btn btn-lg btn-white bg-white no-transform text-gray w-100" style="border-radius: 15px;" type="text" name="query" placeholder="Search">
                             <input class="d-none" type="submit" value="search" id="tosearch_mobile">
                         </form>
                         <img src="../static/images/search.svg" height="30px" style="margin-top: 0.8em; position: absolute; left: 10px;" alt="Search Bar">
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-sm-4 col-lg-3 py-1 mt-3 mt-sm-0 rounded" style="background-color: #E1E1E1;">
-                <ul class="list-unstyled py-2 text-center">
-                    <li class="mt-3"> 
+            <div class="col-12 col-sm-4 col-lg-3 mt-3 mt-sm-0 rounded" style="background-color: #E1E1E1;">
+                <ul class="list-unstyled pb-2 text-center">
+                    <li class=""> 
                         <button onclick="location.href='../academics/';" class="menu-option-1 btn btn-block btn-white btn-lg text-pointer rounded">
-                            Academics
+                            Academics&nbsp;&nbsp;<img style="padding-bottom: 0.2em;" src="../static/images/arrow.svg">
                         </button>
                     </li>
                     <li class="mt-3"> 
                         <button onclick="location.href='../research/';" class="menu-option-2 btn btn-block btn-white btn-lg text-pointer rounded">
-                            Research
+                            Research&nbsp;&nbsp;<img style="padding-bottom: 0.2em;" src="../static/images/arrow.svg">
                         </button>
                     </li>
                     <li class="mt-3"> 
                         <button onclick="location.href='../faculty/';" class="menu-option-3 btn btn-block btn-white btn-lg text-pointer rounded">
-                            People
+                            People&nbsp;&nbsp;<img style="padding-bottom: 0.2em;" src="../static/images/arrow.svg">
                         </button>
                     </li>
                 </ul>

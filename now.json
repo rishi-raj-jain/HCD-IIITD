@@ -2,7 +2,7 @@
     "version": 2,
     "public": true,
     "builds": [
-        { "src": "*.py", "use": "@liudonghua123/now-flask"  }
+        { "src": "index.py", "use": "@liudonghua123/now-flask"  }
     ],
     "routes": [
         { "src": "/.*", "dest": "/"}

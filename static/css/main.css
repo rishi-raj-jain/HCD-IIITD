@@ -75,3 +75,9 @@
 .container{
     max-width: 1400px !important;
 }
+.shadow_hover{
+    box-shadow: 5px 5px #f5f6f6;
+}
+.border-green{
+    border-color: #40ADA7 !important;
+}
