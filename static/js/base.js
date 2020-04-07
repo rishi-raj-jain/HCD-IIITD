@@ -1,7 +1,29 @@
 nav= 1;
 $(document).ready(function(){
     $("#menu").toggle();
+    // $('#academics_innermenu').removeClass('d-none');
+    // $('#people_innermenu').removeClass('d-none');
+    // $('#research_innermenu').removeClass('d-none');
 });
+function handleinnermenu(head, id){
+    head= head.toString().toLowerCase();
+    let selector2= $('#'+id.toString());
+    let selector3= $('#'+head+'_svg');
+    if(!($('#'+head+'_innermenu').hasClass('d-none'))){
+        $('#'+head+'_innermenu').addClass('d-none');
+        if(selector2.hasClass('bg-green')){
+            selector2.removeClass('bg-green text-white');
+            selector3.attr('src', '../static/images/arrow.svg');
+        }
+    }
+    else{
+        $('#'+head+'_innermenu').removeClass('d-none');
+        if(!(selector2.hasClass('bg-green'))){
+            selector2.addClass('bg-green text-white');
+            selector3.attr('src', '../static/images/whitearrow.svg');
+        }
+    }
+}
 function menu_icon(){
     if(($("#menu").is(":visible"))){
         $("#nav_menu").attr('src', '../static/images/close.svg');
@@ -11,9 +33,6 @@ function menu_icon(){
         $("#nav_menu").attr('src', '../static/images/menu.svg');
         $("#nav_menu").attr('height', '35px');
     }
-    // if($("input").is(":visible")){
-    //     $("input").focus();
-    // }
 }
 function openmenu(option_value){
     $("#menu").show();

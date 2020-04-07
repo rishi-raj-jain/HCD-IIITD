@@ -1,8 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
-<div class="container" style="background: url('https://www.iiitd.ac.in/sites/all/themes/impact_theme/images/riise.jpg'); background-size: cover; background-position: center;">
-    <img src="https://www.iiitd.ac.in/sites/all/themes/impact_theme/images/riise.jpg" style="opacity: 0;" class="w-100 h-100">
-</div>
+<img alt="header" id="header" src="" class="w-100 h-100">
 <div class="container-fluid bg-white py-5">
     <div class="container">
         <div class="row">
@@ -12,8 +10,8 @@
                     Welcome to IIIT Delhi’s Department of Human-Centered Design. With an increasing focus on user experience, the importance of Human-Computer Interaction (HCI), Interaction Design, and Design Thinking are also increasing rapidly in IT-based products and services. Digital media is at the heart of many aspects of design in areas like social media, gaming, virtual/augmented reality, etc.
                 </h4>
             </div>
-            <div class="col-12 col-md-6 text-center">
-                <img id="about_image" src="" style="width: auto; max-width: 100%;">
+            <div class="col-12 col-md-6 mt-3 mt-md-0 text-center">
+                <img alt="HCD_Building" id="about_image" src="" style="max-height: 400px; width: auto; max-width: 100%;">
             </div>
         </div>
     </div>
@@ -50,7 +48,7 @@
             <div class="col-12 col-md-4 mt-5 itemlab">
                 <div onmouseout="this.classList.remove('shadow_'); this.classList.add('shadow');" onmouseover="this.classList.add('shadow_');this.classList.remove('shadow');" class="home_main shadow w-100 bg-white h-100 p-5" style="border-style: dashed; border-color: #707070; border-width: 0.02cm;">
                     <div class="d-flex justify-content-center align-items-center" style="height: 70px;" >
-                        <img src="../static/images/news.svg" style="max-height: 100%; max-width: 100%;">
+                        <img alt="News" src="../static/images/news.svg" style="max-height: 100%; max-width: 100%;">
                     </div>
                     <div class="mt-3 mb-1 row-content text-center">
                         <h4 class="font-weight-bolder mt-3 gara-proreg">Latest News</h4>
@@ -69,7 +67,7 @@
             <div class="col-12 col-md-4 mt-5 itemlab">
                 <div onmouseout="this.classList.remove('shadow_'); this.classList.add('shadow');" onmouseover="this.classList.add('shadow_');this.classList.remove('shadow');" class="home_main shadow w-100 bg-white h-100 p-5" style="border-style: dashed; border-color: #707070; border-width: 0.02cm;">
                     <div class="d-flex justify-content-center align-items-center" style="height: 70px;" >
-                        <img src="../static/images/events.svg" style="max-height: 100%; max-width: 100%;">
+                        <img alt="Events" src="../static/images/events.svg" style="max-height: 100%; max-width: 100%;">
                     </div>
                     <div class="mt-3 mb-1 row-content text-center">
                         <h4 class="font-weight-bolder mt-3 gara-proreg">Upcoming Events</h4>
@@ -88,7 +86,7 @@
             <div class="col-12 col-md-4 mt-5 itemlab">
                 <div onmouseout="this.classList.remove('shadow_'); this.classList.add('shadow');" onmouseover="this.classList.add('shadow_');this.classList.remove('shadow');" class="home_main shadow w-100 bg-white h-100 p-5" style="border-style: dashed; border-color: #707070; border-width: 0.02cm;">
                     <div class="d-flex justify-content-center align-items-center" style="height: 70px;" >
-                        <img src="../static/images/publications.svg" style="max-height: 100%; max-width: 100%;">
+                        <img alt="Publications" src="../static/images/publications.svg" style="max-height: 100%; max-width: 100%;">
                     </div>
                     <div class="mt-3 mb-1 row-content text-center">
                         <h4 class="font-weight-bolder mt-3 gara-proreg">Recent Publications</h4>
@@ -111,8 +109,11 @@
 {% block scripts %}
         <script type="text/javascript">
             $(document).ready(function(){
-                $('#about_image').css({'height': $('#about_text').height()});
-                $('#about_image').attr('src', 'https://ia.iiitd.ac.in/assets/images/facilities/2.JPG');
+                setTimeout(()=>{
+                    $('#header').attr('src', 'https://www.iiitd.ac.in/sites/all/themes/impact_theme/images/riise.jpg');
+                    // $('#about_image').css({'height': $('#about_text').height()});
+                    $('#about_image').attr('src', 'https://ia.iiitd.ac.in/assets/images/facilities/2.JPG');
+                }, 200);
             });
             $(".home_submain").toggle();
             function replace(string_home){

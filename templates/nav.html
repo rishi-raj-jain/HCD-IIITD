@@ -16,7 +16,7 @@
                         <input type="hidden" name="n" value="0">
                         <input type="hidden" name="_charset_" value="">
                         <input type="hidden" name="bcd" value="&#247;">
-                        <input aria-label="Search Desktop" class="animated fadeIn faster shadow btn btn-lg btn-white bg-white rounded no-transform text-gray w-100" type="text" name="query" placeholder="Search">
+                        <input aria-label="Search Desktop" style="border-radius: 15px !important;" class="animated fadeIn faster shadow btn btn-lg btn-white bg-white no-transform text-gray w-100" type="text" name="query" placeholder="Search">
                         <input class="d-none" type="submit" value="search" id="tosearch_desktop">
                     </form>
                     <img src="../static/images/search.svg" height="30px" style="margin-top: 0.8em; position: absolute; left: 10px;" alt="Search Bar">
@@ -27,7 +27,7 @@
             </a>
         </div>
     </div>
-    <div id="menu" class="animated fadeIn faster container-fluid px-5 py-2" style="position: absolute; top: 70px; overflow: scroll; background: #E1E1E1;">
+    <div id="menu" class="animated fadeIn faster container-fluid px-5 py-2" style="position: absolute; top: 70px; overflow-y:scroll; background: #E1E1E1; height: 400px; border-radius: 10px;">
         <div class="row">
             <div class="col-12 mt-3 d-lg-none text-center rounded">
                 <div class="row py-2">
@@ -38,43 +38,83 @@
                             <input type="hidden" name="n" value="0">
                             <input type="hidden" name="_charset_" value="">
                             <input type="hidden" name="bcd" value="&#247;">
-                            <input class="animated fadeIn faster shadow btn btn-lg btn-white bg-white no-transform text-gray w-100" style="border-radius: 15px;" type="text" name="query" placeholder="Search">
+                            <input class="animated fadeIn faster btn btn-lg btn-white bg-white no-transform text-gray w-100" style="border-radius: 15px;" type="text" name="query" placeholder="Search">
                             <input class="d-none" type="submit" value="search" id="tosearch_mobile">
                         </form>
                         <img src="../static/images/search.svg" height="30px" style="margin-top: 0.8em; position: absolute; left: 10px;" alt="Search Bar">
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-sm-4 col-lg-3 mt-3 mt-sm-0 rounded" style="background-color: #E1E1E1;">
+            <div class="d-flex align-items-center justify-content-center col-12" style="background-color: #E1E1E1;">
                 <ul class="list-unstyled pb-2 text-center">
-                    <li class=""> 
-                        <button onclick="location.href='../academics/';" class="menu-option-1 btn btn-block btn-white btn-lg text-pointer rounded">
-                            Academics&nbsp;&nbsp;<img style="padding-bottom: 0.2em;" src="../static/images/arrow.svg">
+                    <li class="mt-3"> 
+                        <button id="Academics_Inner" onclick="handleinnermenu('Academics', this.id);" class="menu-option-1 btn btn-block btn-white btn-lg text-pointer rounded">
+                            Academics&nbsp;&nbsp;
+                            <img id="academics_svg" style="padding-bottom: 0.2em;" src="../static/images/arrow.svg">
                         </button>
+                    </li>
+                    <li id="academics_innermenu" class="d-none mt-2 animated fadeIn">
+                        <ul class="list-unstyled p-2 rounded text-center" style="background: #F2F2F2;">
+                            <li class="mt-2">
+                                <p onclick="location.href='../btech-courses/'">B.Tech. in CSD</p>
+                            </li>
+                            <li class="">
+                                <p onclick="location.href='../phd/'">Ph.D.</p>
+                            </li>
+                            <li class="">
+                                <p onclick="location.href='../student-policy/'">Student Conduct Policy</p>
+                            </li>
+                        </ul>
                     </li>
                     <li class="mt-3"> 
-                        <button onclick="location.href='../research/';" class="menu-option-2 btn btn-block btn-white btn-lg text-pointer rounded">
-                            Research&nbsp;&nbsp;<img style="padding-bottom: 0.2em;" src="../static/images/arrow.svg">
+                        <button id="Research_Inner" onclick="handleinnermenu('Research', this.id);" class="menu-option-2 btn btn-block btn-white btn-lg text-pointer rounded">
+                            Research&nbsp;&nbsp;
+                            <img id="research_svg" style="padding-bottom: 0.2em;" src="../static/images/arrow.svg">
                         </button>
+                    </li>
+                    <li id="research_innermenu" class="d-none mt-2 animated fadeIn">
+                        <ul class="list-unstyled p-2 rounded text-center" style="background: #F2F2F2;">
+                            <li class="mt-2">
+                                <p onclick="location.href='../research/'">Research Interests</p>
+                            </li>
+                            <li class="">
+                                <p onclick="location.href='../research-labs/'">Research Labs</p>
+                            </li>
+                            <li class="">
+                                <p onclick="location.href='../research-publications/'">Research Publications</p>
+                            </li>
+                        </ul>
                     </li>
                     <li class="mt-3"> 
-                        <button onclick="location.href='../faculty/';" class="menu-option-3 btn btn-block btn-white btn-lg text-pointer rounded">
-                            People&nbsp;&nbsp;<img style="padding-bottom: 0.2em;" src="../static/images/arrow.svg">
+                        <button id="People_Inner" onclick="handleinnermenu('People', this.id);" class="menu-option-3 btn btn-block btn-white btn-lg text-pointer rounded">
+                            People&nbsp;&nbsp;<img id="people_svg" style="padding-bottom: 0.2em;" src="../static/images/arrow.svg">
                         </button>
                     </li>
-                </ul>
-                <ul class="p-0 d-flex text-center align-items-end flex-column h-100 mt-2 mb-0" style="list-style: none;">
-                    <li class="w-100">Follow Us</li>
-                    <li class="w-100 mt-1">
-                        <a rel='noopener' href="https://twitter.com/hcdiiitd" class="text-decoration-none" target="_blank">
-                            <img src="../static/images/twitter_svg.svg" height="40">
-                        </a>
-                        <a rel='noopener' href="https://www.facebook.com/hcdzine" class="text-decoration-none" target="_blank">
-                            <img src="../static/images/facebook_hcd.svg" height="40">
-                        </a>
-                        <a rel='noopener' href="https://www.linkedin.com/in/human-centered-design-hcd-43b3a7180/" class="text-decoration-none" target="_blank">
-                            <img src="../static/images/linkedin_hcd.svg" height="40">
-                        </a>
+                    <li id="people_innermenu" class="d-none mt-2 animated fadeIn">
+                        <ul class="list-unstyled py-2 rounded text-center" style="background: #F2F2F2;">
+                            <li class="mt-2">
+                                <p onclick="location.href='../faculty/'">Faculty</p>
+                            </li>
+                            <li class="">
+                                <p onclick="location.href='../students/'">B.Tech. Students</p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="mt-3">
+                        <ul class="p-0 d-flex text-center align-items-end flex-column h-100 mt-2 mb-0" style="list-style: none;">
+                            <li class="w-100">Follow Us</li>
+                            <li class="w-100 mt-1">
+                                <a rel='noopener' href="https://twitter.com/hcdiiitd" class="text-decoration-none" target="_blank">
+                                    <img src="../static/images/twitter_svg.svg" height="40">
+                                </a>
+                                <a rel='noopener' href="https://www.facebook.com/hcdzine" class="text-decoration-none" target="_blank">
+                                    <img src="../static/images/facebook_hcd.svg" height="40">
+                                </a>
+                                <a rel='noopener' href="https://www.linkedin.com/in/human-centered-design-hcd-43b3a7180/" class="text-decoration-none" target="_blank">
+                                    <img src="../static/images/linkedin_hcd.svg" height="40">
+                                </a>
+                            </li>
+                        </ul>
                     </li>
                 </ul>      
             </div>
