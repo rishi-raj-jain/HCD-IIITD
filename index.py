@@ -63,5 +63,9 @@ def sitemap():
 def toboots():
     return render_template('robots.txt')
 
+@app.route('/service-worker.js')
+def sw():
+    return app.send_static_file('service-worker.js'), 200, {'Content-Type': 'text/javascript'}
+
 if __name__ == "__main__":
     app.run(debug= True, port= 4000)
