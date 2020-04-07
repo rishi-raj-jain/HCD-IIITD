@@ -9,14 +9,7 @@ from flask import Flask, render_template, request, jsonify, abort
 
 app = Flask(__name__)
 app.config['TEMPLATES_AUTO_RELOAD'] = True
-
-@app.before_request
-def clear_trailing():
-    from flask import redirect, request
-    rp = request.path
-    check_url= str(rp)
-    if rp != '/' and check_url.find('svg')!=-1 and check_url.find('png')!=-1 and check_url.find('jpg')!=-1: 
-        return redirect(rp+'/')
+app.url_map.strict_slashes=False
 
 @app.route("/")
 def index():
