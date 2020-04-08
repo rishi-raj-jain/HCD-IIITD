@@ -1,12 +1,14 @@
 <div style="height: 70px;"></div>
 <nav class="fixed-top" style="z-index: 998; background: black; height: 70px;">
+    
+    
     <div class="container mt-2">
         <div class="d-flex align-items-center justify-content-between">
             <a href="/"><img src="../static/images/logoleft.svg" style="height: 50px;" alt="Indraprastha Institute Of Information Technology, Delhi"><img class="ml-2" src="../static/images/logo-white.svg" style="width: 100px;" alt="Human Centered Design"></a>
             <div class="d-flex">
-                <a href="../academics/" class="text-pointer px-3 d-none d-md-block text-white font-12">Academics</a>    
-                <a href="../research/" class="text-pointer px-3 d-none d-md-block text-white font-12">Research</a>
-                <a href="../btech-courses/" class="text-pointer px-3 d-none d-md-block text-white font-12">Courses</a>
+                <a onclick="openbiggermenu('academics')" class="text-pointer px-3 d-none d-md-block text-white font-12">Academics</a>    
+                <a onclick="openbiggermenu('research')" class="text-pointer px-3 d-none d-md-block text-white font-12">Research</a>
+                <a onclick="openbiggermenu('people')" class="text-pointer px-3 d-none d-md-block text-white font-12">People</a>
             </div>
             <a class="d-lg-block d-none mb-2" id="search" onmouseover="this.style.cursor='pointer'">
                 <div class="d-flex rounded input" style="position: relative;">
@@ -27,9 +29,11 @@
             </a>
         </div>
     </div>
-    <div id="menu" class="animated fadeIn faster container-fluid px-5 py-2" style="position: absolute; top: 70px; overflow-y:scroll; background: #E1E1E1; height: 400px; border-radius: 10px;">
-        <div class="row">
-            <div class="col-12 mt-3 d-lg-none text-center rounded">
+
+
+    <div id="menu" class="animated fadeIn faster container-fluid d-lg-none px-5 py-2" style="position: absolute; top: 70px; overflow-y:scroll; background: #E1E1E1; height: 400px; border-radius: 10px;">
+        <div class="row d-md-flex d-lg-none justify-content-center">
+            <div class="col-12 mt-3 text-center rounded">
                 <div class="row py-2">
                     <div class="d-flex rounded input w-100" style="position: relative;">
                         <form style="margin:0px; margin-top:4px; width: 100%;" action="https://search.freefind.com/find.html" method="get" accept-charset="utf-8" target="_self">
@@ -45,7 +49,7 @@
                     </div>
                 </div>
             </div>
-            <div class="d-flex align-items-center justify-content-center col-12" style="background-color: #E1E1E1;">
+            <div class="col-12 d-lg-none" style="background-color: #E1E1E1;">
                 <ul class="list-unstyled pb-2 text-center">
                     <li class="mt-3"> 
                         <button id="Academics_Inner" onclick="handleinnermenu('Academics', this.id);" class="menu-option-1 btn btn-block btn-white btn-lg text-pointer rounded">
@@ -120,4 +124,146 @@
             </div>
         </div>
     </div>
+
+
+    <div id="menu_2" class="animated fadeIn faster container-fluid d-none d-lg-none px-5 py-2" style="position: absolute; top: 70px; overflow-y:scroll; background: transparent; height: 250px; border-radius: 10px;">
+        <div class="row d-lg-flex align-items-center justify-content-center">
+            <div class="col-8 border" style="background-color: #E1E1E1; border-radius: 15px; border-color: rgb(161, 161, 161) !important;">
+                <ul id="research_2" class="list-unstyled d-flex justify-content-between mt-4 text-center">
+                    <li class="font-12 text-pointer">
+                        <p onclick="location.href='../research/'">Research Areas</p>
+                    </li>
+                    <li class="font-12 text-pointer">
+                        <p onclick="location.href='../research-labs'">Research Labs</p>
+                    </li>
+                    <li class="font-12 text-pointer">
+                        <p onclick="location.href='../research-publications/'">Research Publications</p>
+                    </li>
+                </ul>
+                <ul id="people_2" class="list-unstyled d-flex justify-content-center mt-4 text-center">
+                    <li class="font-12 text-pointer">
+                        <p onclick="location.href='../faculty/'">Faculty</p>
+                    </li>
+                    <li class="font-12 text-pointer ml-5">
+                        <p onclick="location.href='../students/'">Students</p>
+                    </li>
+                </ul>
+                <ul id="academics_2" class="list-unstyled d-flex justify-content-between mt-4 text-center">
+                    <li class="font-12 text-pointer">
+                        <p onclick="location.href='../btech-courses/'">B.Tech. in CSD</p>
+                    </li>
+                    <li class="font-12 text-pointer">
+                        <p onclick="location.href='../phd/'">Ph.D.</p>
+                    </li>
+                    <li class="font-12 text-pointer">
+                        <p onclick="location.href='../student-policy/'">Student Conduct Policy</p>
+                    </li>
+                </ul>  
+                <li class="list-unstyled mt-5 pb-2">
+                    <ul class="p-0 d-flex text-center align-items-end flex-column h-100 mt-2 mb-0" style="list-style: none;">
+                        <li class="w-100">Follow Us</li>
+                        <li class="w-100 mt-1">
+                            <a rel='noopener' href="https://twitter.com/hcdiiitd" class="text-decoration-none" target="_blank">
+                                <img src="../static/images/twitter_svg.svg" height="40">
+                            </a>
+                            <a rel='noopener' href="https://www.facebook.com/hcdzine" class="text-decoration-none" target="_blank">
+                                <img src="../static/images/facebook_hcd.svg" height="40">
+                            </a>
+                            <a rel='noopener' href="https://www.linkedin.com/in/human-centered-design-hcd-43b3a7180/" class="text-decoration-none" target="_blank">
+                                <img src="../static/images/linkedin_hcd.svg" height="40">
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </div>
+        </div>
+    </div>
+    
+
 </nav>
+<script>
+    function openbiggermenu(lol){
+        lol= lol.toString().toLowerCase();
+        if($('#menu_2').hasClass('d-lg-block')){
+            $('#menu_2').addClass('d-lg-none');
+            if(!($('#'+lol+'_2').hasClass('d-lg-none'))){
+                $('#menu_2').removeClass('d-lg-block');
+            }
+            else{
+                let k= ['academics_2', 'research_2', 'people_2'];
+                for(let i in k){
+                    $('#'+k[i]).addClass('d-lg-none');
+                    $('#'+k[i]).removeClass('d-lg-block');
+                }
+                $('#menu_2').removeClass('d-lg-none');
+                $('#menu_2').addClass('d-lg-block');
+                $('#'+lol+'_2').removeClass('d-lg-none');
+            }
+        }
+        else{
+            let k= ['academics_2', 'research_2', 'people_2'];
+            for(let i in k){
+                $('#'+k[i]).addClass('d-lg-none');
+                $('#'+k[i]).removeClass('d-lg-block');
+            }
+            $('#menu_2').removeClass('d-lg-none');
+            $('#menu_2').addClass('d-lg-block');
+            $('#'+lol+'_2').removeClass('d-lg-none');
+        }
+    }
+</script>
+
+
+<!-- <div id="menu" class="animated fadeIn faster container-fluid px-5 py-2" style="position: absolute; top: 70px; overflow: scroll; background: black; display: ;">
+    <div class="row">
+        <div class="col-12 mt-3 d-md-none text-center bg-white rounded">
+            <div class="row py-2" style="background: black;">
+                <div class="d-flex rounded input w-100" style="position: relative;">
+                    <form style="margin:0px; margin-top:4px; width: 100%;" action="https://search.freefind.com/find.html" method="get" accept-charset="utf-8" target="_self">
+                        <input type="hidden" name="si" value="10569528">
+                        <input type="hidden" name="pid" value="r">
+                        <input type="hidden" name="n" value="0">
+                        <input type="hidden" name="_charset_" value="">
+                        <input type="hidden" name="bcd" value="÷">
+                        <input class="animated fadeIn faster shadow btn btn-lg btn-white bg-white no-transform text-gray w-100 rounded" type="text" name="query" placeholder="Search">
+                        <input class="d-none" type="submit" value="search" id="tosearch">
+                    </form>
+                    <img src="../static/images/search.svg" height="30px" style="margin-top: 0.8em; position: absolute; left: 10px;" alt="Search Bar">
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-sm-4 col-lg-3 py-1 mt-3 mt-sm-0 rounded" style="background-color: #E1E1E1;">
+            <ul class="list-unstyled py-2 text-center">
+                <li class="mt-3"> 
+                    <button onclick="location.href='../academics/';" class="menu-option-1 btn btn-block btn-white btn-lg text-pointer rounded">
+                        Academics
+                    </button>
+                </li>
+                <li class="mt-3"> 
+                    <button onclick="location.href='../research/';" class="menu-option-2 btn btn-block btn-white btn-lg text-pointer rounded">
+                        Research
+                    </button>
+                </li>
+                <li class="mt-3"> 
+                    <button onclick="location.href='../faculty/';" class="menu-option-3 btn btn-block btn-white btn-lg text-pointer rounded">
+                        People
+                    </button>
+                </li>
+            </ul>
+            <ul class="p-0 d-flex text-center align-items-end flex-column h-100 mt-2 mb-0" style="list-style: none;">
+                <li class="w-100">Follow Us</li>
+                <li class="w-100 mt-1">
+                    <a href="https://twitter.com/hcdiiitd" class="text-decoration-none" target="_blank">
+                        <img src="../static/images/twitter_svg.svg" height="40">
+                    </a>
+                    <a href="https://www.facebook.com/hcdzine" class="text-decoration-none" target="_blank">
+                        <img src="../static/images/facebook_hcd.svg" height="40">
+                    </a>
+                    <a href="https://www.linkedin.com/in/human-centered-design-hcd-43b3a7180/" class="text-decoration-none" target="_blank">
+                        <img src="../static/images/linkedin_hcd.svg" height="40">
+                    </a>
+                </li>
+            </ul>      
+        </div>
+    </div>
+</div> -->

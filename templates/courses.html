@@ -107,28 +107,23 @@
             }
         });
         let maxs= 0;
-        $(".owl-item").each(function()
-        {
+        $(".owl-item").each(function(){
             maxs= Math.max(maxs, $(this).height());
-            //console.log("next <p> element with id: " + maxs);
         });
-        $(".item").each(function()
-        {
+        $(".item").each(function(){
             $(this).height(maxs);
         });
-        $(".active .item").each(function()
-            {
-                $(this).removeClass('bg-green');
-                $(this).addClass('bg-white');
-                $(this).removeClass('text-white');
-                $(this).addClass('text-dark');
-            });
-            $(".center .item").addClass('bg-green');
-            $(".center .item").removeClass('text-dark');
-            $(".center .item").addClass('text-white');
+        $(".active .item").each(function(){
+            $(this).removeClass('bg-green');
+            $(this).addClass('bg-white');
+            $(this).removeClass('text-white');
+            $(this).addClass('text-dark');
+        });
+        $(".center .item").addClass('bg-green');
+        $(".center .item").removeClass('text-dark');
+        $(".center .item").addClass('text-white');
         $(".owl-next").click(function(){
-            $(".active .item").each(function()
-            {
+            $(".active .item").each(function(){
                 $(this).removeClass('bg-green');
                 $(this).addClass('bg-white');
                 $(this).removeClass('text-white');

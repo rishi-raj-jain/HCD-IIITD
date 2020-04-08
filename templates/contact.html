@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 <div class="container" id="contact_page">
-    <div class="row py-3">
+    <div class="row py-3 d-md-flex align-items-center justify-content-center h-100">
         <div class="col-12 col-md-5 py-3 order-1">
             <h3 class="animated flipInX font-weight-bold">Contact Us</h3>
             <div class="d-flex flex-row bd-highlight">
@@ -35,7 +35,7 @@
                 Contact Person: Ms Jyoti Singh (JM-HCD)
             </div>
         </div>
-        <div class="col-12 col-md-7 order-2 py-3 py-md-0">
+        <div class="col-12 h-100 col-md-7 order-2 py-3 py-md-0">
             <div class="h-100 d-flex align-items-center justify-content-center">
                 <iframe allowfullscreen="" frameborder="0" class="h-100 w-100" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.748076511186!2d77.27101231454759!3d28.547290982451514!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce3e564daac1d%3A0x2c582e340e7bc556!2sIIIT-Delhi!5e0!3m2!1sen!2sus!4v1490258428889"></iframe>
             </div> 
@@ -45,11 +45,16 @@
 {% endblock %}
 {% block scripts %}
 <script>
-    $(document).ready(function(){
+    function handlespace(){
         let i= $('#footer').height();
         if($(window).width()>768){
             $("#contact_page").css('height', 'calc( 100vh - 70px - ' + i.toString()+'px )');
         }
-    });
+        else{
+            $("#contact_page").css('height', 'auto');
+        }
+    }
+    $(window).resize(()=>{handlespace()});
+    $(document).ready(()=>{handlespace()});
 </script>
 {% endblock %}

@@ -107,77 +107,88 @@ facultyJson=[
         'Post': 'Professor (CSE, HCD)',
         'Degree': 'PhD, Inria-Rennes, University de Rennes 1',
         'link': 'https://www.iiitd.ac.in/pushpendra',
-        'image': 'Pushpendra-min.svg'
+        'image': 'Pushpendra-min.svg',
+        'researchInterests': 'Mobile Systems and Applications, Middleware, ICT for Development, Design Research, Human-Robot Interaction'
     },
     {
         'Name': 'Aman Parnami',
         'Post': 'Head (HCD), Assistant Professor (HCD)',
         'Degree': 'PhD, Georgia Institute of Technology',
         'link': 'https://www.iiitd.ac.in/aman',
-        'image': 'amanparnami-min.svg'
+        'image': 'amanparnami-min.svg',
+        'researchInterests': 'Wearable Computing, Design Research, Education Technology'
     },
     {
         'Name': 'Aman Samuel',
         'Post': 'Guest faculty, HCD',
         'Degree': 'MBA, University of Madras',
         'link': 'https://www.linkedin.com/in/aman-samuel-b5942a121/?originalSubdomain=in',
-        'image': 'Aman Samuel-min.svg'
+        'image': 'Aman Samuel-min.svg',
+        'researchInterests': ''
     },
     {
         'Name': 'Anoop Ratn',
         'Post': 'Visiting faculty, HCD',
         'Degree': 'MFA, Teerthankar Mahaveer University',
         'link': 'https://www.iiitd.ac.in/people/visiting-faculty',
-        'image': 'Anoop-min.svg'
+        'image': 'Anoop-min.svg',
+        'researchInterests': ''
     },
     {
         'Name': 'Grace Eden',
         'Post': 'Assitant Professor, HCD',
         'Degree': 'DPhil, University of Oxford',
         'link': 'https://www.iiitd.ac.in/grace',
-        'image': 'Grace-min.svg'
+        'image': 'Grace-min.svg',
+        'researchInterests': 'Human-Machine Interaction, Human-Centered Artificial Intelligence, Human-Computer Interaction, Fieldwork for Design, and Participatory Co-Design of Emerging Technologies'
     },
     {
         'Name': 'Indrani De Parker',
         'Post': 'Visiting Faculty (HCD)',
         'Degree': 'PhD Scholar, IDC, IITB, Mumbai',
         'link': 'https://www.iiitd.ac.in/people/visiting-faculty',
-        'image': 'Indrani-min.svg'
+        'image': 'Indrani-min.svg',
+        'researchInterests': ''
     },
     {
         'Name': 'Jainendra Shukla',
         'Post': 'Assistant Professor (HCD)',
         'Degree': 'PhD, Universitat Rovira i Virgili (URV)',
         'link': 'https://www.iiitd.ac.in/jainendra',
-        'image': 'Jainendra-min.svg'
+        'image': 'Jainendra-min.svg',
+        'researchInterests': 'Human-Robot Interaction, Affective Computing and Machine Learning'
     },
     {
         'Name': 'Manohar Khushalani',
         'Post': 'Visiting Faculty (HCD)',
         'Degree': 'PhD, Universitat Rovira i Virgili (URV)',
         'link': 'https://www.iiitd.ac.in/people/visiting-faculty',
-        'image': 'Manohar-min.svg'
+        'image': 'Manohar-min.svg',
+        'researchInterests': ''
     },
     {
         'Name': 'Rahul Mohanani',
         'Post': 'Assistant Professor (CSE, HCD)',
         'Degree': 'PhD, University of Oulu',
         'link': 'https://www.iiitd.ac.in/rahulm',
-        'image': 'rahulm-min.svg'
+        'image': 'rahulm-min.svg',
+        'researchInterests': 'Human aspects of Software Engineering, Intertemporal Preferences in Technical Debt, Software Project Management, Requirements Engineering and Design'
     },
     {
         'Name': 'Rajiv Ratn Shah',
         'Post': 'Assistant Professor (CSE, HCD)',
         'Degree': 'PhD, National University of Singapore',
         'link': 'https://www.iiitd.ac.in/rajivratn',
-        'image': 'Rajiv-min.svg'
+        'image': 'Rajiv-min.svg',
+        'researchInterests': 'Multimodal semantic and sentiment analysis of user-generated social media content'
     },
     {
         'Name': 'Vibha Narula Gupta',
         'Post': 'Guest Faculty, HCD',
         'Degree': '',
         'link': 'https://www.iiitd.ac.in/people/visiting-faculty',
-        'image': 'Vibha-min.svg'
+        'image': 'Vibha-min.svg',
+        'researchInterests': ''
     },
 ]
 

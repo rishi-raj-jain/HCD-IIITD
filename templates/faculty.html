@@ -1,26 +1,32 @@
 {% extends "base.html" %}
 {% block content %}
 <div class="container py-5 bg-white">
+    <div id="link_tags"></div>
     <h3 class="animated flipInX font-weight-bold text-center">Faculty</h3>
     <div class="p-4 p-md-0">
         <div class="row d-md-flex align-items-center justify-content-center mt-4">
             {% for option_1 in faculty_list %}
                 {% if 'Parnami' in option_1.Name %}
-                <div class="col-12 col-md-4 itemlab">
-                    <a rel='noopener' target="_blank" href="{{option_1.link}}">
-                        <div onmouseout="this.classList.remove('shadow_'); this.classList.add('shadow');" onmouseover="this.classList.add('shadow_');this.classList.remove('shadow');" class="home_main shadow text-pointer w-100 bg-white h-100 p-3 rounded">
-                            <div class="d-flex justify-content-center align-items-center" style="height: calc( 100vh /5 );" >
-                                <img alt="{{option_1.image.split('.')[0]}}" class="rounded-circle" src='' data-src="../static/images/faculty/{{option_1.image}}" style="max-height: 100%; max-width: 100%;">
-                            </div>
-                            <div class="mt-4 row-content text-center">
+                <div class="col-12 col-md-4 itemlab {{option_1.researchInterests}}">
+                    <div onmouseout="this.classList.remove('shadow_'); this.classList.add('shadow');" onmouseover="this.classList.add('shadow_');this.classList.remove('shadow');" class="home_main shadow w-100 bg-white h-100 p-3 rounded">
+                        <div class="d-flex justify-content-center align-items-center" >
+                            <img alt="{{option_1.image.split('.')[0]}}" class="rounded-circle" src='' data-src="../static/images/faculty/{{option_1.image}}" style="max-height: 100%; max-width: 100%;">
+                        </div>
+                        <div class="mt-4 row-content text-center">
+                            <a rel='noopener' target="_blank" href="{{option_1.link}}">
                                 <h4 class="font-weight-bolder mt-3 gara-proreg text-dark" >{{option_1.Name}}</h4>
                                 <h6 class="font-weight-bold text-dark">{{option_1.Post}}</h6>
-                                <p class="mt-3 gara-proreg ellipis-3 text-dark">
-                                    {{option_1.Degree}}
-                                </p>
-                            </div>
+                            </a>
+                            <p class="mt-3 gara-proreg ellipis-3 text-dark">
+                                {{option_1.Degree}}
+                            </p>
+                            {% for interest_ in option_1.researchInterests.split(',') %}
+                            <a onclick="addtag('{{interest_}}')" class="bg-light ml-1 mt-1 btn btn-md gara-proreg" style="color: rgb(95, 95, 95); text-decoration: none !important;">
+                                {{interest_}}
+                            </a>
+                            {% endfor %}
                         </div>
-                    </a>
+                    </div>
                 </div>
                 {% endif %}
             {% endfor %}
@@ -28,7 +34,7 @@
         <div class="row d-md-flex align-items-center justify-content-start">
             {% for option in faculty_list %}
                 {% if 'Parnami' not in option.Name  %}
-                    <div class="col-12 col-md-4 mt-3 itemlab">
+                    <div class="col-12 col-md-4 mt-3 itemlab {{option.researchInterests}}">
                         <a rel='noopener' target="_blank" href="{{option.link}}">
                             <div onmouseout="this.classList.remove('shadow_'); this.classList.add('shadow');" onmouseover="this.classList.add('shadow_');this.classList.remove('shadow');" class="home_main shadow text-pointer w-100 bg-white h-100 p-3 rounded">
                                 <div class="d-flex justify-content-center align-items-center" style="height: calc( 100vh /5 );" >
@@ -40,6 +46,11 @@
                                     <p class="mt-3 gara-proreg ellipis-3 text-dark">
                                         {{option.Degree}}
                                     </p>
+                                    {% for interest_ in option.researchInterests.split(',') %}
+                                    <a onclick="addtag('{{interest_}}')" class="bg-light ml-1 mt-1 btn btn-md gara-proreg" style="color: rgb(95, 95, 95); text-decoration: none !important;">
+                                        {{interest_}}
+                                    </a>
+                                    {% endfor %}
                                 </div>
                             </div>
                         </a>
@@ -53,21 +64,74 @@
 {% block scripts %}
 <script>
     $(document).ready(function(){
-        let maxs= 0;
         setTimeout(()=>{
+            let maxs= 0;
             $('img').each(function(){
                 $(this).attr('src', $(this).attr('data-src'));
             });
+            $(".itemlab").each(function(){
+                maxs= Math.max(maxs, $(this).height());
+            });
+            $(".itemlab").each(function(){
+                $(this).height(maxs);
+            });
+            let list_argument_tags= '{{tags}}';
+            //console.log(list_argument_tags);
+            if(list_argument_tags!=='None'){
+                addtag(list_argument_tags);
+            }
         }, 800);
-        $(".itemlab").each(function()
-        {
-            maxs= Math.max(maxs, $(this).height());
-            //console.log("next <p> element with id: " + maxs);
+    });
+    $(window).resize(function(){
+        $(".itemlab").each(function(){
+            $(this).css({'height': 'auto'});
         });
-        $(".itemlab").each(function()
-        {
+        let maxs= 0;
+        $(".itemlab").each(function(){
+            maxs= Math.max(maxs, $(this).height());
+        });
+        $(".itemlab").each(function(){
             $(this).height(maxs);
         });
     });
+    let selected_tags_arrays= [];
+    function addtag(s){
+        let the_class= s.toString().trim();
+        let index = selected_tags_arrays.indexOf(the_class);
+        if (!(index > -1)) {
+            selected_tags_arrays.push(the_class);
+            //console.log(selected_tags_arrays);
+            referesh_tags_list();
+        }
+    }
+    function removetag(s){
+        let the_class= s.toString().trim();
+        let index = selected_tags_arrays.indexOf(the_class);
+        if (index > -1) {
+            selected_tags_arrays.splice(index, 1);
+            //console.log(selected_tags_arrays);
+            referesh_tags_list();
+        }
+    }
+    function referesh_tags_list(){
+        $('#link_tags').html('');
+        if(selected_tags_arrays.length<1){
+            $('.itemlab').each(function(){
+                $(this).removeClass('d-none');  
+            });
+        }
+        selected_tags_arrays.forEach((element)=>{
+            $('.itemlab').each(function(){
+                if($(this).attr('class').indexOf(element)===-1){
+                    $(this).addClass('d-none');
+                }
+                else{
+                    $(this).removeClass('d-none');
+                }  
+            });
+            $('#link_tags').html($('#link_tags').html()+'<button style="cursor: context-menu;" class="bg-light btn btn-sm m-2 p-2">'+element+'<a class="text-pointer" onclick="removetag('+("'"+element.toString()+"'")+')">&nbsp;<svg aria-hidden="true" focusable="false" data-prefix="fal" style="height: 20px; width: 20px;" data-icon="times" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M193.94 256L296.5 153.44l21.15-21.15c3.12-3.12 3.12-8.19 0-11.31l-22.63-22.63c-3.12-3.12-8.19-3.12-11.31 0L160 222.06 36.29 98.34c-3.12-3.12-8.19-3.12-11.31 0L2.34 120.97c-3.12 3.12-3.12 8.19 0 11.31L126.06 256 2.34 379.71c-3.12 3.12-3.12 8.19 0 11.31l22.63 22.63c3.12 3.12 8.19 3.12 11.31 0L160 289.94 262.56 392.5l21.15 21.15c3.12 3.12 8.19 3.12 11.31 0l22.63-22.63c3.12-3.12 3.12-8.19 0-11.31L193.94 256z" class=""></path></svg></a>'+'</button>');
+        });
+        $("html, body").animate({ scrollTop: 0 }, "slow");
+    }
 </script>
 {% endblock %}

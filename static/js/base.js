@@ -27,7 +27,7 @@ function handleinnermenu(head, id){
 function menu_icon(){
     if(($("#menu").is(":visible"))){
         $("#nav_menu").attr('src', '../static/images/close.svg');
-        $("#nav_menu").attr('height', '30px');
+        $("#nav_menu").attr('height', '25px');
     }
     else{
         $("#nav_menu").attr('src', '../static/images/menu.svg');

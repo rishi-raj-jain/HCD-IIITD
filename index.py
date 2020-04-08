@@ -1,4 +1,3 @@
-from hcd_menu import menuJson
 from course_list import courseJson
 from research_list import labsJSON
 from research_list import facultyJson
@@ -13,47 +12,47 @@ app.url_map.strict_slashes=False
 
 @app.route("/")
 def index():
-    return render_template('index.html', menu_value= menuJson)
+    return render_template('index.html')
 
 @app.route("/student-policy/")
 def policy():
-    return render_template('policy.html', menu_value= menuJson)
+    return render_template('policy.html')
 
 @app.route("/btech-courses/")
 def courses():
-    return render_template('courses.html', menu_value= menuJson, courses_list= courseJson)
+    return render_template('courses.html', courses_list= courseJson)
 
 @app.route("/phd/")
 def coursesphd():
-    return render_template('phd.html', menu_value= menuJson)
+    return render_template('phd.html')
 
 @app.route("/research/")
 def research():
-    return render_template('research.html', menu_value= menuJson)
+    return render_template('research.html')
 
 @app.route("/research-publications/")
 def research_publications():
-    return render_template('research_publications.html', menu_value= menuJson, research_list= publicationsJSON)
+    return render_template('research_publications.html', research_list= publicationsJSON)
 
 @app.route("/research-labs/")
 def research_labs():
-    return render_template('research_labs.html', menu_value= menuJson, labs_list= labsJSON)
+    return render_template('research_labs.html', labs_list= labsJSON)
 
 @app.route("/contact/")
 def contact():
-    return render_template('contact.html', menu_value= menuJson)
+    return render_template('contact.html')
 
 @app.route("/faculty/")
 def faculty():
-    return render_template('faculty.html', menu_value= menuJson, faculty_list= facultyJson)
+    return render_template('faculty.html', faculty_list= facultyJson, tags= request.args.get('tags'))
 
 @app.route("/students/")
 def students():
-    return render_template('students.html', menu_value= menuJson, students_list= studentsJSON)
+    return render_template('students.html', students_list= studentsJSON)
 
 @app.errorhandler(404)
 def page_not_found(e):
-    return render_template('404.html', menu_value= menuJson), 404
+    return render_template('404.html'), 404
 
 @app.route("/sitemap.xml/")
 def sitemap():
