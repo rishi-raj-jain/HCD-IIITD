@@ -24,15 +24,8 @@
 <script>
     $(document).ready(function(){
         let maxs= 0;
-        $(".itemlab").each(function()
-        {
-            maxs= Math.max(maxs, $(this).height());
-            //console.log("next <p> element with id: " + maxs);
-        });
-        $(".itemlab").each(function()
-        {
-            $(this).height(maxs);
-        });
+        $(".itemlab").each(function(){ maxs= Math.max(maxs, $(this).height()); });
+        $(".itemlab").each(function(){ $(this).height(maxs); });
     });
 </script>
 {% endblock %}

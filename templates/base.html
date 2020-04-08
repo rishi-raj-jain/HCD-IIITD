@@ -64,7 +64,6 @@
                         navigator.serviceWorker
                         .register('./service-worker.js', {scope: '/'})
                         .then(function(registration) {
-                            //console.log('Service Worker Registered!');
                             return registration;
                         })
                         .catch(function(err) {

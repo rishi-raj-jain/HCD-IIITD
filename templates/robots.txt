@@ -1,4 +1,4 @@
-# /robots.txt for https://chd.now.sh
+# /robots.txt for https://hcd.now.sh
 User-agent: *
-Sitemap: https://chd.now.sh/sitemap.xml/
+Sitemap: https://hcd.now.sh/sitemap.xml/
 Allow: /
