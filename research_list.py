@@ -103,20 +103,20 @@ labsJSON=[
 
 facultyJson=[
     {
-        'Name': 'Pushpendra Singh',
-        'Post': 'Professor (CSE, HCD)',
-        'Degree': 'PhD, Inria-Rennes, University de Rennes 1',
-        'link': 'https://www.iiitd.ac.in/pushpendra',
-        'image': 'Pushpendra-min.svg',
-        'researchInterests': 'Mobile Systems and Applications, Middleware, ICT for Development, Design Research, Human-Robot Interaction'
-    },
-    {
         'Name': 'Aman Parnami',
         'Post': 'Head (HCD), Assistant Professor (HCD)',
         'Degree': 'PhD, Georgia Institute of Technology',
         'link': 'https://www.iiitd.ac.in/aman',
         'image': 'amanparnami-min.svg',
         'researchInterests': 'Wearable Computing, Design Research, Education Technology'
+    },
+    {
+        'Name': 'Pushpendra Singh',
+        'Post': 'Professor (CSE, HCD)',
+        'Degree': 'PhD, Inria-Rennes, University de Rennes 1',
+        'link': 'https://www.iiitd.ac.in/pushpendra',
+        'image': 'Pushpendra-min.svg',
+        'researchInterests': 'Mobile Systems and Applications, Middleware, ICT for Development, Design Research, Human-Robot Interaction'
     },
     {
         'Name': 'Aman Samuel',

@@ -10,7 +10,7 @@
             {% for option in labs_list %}
             <div id="{{option.Lab_Name.split(' ')[0]}}" class="col-12 col-sm-6 col-md-4 itemlab mt-5 mt-md-{{option.spacing}}">
                 <div onmouseout="this.classList.remove('shadow_'); this.classList.add('shadow');" onmouseover="this.classList.add('shadow_');this.classList.remove('shadow');" 
-                class="rounded home_main shadow w-100 bg-white h-100 p-5" style="border-style: dashed; border-color: #707070; border-width: 0.02cm;">
+                class="rounded home_main shadow w-100 bg-white h-100 p-5" style="border-width: 0.02cm;">
                     <div class="d-flex justify-content-center align-items-center" style="height: calc( 100vh /5 );" >
                         <img alt="{{option.logo.split('.')[0]}}" src="../static/images/logos/{{option.logo}}" style="max-height: 100%; max-width: 100%;">
                     </div>
@@ -23,7 +23,7 @@
                             {{option.Lab_Description}}
                         </p>
                     </div>
-                    <div onclick="replace({{option}})" class="d-flex justify-content-center align-items-center">
+                    <div onclick="replace({{option}})" class="mt-5 d-flex justify-content-center align-items-center">
                         <button id="{{option.Lab_Name.split(' ')[0]}}open_button" class="rounded text-dark btn bg-white">
                             Open
                             <svg class="bi bi-arrow-right" fill="currentColor" height="2em" viewBox="0 0 20 20" width="2em" xmlns="http://www.w3.org/2000/svg">
@@ -54,7 +54,6 @@
             $(this).hide();
         });
         let buttontext= $('#'+response.Lab_Name.split(' ')[0]+'open_button').text().trim().toLowerCase();
-        $("html, body").animate({ scrollTop: 0 }, "slow");
         if(buttontext==='close'){
             $(".itemlab").each(function(){
                 $(this).show();
@@ -78,12 +77,14 @@
                 last_lab_touched= response.Lab_Name.split(' ')[0];
                 $("#"+response.Lab_Name.split(' ')[0]).removeClass('col-md-4 co-md-6');
                 $("#"+response.Lab_Name.split(' ')[0]).addClass('col-md-6');
+                $("#"+response.Lab_Name.split(' ')[0]).addClass('animated fadeIn');
                 if($("#"+response.Lab_Name.split(' ')[0]+"desc_open_more").hasClass('ellipis-3')){
                     $("#"+response.Lab_Name.split(' ')[0]+"desc_open_more").removeClass('ellipis-3');
                 }
                 $("#"+response.Lab_Name.split(' ')[0]+"open_button").html('Close');
             }
             catch{}
+            $("html, body").animate({ scrollTop: 0 }, "slow");
         }
     }
 </script>

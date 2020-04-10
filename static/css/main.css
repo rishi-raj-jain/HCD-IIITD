@@ -16,6 +16,9 @@
 .font-12{
     font-size: 1.3em !important;
 }
+.bg-black{
+    background: #000000 !important;
+}
 .text-gray{
     color: #707173 !important;
 }

@@ -1,10 +1,7 @@
 from course_list import courseJson
-from research_list import labsJSON
-from research_list import facultyJson
-from research_list import researchJson
-from research_list import studentsJSON
-from research_list import publicationsJSON
+from student import studentpolicyJSON
 from flask import Flask, render_template, request, jsonify, abort
+from research_list import labsJSON, facultyJson, researchJson, studentsJSON, publicationsJSON
 
 app = Flask(__name__)
 app.config['TEMPLATES_AUTO_RELOAD'] = True
@@ -16,7 +13,7 @@ def index():
 
 @app.route("/student-policy/")
 def policy():
-    return render_template('policy.html')
+    return render_template('policy.html', policy_list= studentpolicyJSON)
 
 @app.route("/btech-courses/")
 def courses():
@@ -67,4 +64,4 @@ def sw():
     return app.send_static_file('service-worker.js'), 200, {'Content-Type': 'text/javascript'}
 
 if __name__ == "__main__":
-    app.run(debug= True, port= 4000)
+    app.run(debug= True, port= 4001)
