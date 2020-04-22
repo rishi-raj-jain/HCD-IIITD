@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <!-- Meta tags, Open Graph Protocol -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta property="og:title" content="Department of Human-Centered Design, IIIT-Delhi" />
+        {% block meta %}
+        {% endblock %}
         <meta property="og:locale" content="en_US" />
-        <meta property="og:description" content="Welcome to IIIT Delhi’s Department of Human-Centered Design. With an increasing focus on user experience, the importance of Human-Computer Interaction (HCI), Interaction Design, and Design Thinking are also increasing rapidly in IT-based products and services. Digital media is at the heart of many aspects of design in areas like social media, gaming, virtual/augmented reality, etc." />
-        <link rel="canonical" href="https://hcd.now.sh/" />
-        <meta property="og:url" content="https://hcd.now.sh/" />
+        <meta property="og:type" content="website" />
+        <meta property="fb:app_id" content="253706309095809" />
+        <meta property="og:image" content="https://images-six.now.sh/icon-512.png" />
         <meta property="og:site_name" content="Department of Human-Centered Design, IIIT-Delhi" />
-        <meta name="description" content="Welcome to IIIT Delhi’s Department of Human-Centered Design. With an increasing focus on user experience, the importance of Human-Computer Interaction (HCI), Interaction Design, and Design Thinking are also increasing rapidly in IT-based products and services. Digital media is at the heart of many aspects of design in areas like social media, gaming, virtual/augmented reality, etc." />
+        <meta property="og:image:width" content="250" />
+        <meta property="og:image:height" content="250" />
         <link rel="icon" href="https://images-six.now.sh/icon-96.png" sizes="96x96" />
         <link rel="apple-touch-icon-precomposed" href="../static/images/apple-180.svg" />
         <meta name="google-site-verification" content="7AFyHB1J8USPbEllVeNd5PoN55C-7uhBo8bOe-O797k" />
@@ -34,7 +37,9 @@
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="apple-mobile-web-app-status-bar-style" content="black">
         <meta name="format-detection" content="telephone=no">
+        <!-- Title -->
         <title>Department of Human-Centered Design, IIIT-Delhi</title>
+        <!-- DNS Prefetch -->
         <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
         <link rel="preconnect" href="https://maps.googleapis.com" crossorigin>
         <link rel="preconnect" href="https://maps.gstatic.com/" crossorigin>
@@ -45,7 +50,9 @@
         <link rel="dns-prefetch" href="https://khms0.googleapis.com">
         <link rel="dns-prefetch" href="https://maps.googleapis.com">
         <link rel="dns-prefetch" href="https://ia.iiitd.ac.in">
+        <!-- CSS -->
         <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" rel="preload" as="style" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" rel="stylesheet" rel="preload" as="style" integrity="sha384-7/Tl0k65OTvDSvtuq7aPR7aa0aCz7ZKqHsbMRLxhzueldW+9MZpCe9LB1c5UBuNS" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="../static/css/main.css">
     </head>
     <body>
@@ -53,26 +60,10 @@
         {% block content %}
         {% endblock %}
         {% include "footer.html" %}
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha384-vk5WoKIaW/vJyUAd9n/wmopsmNhiy+L2Z+SBxGYnUkunIxVxAv/UtMOhba/xskxh" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
         {% block scripts %}
         {% endblock %}
-        <script>
-            $(document).ready(()=>{
-                setTimeout(()=>{
-                    if ('serviceWorker' in navigator) {
-                        navigator.serviceWorker
-                        .register('./service-worker.js', {scope: '/'})
-                        .then(function(registration) {
-                            return registration;
-                        })
-                        .catch(function(err) {
-                            console.error('Unable to register service worker.', err);
-                        });
-                    }
-                }, 1000);
-            });
-        </script>
         <script src="../static/js/base.js"></script>
     </body>
 </html>

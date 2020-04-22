@@ -111,20 +111,12 @@ facultyJson=[
         'researchInterests': 'Wearable Computing, Design Research, Education Technology'
     },
     {
-        'Name': 'Pushpendra Singh',
-        'Post': 'Professor (CSE, HCD)',
-        'Degree': 'PhD, Inria-Rennes, University de Rennes 1',
-        'link': 'https://www.iiitd.ac.in/pushpendra',
-        'image': 'Pushpendra-min.svg',
-        'researchInterests': 'Mobile Systems and Applications, Middleware, ICT for Development, Design Research, Human-Robot Interaction'
-    },
-    {
         'Name': 'Aman Samuel',
         'Post': 'Guest faculty, HCD',
         'Degree': 'MBA, University of Madras',
         'link': 'https://www.linkedin.com/in/aman-samuel-b5942a121/?originalSubdomain=in',
         'image': 'Aman Samuel-min.svg',
-        'researchInterests': ''
+        'researchInterests': 'Different Criteria, Design Research, Education Technology'
     },
     {
         'Name': 'Anoop Ratn',
@@ -132,7 +124,7 @@ facultyJson=[
         'Degree': 'MFA, Teerthankar Mahaveer University',
         'link': 'https://www.iiitd.ac.in/people/visiting-faculty',
         'image': 'Anoop-min.svg',
-        'researchInterests': ''
+        'researchInterests': 'Another Criteria, Design Research, Education Technology'
     },
     {
         'Name': 'Grace Eden',
@@ -140,7 +132,7 @@ facultyJson=[
         'Degree': 'DPhil, University of Oxford',
         'link': 'https://www.iiitd.ac.in/grace',
         'image': 'Grace-min.svg',
-        'researchInterests': 'Human-Machine Interaction, Human-Centered Artificial Intelligence, Human-Computer Interaction, Fieldwork for Design, and Participatory Co-Design of Emerging Technologies'
+        'researchInterests': 'Wearable Computing, Design Research, Education Technology'
     },
     {
         'Name': 'Indrani De Parker',
@@ -148,7 +140,7 @@ facultyJson=[
         'Degree': 'PhD Scholar, IDC, IITB, Mumbai',
         'link': 'https://www.iiitd.ac.in/people/visiting-faculty',
         'image': 'Indrani-min.svg',
-        'researchInterests': ''
+        'researchInterests': 'Wearable Computing, Design Research, Education Technology'
     },
     {
         'Name': 'Jainendra Shukla',
@@ -156,7 +148,15 @@ facultyJson=[
         'Degree': 'PhD, Universitat Rovira i Virgili (URV)',
         'link': 'https://www.iiitd.ac.in/jainendra',
         'image': 'Jainendra-min.svg',
-        'researchInterests': 'Human-Robot Interaction, Affective Computing and Machine Learning'
+        'researchInterests': 'Wearable Computing, Design Research, Education Technology'
+    },
+    {
+        'Name': 'Pushpendra Singh',
+        'Post': 'Professor (CSE, HCD)',
+        'Degree': 'PhD, Inria-Rennes, University de Rennes 1',
+        'link': 'https://www.iiitd.ac.in/pushpendra',
+        'image': 'Pushpendra-min.svg',
+        'researchInterests': 'Link Design, Design Research, Education Technology'
     },
     {
         'Name': 'Manohar Khushalani',
@@ -164,7 +164,7 @@ facultyJson=[
         'Degree': 'PhD, Universitat Rovira i Virgili (URV)',
         'link': 'https://www.iiitd.ac.in/people/visiting-faculty',
         'image': 'Manohar-min.svg',
-        'researchInterests': ''
+        'researchInterests': 'Wearable Computing, Design Research, Education Technology'
     },
     {
         'Name': 'Rahul Mohanani',
@@ -172,7 +172,7 @@ facultyJson=[
         'Degree': 'PhD, University of Oulu',
         'link': 'https://www.iiitd.ac.in/rahulm',
         'image': 'rahulm-min.svg',
-        'researchInterests': 'Human aspects of Software Engineering, Intertemporal Preferences in Technical Debt, Software Project Management, Requirements Engineering and Design'
+        'researchInterests': 'Text Computing, Design Research, Education Technology'
     },
     {
         'Name': 'Rajiv Ratn Shah',
@@ -180,7 +180,7 @@ facultyJson=[
         'Degree': 'PhD, National University of Singapore',
         'link': 'https://www.iiitd.ac.in/rajivratn',
         'image': 'Rajiv-min.svg',
-        'researchInterests': 'Multimodal semantic and sentiment analysis of user-generated social media content'
+        'researchInterests': 'Wearable Computing, Design Research, Education Technology'
     },
     {
         'Name': 'Vibha Narula Gupta',
@@ -188,55 +188,499 @@ facultyJson=[
         'Degree': '',
         'link': 'https://www.iiitd.ac.in/people/visiting-faculty',
         'image': 'Vibha-min.svg',
-        'researchInterests': ''
+        'researchInterests': 'Wearable Computing, Design Research, Education Technology'
     },
 ]
 
-studentsJSON=[
+studentsJSON2018=[
     {
-        'Name': 'Pushpendra Singh',
-        'image': 'Pushpendra-min.svg'
+        'Name': 'ABHISHEK ANIL',
+        'Link': 'abhishek18272@iiitd.ac.in',
+        'image': 'user'
     },
     {
-        'Name': 'Aman Parnami',
+        'Name': 'ADITYA RASTOGI',
+        'Link': 'aditya18273@iiitd.ac.in',
+        'image': 'user'
+    },
+    {
+        'Name': 'ADITYA SHARMA',
+        'Link': 'aditya18274@iiitd.ac.in',
+        'image': 'user'
+    },
+    {
+        'Name': 'Advika Singh',
+        'Link': 'advika18275@iiitd.ac.in',
+        'image': 'user'
+    },
+    {
+        'Name': 'AMAN AGGARWAL',
+        'Link': 'aman18327@iiitd.ac.in',
+        'image': 'user'
+    },
+    {
+        'Name': 'ANEESHA LAKRA',
+        'Link': 'aneesha18277@iiitd.ac.in',
+        'image': 'user'
+    },
+    {
+        'Name': 'Angad Yadav',
+        'Link': 'angad17279@iiitd.ac.in',
+        'image': 'user'
+    },
+    {
+        'Name': 'Arnav',
+        'Link': 'arnav18278@iiitd.ac.in',
+        'image': 'user'
+    },
+    {
+        'Name': 'Arunesh',
+        'Link': 'arunesh18279@iiitd.ac.in',
+        'image': 'user'
+    },
+    {
+        'Name': 'BHAVYA CHOPRA',
+        'Link': 'bhavya18333@iiitd.ac.in',
+        'image': 'user'
+    },
+    {
+        'Name': 'BHUNESH',
+        'Link': 'bhunesh18280@iiitd.ac.in',
+        'image': 'user'
+    },
+    {
+        'Name': 'DHRUV YADAV',
+        'Link': 'dhruv18281@iiitd.ac.in',
+        'image': 'user'
+    },
+    {
+        'Name': 'GAGAN MALIK',
+        'Link': 'gagan18283@iiitd.ac.in',
+        'image': 'user'
+    },
+    {
+        'Name': 'HARMAN',
+        'Link': 'harman18284@iiitd.ac.in',
+        'image': 'user'
+    },
+    {
+        'Name': 'HARSH KUMAR',
+        'Link': 'harsh18285@iiitd.ac.in',
+        'image': 'user'
+    },
+    {
+        'Name': 'HIMANSHU YADAV',
+        'Link': 'himanshu18286@iiitd.ac.in',
+        'image': 'user'
+    },
+    {
+        'Name': 'Jasmine',
+        'Link': 'jasmine18287@iiitd.ac.in',
+        'image': 'user'
+    },
+    {
+        'Name': 'KAIMAN YADAV',
+        'Link': 'kaiman18288@iiitd.ac.in',
+        'image': 'user'
+    },
+    {
+        'Name': 'KHANDADE LIMBRAJ OM',
+        'Link': 'khandade18289@iiitd.ac.in',
+        'image': 'user'
+    },
+    {
+        'Name': 'Khushali',
+        'Link': 'khushali18290@iiitd.ac.in',
+        'image': 'user'
+    },
+    {
+        'Name': 'KIRTI',
+        'Link': 'kirti18291@iiitd.ac.in',
+        'image': 'user'
+    },
+    {
+        'Name': 'Kshitij Agrawal',
+        'Link': 'kshitij18292@iiitd.ac.in',
+        'image': 'user'
+    },
+    {
+        'Name': 'KUNAL ANAND',
+        'Link': 'kunal18293@iiitd.ac.in',
+        'image': 'user'
+    },
+    {
+        'Name': 'MANAK BISHT',
+        'Link': 'manak18340@iiitd.ac.in',
+        'image': 'user'
+    },
+    {
+        'Name': 'MANAN JAIN',
+        'Link': 'manan18294@iiitd.ac.in',
+        'image': 'user'
+    },
+    {
+        'Name': 'Manavjeet Singh',
+        'Link': 'manavjeet18295@iiitd.ac.in',
+        'image': 'user'
+    },
+    {
+        'Name': 'MUKUL TOMAR',
+        'Link': 'mukul18296@iiitd.ac.in',
+        'image': 'user'
+    },
+    {
+        'Name': 'Muskan Aggarwal',
+        'Link': 'muskan18297@iiitd.ac.in',
+        'image': 'user'
+    },
+    {
+        'Name': 'NIKHIL YADAV',
+        'Link': 'nikhil18298@iiitd.ac.in',
+        'image': 'user'
+    },
+    {
+        'Name': 'Nishant',
+        'Link': 'nishant18299@iiitd.ac.in',
+        'image': 'user'
+    },
+    {
+        'Name': 'NISHANT GROVER',
+        'Link': 'nishant18399@iiitd.ac.in',
+        'image': 'user'
+    },
+    {
+        'Name': 'PEEYUSH JAIN',
+        'Link': 'peeyush18402@iiitd.ac.in',
+        'image': 'user'
+    },
+    {
+        'Name': 'RACHIT BHAYANA',
+        'Link': 'rachit18301@iiitd.ac.in',
+        'image': 'user'
+    },
+    {
+        'Name': 'Rachit Mittal',
+        'Link': 'rachit18302@iiitd.ac.in',
+        'image': 'user'
+    },
+    {
+        'Name': 'Rakshita Anand',
+        'Link': 'rakshita17308@iiitd.ac.in',
+        'image': 'user'
+    },
+    {
+        'Name': 'Rishabh',
+        'Link': 'rishabh18303@iiitd.ac.in',
+        'image': 'user'
+    },
+    {
+        'Name': 'RISHI RAJ JAIN',
+        'Link': 'rishi18304@iiitd.ac.in',
+        'image': 'user'
+    },
+    {
+        'Name': 'RITIK GARG',
+        'Link': 'ritik18305@iiitd.ac.in',
+        'image': 'user'
+    },
+    {
+        'Name': 'RITWIK KAR',
+        'Link': 'ritwik18306@iiitd.ac.in',
+        'image': 'user'
+    },
+    {
+        'Name': 'RUSHIL THAREJA',
+        'Link': 'rushil18408@iiitd.ac.in',
+        'image': 'user'
+    },
+    {
+        'Name': 'SARTHAK ARORA',
+        'Link': 'sarthak18307@iiitd.ac.in',
+        'image': 'user'
+    },
+    {
+        'Name': 'SHANEY WARIS',
+        'Link': 'shaney18308@iiitd.ac.in',
+        'image': 'user'
+    },
+    {
+        'Name': 'SHIVAM',
+        'Link': 'shivam18309@iiitd.ac.in',
+        'image': 'user'
+    },
+    {
+        'Name': 'Shivang',
+        'Link': 'shivang18310@iiitd.ac.in',
+        'image': 'user'
+    },
+    {
+        'Name': 'SHOURYA PATHAK',
+        'Link': 'shourya18311@iiitd.ac.in',
+        'image': 'user'
+    },
+    {
+        'Name': 'SHRIKANT GARG',
+        'Link': 'shrikant18312@iiitd.ac.in',
+        'image': 'user'
+    },
+    {
+        'Name': 'SIddharth Sadhwani',
+        'Link': 'siddharth18313@iiitd.ac.in',
+        'image': 'user'
+    },
+    {
+        'Name': 'Siddharth V',
+        'Link': 'siddharth18314@iiitd.ac.in',
+        'image': 'user'
+    },
+    {
+        'Name': 'Smera Goel',
+        'Link': 'smera18315@iiitd.ac.in',
+        'image': 'user'
+    },
+    {
+        'Name': 'SNIGDHA GUPTA',
+        'Link': 'snigdha18316@iiitd.ac.in',
+        'image': 'user'
+    },
+    {
+        'Name': 'Sonali',
+        'Link': 'sonali18317@iiitd.ac.in',
+        'image': 'user'
+    },
+    {
+        'Name': 'Sonali Supriya',
+        'Link': 'sonali18318@iiitd.ac.in',
+        'image': 'user'
+    },
+    {
+        'Name': 'Srijan Jain',
+        'Link': 'srijan18319@iiitd.ac.in',
+        'image': 'user'
+    },
+    {
+        'Name': 'TANUPRIYA DAS',
+        'Link': 'tanupriya18320@iiitd.ac.in',
+        'image': 'user'
+    },
+    {
+        'Name': 'Udbhav Gupta',
+        'Link': 'udbhav17319@iiitd.ac.in',
+        'image': 'user'
+    },
+    {
+        'Name': 'Utsav',
+        'Link': 'utsav18321@iiitd.ac.in',
+        'image': 'user'
+    },
+]
+
+studentsJSON2017=[
+    {
+        'Name': 'Angel Walia',
+        'Link': 'angel17132@iiitd.ac.in',
+        'image': 'user'
+    },
+    {
+        'Name': 'Anand',
+        'Link': 'anand17218@iiitd.ac.in',
         'image': 'amanparnami-min.svg'
     },
     {
-        'Name': 'Aman Samuel',
+        'Name': 'Dashmesh Singh',
+        'Link': 'dashmesh17228@iiitd.ac.in',
         'image': 'Aman Samuel-min.svg'
     },
     {
-        'Name': 'Anoop Ratn',
+        'Name': 'Aakash Sehrawat',
+        'Link': 'aakash17275@iiitd.ac.in',
         'image': 'Anoop-min.svg'
     },
     {
-        'Name': 'Grace Eden',
+        'Name': 'Akshat Jain',
+        'Link': 'akshat17277@iiitd.ac.in',
         'image': 'Grace-min.svg'
     },
     {
-        'Name': 'Indrani De Parker',
+        'Name': 'Aman Rehman',
+        'Link': 'aman17278@iiitd.ac.in',
         'image': 'Indrani-min.svg'
     },
     {
-        'Name': 'Jainendra Shukla',
+        'Name': 'Anish Bhardwaj',
+        'Link': 'anish17281@iiitd.ac.in',
         'image': 'Jainendra-min.svg'
     },
     {
-        'Name': 'Manohar Khushalani',
+        'Name': 'Apratim Ankit',
+        'Link': 'apratim17282@iiitd.ac.in',
         'image': 'Manohar-min.svg'
     },
     {
-        'Name': 'Rahul Mohanani',
+        'Name': 'Atul Anand',
+        'Link': 'atul17284@iiitd.ac.in',
         'image': 'rahulm-min.svg'
     },
     {
-        'Name': 'Rajiv Ratn Shah',
+        'Name': 'Avyakt Gupta',
+        'Link': 'avyakt17285@iiitd.ac.in',
         'image': 'Rajiv-min.svg'
     },
     {
-        'Name': 'Vibha Narula Gupta',
+        'Name': 'Ayush Verma',
+        'Link': 'ayush17286@iiitd.ac.in',
         'image': 'Vibha-min.svg'
     },
+    {
+        'Name': 'Chirayu Prasad',
+        'Link': 'chirayu17287@iiitd.ac.in',
+        'image': 'Vibha-min.svg'
+    },
+    {
+        'Name': 'Gaurav Gautam',
+        'Link': 'gaurav17289@iiitd.ac.in',
+        'image': 'Vibha-min.svg'
+    },
+    {
+        'Name': 'Himanshu Singh',
+        'Link': 'himanshu17291@iiitd.ac.in',
+        'image': 'Vibha-min.svg'
+    },
+    {
+        'Name': 'Himanshu Singh',
+        'Link': 'himanshu17292@iiitd.ac.in',
+        'image': 'Vibha-min.svg'
+    },
+    {
+        'Name': 'Jatin Singhal',
+        'Link': 'jatin17293@iiitd.ac.in',
+        'image': 'Vibha-min.svg'
+    },
+    {
+        'Name': 'Kanupriya Singh',
+        'Link': 'kanupriya17294@iiitd.ac.in',
+        'image': 'Vibha-min.svg'
+    },
+    {
+        'Name': 'Kritika',
+        'Link': 'kritika17295@iiitd.ac.in',
+        'image': 'Vibha-min.svg'
+    },
+    {
+        'Name': 'Kyzyl Monteiro John',
+        'Link': 'kyzyl17296@iiitd.ac.in',
+        'image': 'Vibha-min.svg'
+    },
+    {
+        'Name': 'Mayank Jain',
+        'Link': 'mayank17297@iiitd.ac.in',
+        'image': 'Vibha-min.svg'
+    },
+    {
+        'Name': 'Mayank Rohilla',
+        'Link': 'mayank17299@iiitd.ac.in',
+        'image': 'Vibha-min.svg'
+    },
+    {
+        'Name': 'Meeha Tewari',
+        'Link': 'meeha17300@iiitd.ac.in',
+        'image': 'Vibha-min.svg'
+    },
+    {
+        'Name': 'Nikhil Kumar',
+        'Link': 'nikhil17301@iiitd.ac.in',
+        'image': 'Vibha-min.svg'
+    },
+    {
+        'Name': 'Nishtha Singhal',
+        'Link': 'nishtha17302@iiitd.ac.in',
+        'image': 'Vibha-min.svg'
+    },
+    {
+        'Name': 'Piyush Vashisht',
+        'Link': 'piyush17303@iiitd.ac.in',
+        'image': 'Vibha-min.svg'
+    },
+    {
+        'Name': 'Porvil',
+        'Link': 'porvil17304@iiitd.ac.in',
+        'image': 'Vibha-min.svg'
+    },
+    {
+        'Name': 'Pragya Singh',
+        'Link': 'pragya17305@iiitd.ac.in',
+        'image': 'Vibha-min.svg'
+    },
+    {
+        'Name': 'Prakhar Goel',
+        'Link': 'prakhar17306@iiitd.ac.in',
+        'image': 'Vibha-min.svg'
+    },
+    {
+        'Name': 'Pushpraj',
+        'Link': 'pushpraj17307@iiitd.ac.in',
+        'image': 'Vibha-min.svg'
+    },
+    {
+        'Name': 'Riya Singh',
+        'Link': 'riya17309@iiitd.ac.in',
+        'image': 'Vibha-min.svg'
+    },
+    {
+        'Name': 'Royal Tomar',
+        'Link': 'royal17310@iiitd.ac.in',
+        'image': 'Vibha-min.svg'
+    },
+    {
+        'Name': 'Sanchit Mittal',
+        'Link': 'sanchit17312@iiitd.ac.in',
+        'image': 'Vibha-min.svg'
+    },
+    {
+        'Name': 'Shaurya Singh',
+        'Link': 'shaurya17313@iiitd.ac.in',
+        'image': 'Vibha-min.svg'
+    },
+    {
+        'Name': 'Shivankar Sharma',
+        'Link': 'shivankar17314@iiitd.ac.in',
+        'image': 'Vibha-min.svg'
+    },
+    {
+        'Name': 'Shruti Dabas',
+        'Link': 'shruti17315@iiitd.ac.in',
+        'image': 'Vibha-min.svg'
+    },
+    {
+        'Name': 'Sounak Gupta',
+        'Link': 'sounak17317@iiitd.ac.in',
+        'image': 'Vibha-min.svg'
+    },
+    {
+        'Name': 'Tushar Kadian',
+        'Link': 'tushar17318@iiitd.ac.in',
+        'image': 'Vibha-min.svg'
+    },
+    {
+        'Name': 'Vaibhav Sarda',
+        'Link': 'vaibhav17320@iiitd.ac.in',
+        'image': 'Vibha-min.svg'
+    },
+    {
+        'Name': 'Varnika Kairon',
+        'Link': 'varnika17321@iiitd.ac.in',
+        'image': 'Vibha-min.svg'
+    },
+    {
+        'Name': 'Vishnu Mohan',
+        'Link': 'vishnu17322@iiitd.ac.in',
+        'image': 'Vibha-min.svg'
+    },
+    {
+        'Name': 'Zubair Aslam',
+        'Link': 'zubair17323@iiitd.ac.in',
+        'image': 'Vibha-min.svg'
+    }
 ]
 
 publicationsJSON= [

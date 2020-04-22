@@ -1,9 +1,18 @@
 nav= 1;
 $(document).ready(function(){
     $("#menu").toggle();
-    // $('#academics_innermenu').removeClass('d-none');
-    // $('#people_innermenu').removeClass('d-none');
-    // $('#research_innermenu').removeClass('d-none');
+    setTimeout(()=>{
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker
+            .register('/service-worker.js', {scope: '/'})
+            .then(function(registration) {
+                return registration;
+            })
+            .catch(function(err) {
+                console.error('Unable to register service worker.', err);
+            });
+        }
+    }, 1000);
 });
 function handleinnermenu(head, id){
     head= head.toString().toLowerCase();

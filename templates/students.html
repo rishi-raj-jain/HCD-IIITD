@@ -1,31 +1,63 @@
 {% extends "base.html" %}
+{% block meta %}
+<link rel="canonical" href="https://hcd.now.sh/students" />
+<meta property="og:url" content="https://hcd.now.sh/students" />    
+<meta name="description" content="Desc for B.Tech CSD" />
+<meta property="og:description" content="Desc for B.Tech CSD" />
+<meta property="og:title" content="B.Tech. Courses | Human-Centered Design @ IIIT-Delhi" />
+{% endblock %}
 {% block content %}
-<div class="container py-5 bg-white">
-    <h3 class="animated flipInX font-weight-bold">Students</h3>
-    <div class="p-4 p-md-0 mt-3">
-        <div class="row d-md-flex align-items-center justify-content-start">
-            {% for option in students_list %}
-                <div class="col-12 col-md-3 mt-4 itemlab">
-                    <div onmouseout="this.classList.remove('shadow_'); this.classList.add('shadow');" onmouseover="this.classList.add('shadow_');this.classList.remove('shadow');" class="home_main shadow w-100 bg-white h-100 p-5 rounded" style="border-style: dashed; border-color: #707070; border-width: 0.013cm;">
-                        <div class="d-flex justify-content-center align-items-center" style="height: calc( 100vh /5 );" >
-                            <img src="../static/images/faculty/{{option.image}}" style="max-height: 100%; max-width: 100%;">
-                        </div>
-                        <div class="row-content text-center">
-                            <h3 class="font-weight-bolder mt-3 gara-proreg text-dark">{{option.Name}}</h3>
-                        </div>
-                    </div>
-                </div>
-            {% endfor %}
+<div class="container mb-5 bg-white">
+    <div class="mt-5 row d-md-flex align-items-center justify-content-center">
+        <h3 class="font-weight-bold">Students</h3>
+    </div>
+    <div id="students_2017" class="row d-md-flex align-items-center justify-content-center text-left pl-md-3 mt-3">
+        <h4 class="mt-3 text-green">B.Tech CSD 2017</h4>
+    </div>
+    <div class="row d-md-flex align-items-center justify-content-center text-left pl-md-3 mt-1">
+        {% for option in students_list %}
+        <div onmouseover="this.classList.add('shadow_hover');" onmouseout="this.classList.remove('shadow_hover')" class="d-flex align-items-center p-3 my-3 ml-2 ml-sm-2 text-white-50 bg-purple rounded border" style="width: 300px;">
+            <!-- <img class="mr-3 rounded-circle" src="../static/images/faculty/{{option.image}}" alt="" width="48" height="48"> -->
+            <img class="mr-3 rounded-circle" src="https://img.icons8.com/bubbles/50/000000/edit-user.png" alt="" width="48" height="48">
+            <div class="lh-100">
+                <h6 class="mb-0 text-green lh-100">{{option.Name}}</h6>
+                <a class="border-bottom" href="mailto:{{option.Link}}">
+                    <small class="text-dark">
+                        {{option.Link}}
+                    </small>
+                </a>
+            </div>
         </div>
+        {% endfor %}
+    </div>
+    <div id="students_2018" class="row d-md-flex align-items-center justify-content-center text-left pl-md-3 mt-3">
+        <h4 class="mt-3 text-green">B.Tech CSD 2018</h4>
+    </div>
+    <div class="row d-md-flex align-items-center justify-content-center text-left pl-md-3 mt-1">
+        {% for option in students_list_1 %}
+        <div onmouseover="this.classList.add('shadow_hover');" onmouseout="this.classList.remove('shadow_hover')" class="d-flex align-items-center p-3 my-3 ml-2 ml-sm-2 text-white-50 bg-purple rounded border" style="width: 300px;">
+            <img class="mr-3 rounded-circle" src="https://img.icons8.com/bubbles/50/000000/edit-user.png" alt="" width="48" height="48">
+            <div class="lh-100">
+                <h6 class="mb-0 text-green lh-100">{{option.Name}}</h6>
+                <a class="border-bottom" href="mailto:{{option.Link}}">
+                    <small class="text-dark">
+                        {{option.Link}}
+                    </small>
+                </a>
+            </div>
+        </div>
+        {% endfor %}
     </div>
 </div>
 {% endblock %}
 {% block scripts %}
 <script>
-    $(document).ready(function(){
-        let maxs= 0;
-        $(".itemlab").each(function(){ maxs= Math.max(maxs, $(this).height()); });
-        $(".itemlab").each(function(){ $(this).height(maxs); });
+    $(document).ready(()=>{
+        let list_argument_year= '{{year}}';
+        let selector= $('#students_'+list_argument_year);
+        if(selector.hasClass('row')){
+            $('html,body').animate({scrollTop: selector.offset().top - 80});
+        }
     });
 </script>
 {% endblock %}

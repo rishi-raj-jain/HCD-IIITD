@@ -1,11 +1,20 @@
 {% extends "base.html" %}
 {% block content %}
+{% block meta %}
+<link rel="canonical" href="https://hcd.now.sh/research-publications" />
+<meta property="og:url" content="https://hcd.now.sh/research-publications" />    
+<meta name="description" content="Desc for B.Tech CSD" />
+<meta property="og:description" content="Desc for B.Tech CSD" />
+<meta property="og:title" content="B.Tech. Courses | Human-Centered Design @ IIIT-Delhi" />
+{% endblock %}
 <div class="container py-5">
     <h3 class="animated flipInX font-weight-bold">Research Publications</h3>
     <div class="row">
         <div class="mt-4 ml-3 w-100">
             {% for option in research_list %}
-                <button onclick="openpublications('{{option.Year_Publication}}')" class="20{{option.Year_Publication}} text-left font-weight-bold btn btn-block rounded-0 border-0 w-100 bg-white shadow mt-3" style="font-size: 1.3em;">20{{option.Year_Publication}}</button>
+                <button onclick="openpublications('{{option.Year_Publication}}')" class="20{{option.Year_Publication}} text-left font-weight-bold btn btn-block rounded-0 border-0 w-100 bg-white shadow mt-3" style="font-size: 1.3em;">
+                    20{{option.Year_Publication}}
+                </button>
                 <div id="Year_20{{option.Year_Publication}}" class="listing mt-2 bg-light p-3">
                     {% for option2 in option.List %}
                         <h5 class="font-weight-bold">{{option2.Owner}}</h5>

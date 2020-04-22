@@ -1,7 +1,8 @@
+import re
 from course_list import courseJson
 from student import studentpolicyJSON
 from flask import Flask, render_template, request, jsonify, abort
-from research_list import labsJSON, facultyJson, researchJson, studentsJSON, publicationsJSON
+from research_list import labsJSON, facultyJson, researchJson, studentsJSON2017, studentsJSON2018, publicationsJSON
 
 app = Flask(__name__)
 app.config['TEMPLATES_AUTO_RELOAD'] = True
@@ -13,7 +14,8 @@ def index():
 
 @app.route("/student-policy/")
 def policy():
-    return render_template('policy.html', policy_list= studentpolicyJSON)
+    temp= render_template('policy.html', policy_list= studentpolicyJSON)
+    return re.sub(' +', ' ', ''.join(temp.split('\n')))
 
 @app.route("/btech-courses/")
 def courses():
@@ -37,19 +39,22 @@ def research_labs():
 
 @app.route("/contact/")
 def contact():
-    return render_template('contact.html')
+    temp= render_template('contact.html')
+    return re.sub(' +', ' ', ''.join(temp.split('\n')))
 
 @app.route("/faculty/")
 def faculty():
-    return render_template('faculty.html', faculty_list= facultyJson, tags= request.args.get('tags'))
+    temp= render_template('faculty.html', faculty_list= facultyJson, tags= request.args.get('tags'))
+    return re.sub(' +', ' ', ''.join(temp.split('\n')))
 
 @app.route("/students/")
 def students():
-    return render_template('students.html', students_list= studentsJSON)
+    temp= render_template('students.html', students_list= studentsJSON2017, students_list_1= studentsJSON2018, year= request.args.get('year'))
+    return re.sub(' +', ' ', ''.join(temp.split('\n')))
 
 @app.errorhandler(404)
 def page_not_found(e):
-    return render_template('404.html'), 404
+    return re.sub(' +', ' ', ''.join(render_template('404.html').split('\n'))), 404
 
 @app.route("/sitemap.xml/")
 def sitemap():

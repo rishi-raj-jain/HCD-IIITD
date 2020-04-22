@@ -1,43 +1,62 @@
 {% extends "base.html" %}
 {% block content %}
-<div class="container" id="contact_page">
+{% block meta %}
+<link rel="canonical" href="https://hcd.now.sh/contact" />
+<meta property="og:url" content="https://hcd.now.sh/contact" />    
+<meta name="description" content="Contact us at Human-Centered Design @ IIIT-Delhi" />
+<meta property="og:description" content="Contact us at Human-Centered Design @ IIIT-Delhi" />
+<meta property="og:title" content="Contact | Human-Centered Design @ IIIT-Delhi" />
+{% endblock %}
+<div class="container" id="contact_page" style="height: auto !important;">
     <div class="row py-3 d-md-flex align-items-center justify-content-center h-100">
         <div class="col-12 col-md-5 py-3 order-1">
-            <h3 class="animated flipInX font-weight-bold">Contact Us</h3>
-            <div class="d-flex flex-row bd-highlight">
-                <div class="mt-3 bd-highlight"><h6 >
-                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="map-marked-alt" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" style="height: 1.5em; width: 1.5em;" class="svg-inline--fa fa-map-marked-alt fa-w-18 fa-3x"><path fill="currentColor" d="M288 0c-69.59 0-126 56.41-126 126 0 56.26 82.35 158.8 113.9 196.02 6.39 7.54 17.82 7.54 24.2 0C331.65 284.8 414 182.26 414 126 414 56.41 357.59 0 288 0zm0 168c-23.2 0-42-18.8-42-42s18.8-42 42-42 42 18.8 42 42-18.8 42-42 42zM20.12 215.95A32.006 32.006 0 0 0 0 245.66v250.32c0 11.32 11.43 19.06 21.94 14.86L160 448V214.92c-8.84-15.98-16.07-31.54-21.25-46.42L20.12 215.95zM288 359.67c-14.07 0-27.38-6.18-36.51-16.96-19.66-23.2-40.57-49.62-59.49-76.72v182l192 64V266c-18.92 27.09-39.82 53.52-59.49 76.72-9.13 10.77-22.44 16.95-36.51 16.95zm266.06-198.51L416 224v288l139.88-55.95A31.996 31.996 0 0 0 576 426.34V176.02c0-11.32-11.43-19.06-21.94-14.86z" class=""></path></svg>
-                    &nbsp;Indraprastha Institute of Information Technology, Delhi</h6></div>
-            </div>
-            <div class="d-flex flex-row bd-highlight">
-                <div class="py-1 bd-highlight"><h6 >Okhla Industrial Estate, Phase 3</h6></div>
-            </div>
-            <div class="d-flex flex-row bd-highlight">
-                <div class="py-1 bd-highlight"><h6 >(Near Govind Puri Metro Station)</h6></div>
-            </div>
-            <div class="d-flex flex-row bd-highlight">
-                <div class="py-1 bd-highlight"><h6 >New Delhi, India - 110020</h6></div>
-            </div>
-            <div class="d-flex flex-row bd-highlight">
-                <div class="py-1 bd-highlight"><h6 >Room No: A-401, 4th Floor, Research & Development Building</h6></div>
-            </div>
-            <div class="d-flex flex-row bd-highlight">
-                <div class="py-3 bd-highlight">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20 22.621l-3.521-6.795c-.008.004-1.974.97-2.064 1.011-2.24 1.086-6.799-7.82-4.609-8.994l2.083-1.026-3.493-6.817-2.106 1.039c-7.202 3.755 4.233 25.982 11.6 22.615.121-.055 2.102-1.029 2.11-1.033z"/></svg>
-                    <a class="text-dark" href="tel:+91-11-26907588">+91-11-26907588</a>
-                </div>
-            </div>
-            <div class="d-flex flex-row bd-highlight py-2">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 12.713l-11.985-9.713h23.97l-11.985 9.713zm0 2.574l-12-9.725v15.438h24v-15.438l-12 9.725z"/></svg>
-                &nbsp;&nbsp;<a class="text-dark" href="mailto:jyoti@iiitd.ac.in">jyoti@iiitd.ac.in</a>,&nbsp;<a class="text-dark" href="mailto:admin-hcd@iiitd.ac.in">admin-hcd@iiitd.ac.in</a>
-            </div>
-            <div class="d-flex flex-row bd-highlight mt-3 text-dark font-weight-bold">
-                Contact Person: Ms Jyoti Singh (JM-HCD)
-            </div>
+            <h5 class="font-weight-normal text-green">
+                Address
+            </h5>
+            <h6 class="mt-1">
+                Department of Human-Centered Design<br>
+                Room No – A-401, 4th Floor, Research & Development Block,<br>
+                Indraprastha Institute of Information Technology, Delhi (IIIT-Delhi)<br>
+                Okhla Industrial Estate, Phase III <br>
+                (Near Govind Puri Metro Station)<br>
+                New Delhi, India – 110020<br>
+            </h6> 
+            <h5 class="mt-4 font-weight-normal text-green">
+                Email
+            </h5>
+            <h6 class="mt-1">
+                <a rel="noopener noreferrer" class="text-dark" href="mailto:admin-hcd@iiitd.ac.in">
+                    admin-hcd@iiitd.ac.in
+                </a>
+            </h6>
+            <h5 class="mt-4 font-weight-normal text-green">
+                Phone
+            </h5>
+            <h6 class="mt-1">
+                <a class="text-dark" href="tel:+91-11-26907588">+91-11-26907588</a>
+            </h6>
+            <h5 class="mt-4 font-weight-normal text-green">
+                Social Media
+            </h5>
+            <h6 class="mt-1">
+                <ul class="p-0 d-flex align-items-end flex-column mt-2 mb-0 list-unstyled">
+                    <li class="w-100">
+                        <a rel='noopener noreferrer' href="https://twitter.com/hcd_IIITD" class="py-1 text-decoration-none" target="_blank">
+                            <img alt="Human Centered Design - Twitter" src="../static/images/twitter_svg.svg" height="35">
+                        </a>
+                        <a rel='noopener noreferrer' href="https://www.facebook.com/hcdzine" class="py-1 text-decoration-none" target="_blank">
+                            <img alt="Human Centered Design - Facebook" src="../static/images/facebook_hcd.svg" height="35">
+                        </a>
+                        <a rel='noopener noreferrer' href="https://www.linkedin.com/in/human-centered-design-hcd-43b3a7180/" class="py-1 text-decoration-none" target="_blank">
+                            <img alt="Human Centered Design - LinkedIn" src="../static/images/linkedin_hcd.svg" height="35">
+                        </a>
+                    </li>
+                </ul>      
+            </h6>
         </div>
         <div class="col-12 h-100 col-md-7 order-2 py-3 py-md-0">
             <div class="h-100 d-flex align-items-center justify-content-center">
-                <iframe allowfullscreen="" frameborder="0" class="h-100 w-100" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.748076511186!2d77.27101231454759!3d28.547290982451514!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce3e564daac1d%3A0x2c582e340e7bc556!2sIIIT-Delhi!5e0!3m2!1sen!2sus!4v1490258428889"></iframe>
+                <iframe class="border-0" style="height: 400px; width: 100%;" id="map" data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.748076511186!2d77.27101231454759!3d28.547290982451514!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce3e564daac1d%3A0x2c582e340e7bc556!2sIIIT-Delhi!5e0!3m2!1sen!2sus!4v1490258428889" allowfullscreen="" frameborder="0" src=""></iframe>
             </div> 
         </div>
     </div>
@@ -46,15 +65,26 @@
 {% block scripts %}
 <script>
     function handlespace(){
-        let i= $('#footer').height();
-        if($(window).width()>768){
-            $("#contact_page").css('height', 'calc( 100vh - 70px - ' + i.toString()+'px )');
+        let height= $(window).height();
+        let footer= $('#footer');
+        let extra= footer.height()+footer.offset().top;
+        if(height>extra){
+            $('#contact_page').css({height: height - footer.height()});
+            console.log('Larger');
         }
         else{
-            $("#contact_page").css('height', 'auto');
+            $('#contact_page').css({height: 'auto'});
+            console.log('Smaller');
         }
     }
-    $(window).resize(()=>{handlespace()});
-    $(document).ready(()=>{handlespace()});
+    $(window).resize(()=>{
+        handlespace();
+    });
+    $(document).ready(()=>{
+        handlespace();
+        setTimeout(()=>{
+            $('#map').attr('src', $('#map').attr('data-src'));
+        }, 100);
+    });
 </script>
 {% endblock %}
