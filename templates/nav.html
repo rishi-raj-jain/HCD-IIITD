@@ -1,14 +1,158 @@
+<style>
+    button[aria-expanded="true"]{
+        border-bottom: solid 4px #40ADA7;
+    }
+    .dropdown-submenu {
+       position: relative;
+    }
+    .dropdown-submenu>.dropdown-menu {
+        top: 0;
+        left: 100%;
+    }
+    @supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+        .dropdown-menu {
+            -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); background-color: rgba(0, 0, 0, 0.5); 
+        }
+    }
+    @supports not ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+        .dropdown-menu {
+            background-color: rgb(0, 0, 0, 0.8);
+            filter: blur(0.5px);
+        }
+    }
+</style>
 <div style="height: 70px;"></div>
-<nav class="fixed-top" style="z-index: 998; background: black; height: 70px;">
-    
+
+<nav class="fixed-top" style="z-index: 998; background: black; height: 110px;">
+    <div class="py-1 container-fluid bg-white">
+        <div class="container">
+            <div class="row px-md-4 d-md-flex align-items-center justify-content-between" style="height: 30px;">
+                <ul class="list-unstyled">
+                    <li class="d-flex align-items-center justify-content-center">
+                        <a aria-label="contact" href="/contact" class="no-transform-imp">
+                            <img alt="contact icon" class="ml-2 ml-md-1" src="../static/img/Icon metro-contacts-mail.svg">
+                        </a>
+                        <a aria-label="contact" href="/contact" class="text-green no-transform-imp">
+                            &nbsp;&nbsp;Contact Us
+                        </a>
+                    </li>
+                </ul>
+                <ul class="list-unstyled" style="width: 150px;">
+                    <li class="d-flex align-items-center justify-content-between">
+                        <a aria-label="twitter hcd" rel='noopener noreferrer' href="https://twitter.com/hcd_IIITD" class="text-decoration-none" target="_blank">
+                            <svg id="Group_657" data-name="Group 657" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30" viewBox="0 0 37.222 37.222">
+                                <defs>
+                                  <linearGradient id="linear-gradient" x1="0.021" y1="0.527" x2="0.967" y2="0.5" gradientUnits="objectBoundingBox">
+                                    <stop offset="0" stop-color="#00d3a8"/>
+                                    <stop offset="1" stop-color="#01c0cf"/>
+                                  </linearGradient>
+                                </defs>
+                                <path id="Path_1256" data-name="Path 1256" d="M584.9,207.878a18.611,18.611,0,1,0-18.609,18.611A18.612,18.612,0,0,0,584.9,207.878Z" transform="translate(-547.678 -189.267)" fill="url(#linear-gradient)"/>
+                                <path id="Path_1257" data-name="Path 1257" d="M598.352,233.355a8.66,8.66,0,0,1-2.329.624,4.551,4.551,0,0,0,1.89-2.351.07.07,0,0,0-.1-.086,8.682,8.682,0,0,1-2.658,1.017,4.362,4.362,0,0,0-3.238-1.445,4.509,4.509,0,0,0-4.434,4.576,4.792,4.792,0,0,0,.115,1.043,12.471,12.471,0,0,1-9.118-4.754.024.024,0,0,0-.04,0,4.706,4.706,0,0,0-.582,2.269,4.62,4.62,0,0,0,1.9,3.753.029.029,0,0,1-.016.052,4.325,4.325,0,0,1-1.878-.548.022.022,0,0,0-.034.021,6.463,6.463,0,0,0,.3,1.675,4.533,4.533,0,0,0,3.258,2.83,4.448,4.448,0,0,1-1.171.162,4.231,4.231,0,0,1-.8-.078.025.025,0,0,0-.028.034,4.464,4.464,0,0,0,4.055,3.134.028.028,0,0,1,.016.05,8.707,8.707,0,0,1-5.449,1.913,8.811,8.811,0,0,1-1.056-.063,12.276,12.276,0,0,0,6.8,2.055,12.019,12.019,0,0,0,8.308-3.144,13.571,13.571,0,0,0,4.008-7.114,13.155,13.155,0,0,0,.3-2.763c0-.2,0-.4-.014-.591a9.144,9.144,0,0,0,2.077-2.167A.07.07,0,0,0,598.352,233.355Z" transform="translate(-569.155 -220.541)" fill="#fff"/>
+                            </svg>
+                        </a>
+                        <a aria-label="facebook hcd" rel='noopener noreferrer' href="https://www.facebook.com/hcdzine" class="text-decoration-none" target="_blank">                    
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30" viewBox="0 0 38.49 38.49">
+                                <defs>
+                                  <linearGradient id="linear-gradient" y1="0.5" x2="1" y2="0.5" gradientUnits="objectBoundingBox">
+                                    <stop offset="0" stop-color="#00d3a8"/>
+                                    <stop offset="1" stop-color="#01c0cf"/>
+                                  </linearGradient>
+                                </defs>
+                                <g id="Group_661" data-name="Group 661" transform="translate(0 0)">
+                                  <g id="Group_660" data-name="Group 660">
+                                    <path id="Path_1300" data-name="Path 1300" d="M152.082,208.511a19.245,19.245,0,1,0-19.245,19.246A19.244,19.244,0,0,0,152.082,208.511Z" transform="translate(-113.592 -189.267)" fill="url(#linear-gradient)"/>
+                                    <path id="Path_1301" data-name="Path 1301" d="M172.569,225.391v-1.823a.966.966,0,0,1,1.008-1.1h2.558v-3.9l-3.523-.016c-3.91,0-4.8,2.913-4.8,4.778v2.059h-2.26v4.56h2.28v11.4h4.559v-11.4h3.384l.416-4.56Z" transform="translate(-151.628 -210.704)" fill="#fff"/>
+                                  </g>
+                                </g>
+                            </svg>                                     
+                        </a>
+                        <a aria-label="linkedin hcd" rel='noopener noreferrer' href="https://www.linkedin.com/in/human-centered-design-hcd-43b3a7180/" class="text-decoration-none" target="_blank">
+                            <svg id="Group_664" data-name="Group 664" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30" viewBox="0 0 38.221 37.181">
+                                <defs>
+                                  <linearGradient id="linear-gradient" x1="0.029" y1="0.5" x2="1" y2="0.5" gradientUnits="objectBoundingBox">
+                                    <stop offset="0" stop-color="#00d3a8"/>
+                                    <stop offset="1" stop-color="#01c0cf"/>
+                                  </linearGradient>
+                                </defs>
+                                <path id="Path_1344" data-name="Path 1344" d="M368.194,408.083a19.118,19.118,0,1,0-19.109,18.591A18.855,18.855,0,0,0,368.194,408.083Z" transform="translate(-329.973 -389.492)" fill="url(#linear-gradient)"/>
+                                <g id="Group_663" data-name="Group 663" transform="translate(10.011 7.686)">
+                                  <rect id="Rectangle_1560" data-name="Rectangle 1560" width="4.424" height="12.643" transform="translate(0 6.321)" fill="#fff"/>
+                                  <path id="Path_1345" data-name="Path 1345" d="M369.8,420.023a2.213,2.213,0,1,0,2.212,2.212A2.215,2.215,0,0,0,369.8,420.023Z" transform="translate(-367.592 -420.023)" fill="#fff"/>
+                                  <path id="Path_1346" data-name="Path 1346" d="M405.725,447.661c-.3-2.383-1.49-3.884-4.711-3.884-2.286,0-3.2.357-3.72,1.354h0v-1.354h-3.581V456.42H397.4V449.8c0-1.652.313-2.9,2.355-2.9,2.014,0,2.175,1.536,2.175,3.007v6.511h3.8S405.795,448.218,405.725,447.661Z" transform="translate(-386.761 -437.455)" fill="#fff"/>
+                                </g>
+                            </svg>
+                        </a>
+                        <a aria-label="instagram hcd" rel='noopener noreferrer' href="https://www.instagram.com/hcd.iiitd" class="text-decoration-none" target="_blank">                    
+                            <svg height='30' width='30' id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 40 40"><defs><style>.cls-1{fill:url(#linear-gradient);}.cls-2{fill:none;stroke:#fff;stroke-miterlimit:10;stroke-width:0.89px;}.cls-3{fill:#fff;}</style><linearGradient id="linear-gradient" x1="7.37" y1="32.18" x2="8.26" y2="32.18" gradientTransform="matrix(44.76, 0, 0, -44.76, -329.76, 1460.28)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#48bd9f"/><stop offset="1" stop-color="#17becd"/></linearGradient></defs><g id="Group_689" data-name="Group 689"><g id="Group_688" data-name="Group 688"><path id="Path_1393" data-name="Path 1393" class="cls-1" d="M20,0A20,20,0,0,0,0,20H0A20,20,0,1,0,20,0Z" transform="translate(0 0)"/><g id="Group_687" data-name="Group 687"><path id="Path_1394" data-name="Path 1394" class="cls-2" d="M25.73,9.43" transform="translate(0 0)"/><g id="Group_686" data-name="Group 686"><path id="Path_1395" data-name="Path 1395" class="cls-3" d="M20,27.14A7.14,7.14,0,1,0,12.86,20,7.15,7.15,0,0,0,20,27.14ZM14.59,20A5.41,5.41,0,1,1,20,25.41,5.42,5.42,0,0,1,14.59,20Z" transform="translate(0 0)"/></g><path id="Path_1396" data-name="Path 1396" class="cls-3" d="M27.13,31.86H12.88A4.85,4.85,0,0,1,8,27V13a4.85,4.85,0,0,1,4.85-4.85H27.13A4.87,4.87,0,0,1,32,13V27A4.86,4.86,0,0,1,27.13,31.86ZM12.88,9.9A3.09,3.09,0,0,0,9.8,13V27a3.08,3.08,0,0,0,3.08,3.08H27.13A3.09,3.09,0,0,0,30.21,27V13A3.09,3.09,0,0,0,27.13,9.9Z" transform="translate(0 0)"/></g><path id="Path_1397" data-name="Path 1397" class="cls-3" d="M27.24,12.05a1.13,1.13,0,1,0,1.13,1.12,1.12,1.12,0,0,0-1.13-1.12Z" transform="translate(0 0)"/></g></g></svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div> 
+    </div>
     
     <div class="container mt-2">
         <div class="d-flex align-items-center justify-content-between">
             <a href="/"><img src="../static/images/logoleft.svg" style="height: 50px;" alt="Indraprastha Institute Of Information Technology, Delhi"><img class="ml-2" src="../static/images/logo-white.svg" style="width: 100px;" alt="Human Centered Design"></a>
             <div class="d-flex">
-                <a onclick="openbiggermenu('academics')" class="text-pointer px-3 d-none d-md-block text-white font-12">Academics</a>    
-                <a onclick="openbiggermenu('research')" class="text-pointer px-3 d-none d-md-block text-white font-12">Research</a>
-                <a onclick="openbiggermenu('people')" class="text-pointer px-3 d-none d-md-block text-white font-12">People</a>
+                <div class="dropdown d-none d-lg-block">
+                    <button class="btn text-pointer px-3 text-white font-12" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Academics
+                    </button>
+                    <div class="border-0 btn btn-lg dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="h5 dropdown-item text-white" onmouseover="this.classList.remove('text-white');this.classList.add('text-dark');" onmouseout="this.classList.add('text-white');this.classList.remove('text-dark');" href="/btech-courses/">
+                            B.Tech. in CSD
+                        </a>
+                        <a class="h5 dropdown-item text-white" onmouseover="this.classList.remove('text-white');this.classList.add('text-dark');" onmouseout="this.classList.add('text-white');this.classList.remove('text-dark');" href="/phd/">
+                            Ph.D.
+                        </a>
+                        <a class="h5 dropdown-item text-white" onmouseover="this.classList.remove('text-white');this.classList.add('text-dark');" onmouseout="this.classList.add('text-white');this.classList.remove('text-dark');" href="/thesis-defense/">
+                            Thesis Defense
+                        </a>
+                        <a class="h5 dropdown-item text-white" onmouseover="this.classList.remove('text-white');this.classList.add('text-dark');" onmouseout="this.classList.add('text-white');this.classList.remove('text-dark');" href="/student-policy/">
+                            Student Conduct Policy
+                        </a>
+                    </div>
+                </div>
+                <div class="dropdown d-none d-lg-block">
+                    <button class="btn text-pointer px-3 text-white font-12" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Research
+                    </button>
+                    <div class="border-0 btn btn-lg dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="h5 dropdown-item text-white" onmouseover="this.classList.remove('text-white');this.classList.add('text-dark');" onmouseout="this.classList.add('text-white');this.classList.remove('text-dark');" href="/research-areas/">
+                            Research Areas
+                        </a>
+                        <a class="h5 dropdown-item text-white" onmouseover="this.classList.remove('text-white');this.classList.add('text-dark');" onmouseout="this.classList.add('text-white');this.classList.remove('text-dark');" href="/research-labs/">
+                            Research Labs
+                        </a>
+                        <a class="h5 dropdown-item text-white" onmouseover="this.classList.remove('text-white');this.classList.add('text-dark');" onmouseout="this.classList.add('text-white');this.classList.remove('text-dark');" href="/research-publications/">
+                            Research Publications
+                        </a>
+                        <a class="h5 dropdown-item text-white" onmouseover="this.classList.remove('text-white');this.classList.add('text-dark');" onmouseout="this.classList.add('text-white');this.classList.remove('text-dark');" href="/research-projects/">
+                            Research Projects
+                        </a>
+                    </div>
+                </div>
+                <div class="dropdown d-none d-lg-block">
+                    <button class="btn text-pointer px-3 text-white font-12" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        People
+                    </button>
+                    <div class="border-0 btn btn-lg dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="h5 dropdown-item text-white" onmouseover="this.classList.remove('text-white');this.classList.add('text-dark');" onmouseout="this.classList.add('text-white');this.classList.remove('text-dark');" href="/students/">
+                            B.Tech. Students
+                        </a>
+                        <a class="h5 dropdown-item text-white" onmouseover="this.classList.remove('text-white');this.classList.add('text-dark');" onmouseout="this.classList.add('text-white');this.classList.remove('text-dark');" href="/phd-scholars/">
+                            Ph.D. Scholars
+                        </a>
+                        <a class="h5 dropdown-item text-white" onmouseover="this.classList.remove('text-white');this.classList.add('text-dark');" onmouseout="this.classList.add('text-white');this.classList.remove('text-dark');" href="/faculty/">
+                            Faculty
+                        </a>
+                        <a class="h5 dropdown-item text-white" onmouseover="this.classList.remove('text-white');this.classList.add('text-dark');" onmouseout="this.classList.add('text-white');this.classList.remove('text-dark');" href="/staff/">
+                            Staff
+                        </a>
+                    </div>
+                </div>
             </div>
             <a class="d-lg-block d-none mb-2" id="search" onmouseover="this.style.cursor='pointer'">
                 <div class="d-flex rounded input" style="position: relative;">
@@ -18,20 +162,19 @@
                         <input type="hidden" name="n" value="0">
                         <input type="hidden" name="_charset_" value="">
                         <input type="hidden" name="bcd" value="&#247;">
-                        <input aria-label="Search Desktop" style="border-radius: 15px !important;" class="animated fadeIn faster shadow btn btn-lg btn-white bg-white no-transform text-gray w-100" type="text" name="query" placeholder="Search">
+                        <input aria-label="Search Desktop" style="border-radius: 5px !important;" class="animated fadeIn faster shadow btn btn-lg btn-white bg-white no-transform text-gray w-100" type="text" name="query" placeholder="Search">
                         <input class="d-none" type="submit" value="search" id="tosearch_desktop">
                     </form>
                     <img src="../static/images/search.svg" height="30px" style="margin-top: 0.8em; position: absolute; left: 10px;" alt="Search Bar">
                 </div>
             </a>
-            <a onclick="togglemenu('null')" class="d-md-none" onmouseover="this.style.cursor='pointer'">
+            <a onclick="togglemenu('null')" class="d-lg-none" onmouseover="this.style.cursor='pointer'">
                 <img id="nav_menu" src="../static/images/menu.svg" height="35px" alt="Navigation Menu">
             </a>
         </div>
     </div>
 
-
-    <div id="menu" class="animated fadeIn faster container-fluid d-lg-none px-5 py-2" style="position: absolute; top: 70px; overflow-y:scroll; background: #E1E1E1; height: 400px; border-radius: 10px;">
+    <div id="menu" class="animated fadeIn faster container-fluid d-lg-none px-5 py-2" style="position: absolute; top: 110px; overflow-y:scroll; background: #E1E1E1; height: 310px; border-radius: 10px;">
         <div class="row d-md-flex d-lg-none justify-content-center">
             <div class="col-12 mt-3 text-center rounded">
                 <div class="row py-2">
@@ -42,7 +185,7 @@
                             <input type="hidden" name="n" value="0">
                             <input type="hidden" name="_charset_" value="">
                             <input type="hidden" name="bcd" value="&#247;">
-                            <input class="animated fadeIn faster btn btn-lg btn-white bg-white no-transform text-gray w-100" style="border-radius: 15px;" type="text" name="query" placeholder="Search">
+                            <input class="animated fadeIn faster btn btn-lg btn-white bg-white no-transform text-gray w-100" style="border-radius: 5px !important;" type="text" name="query" placeholder="Search">
                             <input class="d-none" type="submit" value="search" id="tosearch_mobile">
                         </form>
                         <img src="../static/images/search.svg" height="30px" style="margin-top: 0.8em; position: absolute; left: 10px;" alt="Search Bar">
@@ -66,6 +209,9 @@
                                 <p onclick="location.href='../phd/'">Ph.D.</p>
                             </li>
                             <li class="">
+                                <p onclick="location.href='../thesis-defense/'">Thesis Defense</p>
+                            </li>
+                            <li class="">
                                 <p onclick="location.href='../student-policy/'">Student Conduct Policy</p>
                             </li>
                         </ul>
@@ -79,13 +225,16 @@
                     <li id="research_innermenu" class="d-none mt-2 animated fadeIn">
                         <ul class="list-unstyled p-2 rounded text-center" style="background: #F2F2F2;">
                             <li class="mt-2">
-                                <p onclick="location.href='../research/'">Research Interests</p>
+                                <p onclick="location.href='../research-areas/'">Research Areas</p>
                             </li>
                             <li class="">
                                 <p onclick="location.href='../research-labs/'">Research Labs</p>
                             </li>
                             <li class="">
                                 <p onclick="location.href='../research-publications/'">Research Publications</p>
+                            </li>
+                            <li class="">
+                                <p onclick="location.href='../research-projects/'">Research Projects</p>
                             </li>
                         </ul>
                     </li>
@@ -96,27 +245,17 @@
                     </li>
                     <li id="people_innermenu" class="d-none mt-2 animated fadeIn">
                         <ul class="list-unstyled py-2 rounded text-center" style="background: #F2F2F2;">
+                            <li class="">
+                                <p onclick="location.href='../students/'">B.Tech. Students</p>
+                            </li>
+                            <li class="mt-2">
+                                <p onclick="location.href='../phd-scholars/'">Ph.D. Scholars</p>
+                            </li>
                             <li class="mt-2">
                                 <p onclick="location.href='../faculty/'">Faculty</p>
                             </li>
                             <li class="">
-                                <p onclick="location.href='../students/'">B.Tech. Students</p>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="mt-3">
-                        <ul class="p-0 d-flex text-center align-items-end flex-column h-100 mt-2 mb-0" style="list-style: none;">
-                            <li class="w-100">Follow Us</li>
-                            <li class="w-100 mt-1">
-                                <a rel='noopener noreferrer' href="https://twitter.com/hcd_IIITD" class="text-decoration-none" target="_blank">
-                                    <img src="../static/images/twitter_svg.svg" height="40">
-                                </a>
-                                <a rel='noopener noreferrer' href="https://www.facebook.com/hcdzine" class="text-decoration-none" target="_blank">
-                                    <img src="../static/images/facebook_hcd.svg" height="40">
-                                </a>
-                                <a rel='noopener noreferrer' href="https://www.linkedin.com/in/human-centered-design-hcd-43b3a7180/" class="text-decoration-none" target="_blank">
-                                    <img src="../static/images/linkedin_hcd.svg" height="40">
-                                </a>
+                                <p onclick="location.href='../staff/'">Staff</p>
                             </li>
                         </ul>
                     </li>
@@ -124,14 +263,13 @@
             </div>
         </div>
     </div>
-
-
+    
     <div id="menu_2" class="animated fadeIn faster container-fluid d-none d-lg-none px-5 py-2" style="position: absolute; top: 70px; overflow-y:scroll; background: transparent; height: 250px; border-radius: 10px;">
         <div class="row d-lg-flex align-items-center justify-content-center">
             <div class="col-8 border" style="background-color: #E1E1E1; border-radius: 15px; border-color: rgb(161, 161, 161) !important;">
                 <ul id="research_2" class="list-unstyled d-flex justify-content-between mt-4 text-center">
                     <li class="font-12 text-pointer">
-                        <p onclick="location.href='../research/'">Research Areas</p>
+                        <p onclick="location.href='../research-areas/'">Research Areas</p>
                     </li>
                     <li class="font-12 text-pointer">
                         <p onclick="location.href='../research-labs'">Research Labs</p>
@@ -160,7 +298,7 @@
                     </li>
                 </ul>  
                 <li class="list-unstyled mt-5 pb-2">
-                    <ul class="p-0 d-flex text-center align-items-end flex-column h-100 mt-2 mb-0" style="list-style: none;">
+                    <ul class="d-flex text-center align-items-end flex-column h-100 mt-2 mb-0" style="list-style: none;">
                         <li class="w-100">Follow Us</li>
                         <li class="w-100 mt-1">
                             <a rel='noopener noreferrer' href="https://twitter.com/hcd_IIITD" class="text-decoration-none" target="_blank">
@@ -178,9 +316,8 @@
             </div>
         </div>
     </div>
-    
-
 </nav>
+
 <script>
     function openbiggermenu(lol){
         lol= lol.toString().toLowerCase();
@@ -212,58 +349,3 @@
         }
     }
 </script>
-
-
-<!-- <div id="menu" class="animated fadeIn faster container-fluid px-5 py-2" style="position: absolute; top: 70px; overflow: scroll; background: black; display: ;">
-    <div class="row">
-        <div class="col-12 mt-3 d-md-none text-center bg-white rounded">
-            <div class="row py-2" style="background: black;">
-                <div class="d-flex rounded input w-100" style="position: relative;">
-                    <form style="margin:0px; margin-top:4px; width: 100%;" action="https://search.freefind.com/find.html" method="get" accept-charset="utf-8" target="_self">
-                        <input type="hidden" name="si" value="10569528">
-                        <input type="hidden" name="pid" value="r">
-                        <input type="hidden" name="n" value="0">
-                        <input type="hidden" name="_charset_" value="">
-                        <input type="hidden" name="bcd" value="÷">
-                        <input class="animated fadeIn faster shadow btn btn-lg btn-white bg-white no-transform text-gray w-100 rounded" type="text" name="query" placeholder="Search">
-                        <input class="d-none" type="submit" value="search" id="tosearch">
-                    </form>
-                    <img src="../static/images/search.svg" height="30px" style="margin-top: 0.8em; position: absolute; left: 10px;" alt="Search Bar">
-                </div>
-            </div>
-        </div>
-        <div class="col-12 col-sm-4 col-lg-3 py-1 mt-3 mt-sm-0 rounded" style="background-color: #E1E1E1;">
-            <ul class="list-unstyled py-2 text-center">
-                <li class="mt-3"> 
-                    <button onclick="location.href='../academics/';" class="menu-option-1 btn btn-block btn-white btn-lg text-pointer rounded">
-                        Academics
-                    </button>
-                </li>
-                <li class="mt-3"> 
-                    <button onclick="location.href='../research/';" class="menu-option-2 btn btn-block btn-white btn-lg text-pointer rounded">
-                        Research
-                    </button>
-                </li>
-                <li class="mt-3"> 
-                    <button onclick="location.href='../faculty/';" class="menu-option-3 btn btn-block btn-white btn-lg text-pointer rounded">
-                        People
-                    </button>
-                </li>
-            </ul>
-            <ul class="p-0 d-flex text-center align-items-end flex-column h-100 mt-2 mb-0" style="list-style: none;">
-                <li class="w-100">Follow Us</li>
-                <li class="w-100 mt-1">
-                    <a href="https://twitter.com/hcd_IIITD" class="text-decoration-none" target="_blank">
-                        <img src="../static/images/twitter_svg.svg" height="40">
-                    </a>
-                    <a href="https://www.facebook.com/hcdzine" class="text-decoration-none" target="_blank">
-                        <img src="../static/images/facebook_hcd.svg" height="40">
-                    </a>
-                    <a href="https://www.linkedin.com/in/human-centered-design-hcd-43b3a7180/" class="text-decoration-none" target="_blank">
-                        <img src="../static/images/linkedin_hcd.svg" height="40">
-                    </a>
-                </li>
-            </ul>      
-        </div>
-    </div>
-</div> -->

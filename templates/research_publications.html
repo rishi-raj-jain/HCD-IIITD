@@ -6,49 +6,107 @@
 <meta name="description" content="Desc for B.Tech CSD" />
 <meta property="og:description" content="Desc for B.Tech CSD" />
 <meta property="og:title" content="B.Tech. Courses | Human-Centered Design @ IIIT-Delhi" />
+<title>Research Publications | Human-Centered Design @ IIIT-Delhi</title>
+<style>
+    .fix-publications{
+        max-height: 700px; 
+        overflow: scroll;
+    } 
+    .listing {
+        text-decoration: none;
+    }
+    .listing:hover {
+        text-decoration-color: #17a2b8 !important; 
+        border-bottom: 1px solid #17a2b8 !important;
+    }
+    .scrolltoptop{
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        padding-right: 10px;
+    }
+    @media screen and (max-width: 768px){
+        .fix-publications{
+            max-height: unset !important;
+            overflow: unset !important;
+        }   
+    }
+</style>
 {% endblock %}
+<ul class="scrolltoptop d-md-none mt-3 w-100" style="z-index: 10;">
+    <span class="d-flex justify-content-between">
+        <span></span>
+        <span class="bg-light p-2 rounded text-gray" onclick="$('html, body').animate({ scrollTop: 0 }, 'slow');">
+            Scroll to top
+            <svg style="width: 10px;" aria-hidden="true" focusable="false" data-prefix="fal" data-icon="long-arrow-up" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><path fill="currentColor" d="M3.515 168.97l7.07 7.071c4.686 4.686 12.284 4.686 16.971 0L111 92.113V468c0 6.627 5.373 12 12 12h10c6.627 0 12-5.373 12-12V92.113l83.444 83.928c4.686 4.686 12.284 4.686 16.971 0l7.07-7.071c4.686-4.686 4.686-12.284 0-16.97l-116-116.485c-4.686-4.686-12.284-4.686-16.971 0L3.515 152c-4.687 4.686-4.687 12.284 0 16.97z" class=""></path></svg>
+        </span>
+    </span>
+</ul>
 <div class="container py-5">
-    <h3 class="animated flipInX font-weight-bold">Research Publications</h3>
-    <div class="row">
-        <div class="mt-4 ml-3 w-100">
-            {% for option in research_list %}
-                <button onclick="openpublications('{{option.Year_Publication}}')" class="20{{option.Year_Publication}} text-left font-weight-bold btn btn-block rounded-0 border-0 w-100 bg-white shadow mt-3" style="font-size: 1.3em;">
-                    20{{option.Year_Publication}}
-                </button>
-                <div id="Year_20{{option.Year_Publication}}" class="listing mt-2 bg-light p-3">
-                    {% for option2 in option.List %}
-                        <h5 class="font-weight-bold">{{option2.Owner}}</h5>
-                        <p class="gara-proreg" style="font-size: 1.2em;">{{option2.Text}}</p>
-                    {% endfor %}
+    <div class="d-flex flex-row">
+        <h4 class="ml-2 mt-4 animated flipInX font-weight-bold">Research Publications</h4>
+    </div>
+    <div class="col-12">
+        <div class="row">
+            <div class="mt-3 col-12 col-md-3 order-0">
+                <!-- <ul class="list-unstyled w-100"> -->
+                    <div class="w-100">
+                        <h6 class="text-gray">Filters</h6>
+                    </div>
+                    <div class="btn-group-horizontal" role="group" aria-label="Vertical button group">
+                        <button onclick="$('#myInput').val('2020'); myFunction(); $('html, body').animate({ scrollTop: $('.fix-publications').offset().top - ($(window).width()<768 ? 130 : 1000) }, 'slow');" type="button" class="mt-3 btn btn-sm btn-outline-green">2020</button>
+                        <button onclick="$('#myInput').val('2019'); myFunction(); $('html, body').animate({ scrollTop: $('.fix-publications').offset().top - ($(window).width()<768 ? 130 : 1000) }, 'slow');" type="button" class="mt-3 btn btn-sm btn-outline-green">2019</button>
+                        <button onclick="$('#myInput').val('2018'); myFunction(); $('html, body').animate({ scrollTop: $('.fix-publications').offset().top - ($(window).width()<768 ? 130 : 1000) }, 'slow');" type="button" class="mt-3 btn btn-sm btn-outline-green">2018</button>
+                        <button onclick="$('#myInput').val('2017'); myFunction(); $('html, body').animate({ scrollTop: $('.fix-publications').offset().top - ($(window).width()<768 ? 130 : 1000) }, 'slow');" type="button" class="mt-3 btn btn-sm btn-outline-green">2017</button>
+                    </div>
+                <!-- </ul> -->
+            </div>
+            <div class="mt-4 mt-md-3 col-12 col-md-9 order-1">
+                <div class="row fix-publications">
+                    <input class="w-100 btn form-control btn-block bg-light text-dark border rounded text-left" type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for publications..." title="Type in a name">
+                    <ul id="myUL" class="list-unstyled">
+                        {% for option in research_list %}
+                            {% for option2 in option.List %}
+                                <li>
+                                    <a href="#" class="listing">
+                                        <div id="Year_20{{option.Year_Publication}}"  
+                                        onmouseover="this.classList.add('shadow'); this.classList.remove('shadow-sm');"
+                                        onmouseout="this.classList.remove('shadow'); this.classList.add('shadow-sm');"
+                                        class="mt-4 p-3 shadow-sm">
+                                            <div class="d-flex flex-column flex-md-row justify-content-between">
+                                                <h5 class="text-green font-weight-bold">{{option2.Owner}}</h5>
+                                                <span class="p-1 border border-gray rounded text-gray" style="width: 165px;">Publication Year: 20{{option.Year_Publication}}</span>
+                                            </div>
+                                            <p class="text-gray gara-proreg" style="font-size: 1.2em;">{{option2.Text}}</p>
+                                        </div>
+                                    </a>
+                                </li>
+                            {% endfor %}
+                        {% endfor %}
+                    </ul>
                 </div>
-            {% endfor %}
-        </div> 
+            </div>
+        </div>
     </div>
 </div>
 {% endblock %}
 {% block scripts %}
 <script>
-    let length;
-    let id= '17';
-    $(document).ready(function(){
-        length= $('.listing').length + 1;
-        for(let i=0; i<length; i++){
-            try{
-                $('#Year_20'+(parseInt(id)+i).toString()).hide();
+    function myFunction() {
+        var input, filter, ul, li, a, txtValue;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        ul = document.getElementById("myUL");
+        li = ul.getElementsByTagName("li");
+        for (let i = 0; i < li.length; i++) {
+            a = li[i].getElementsByTagName("a")[0];
+            txtValue = a.textContent || a.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                li[i].style.display = "";
+            } else {
+                li[i].style.display = "none";
             }
-            finally{}
         }
-        $('#Year_2020').show();
-    });
-    function openpublications(year_open){
-        for(let i=0; i<length; i++){
-            $('#Year_20'+(parseInt(id)+i).toString()).hide();
-            $('.20'+(parseInt(id)+i).toString()).addClass('shadow-sm');
-            $('.20'+(parseInt(id)+i).toString()).removeClass('shadow');
-        }
-        $('#Year_20'+(parseInt(year_open)).toString()).show();
-        $('.20'+(parseInt(year_open)).toString()).addClass('shadow');
-        $('.20'+(parseInt(year_open)).toString()).removeClass('shadow-sm');
     }
 </script>
 {% endblock %}

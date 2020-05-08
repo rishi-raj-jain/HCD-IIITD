@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block content %}
+{% block meta %}
+<link rel="canonical" href="https://hcd.now.sh/events" />
+<meta property="og:url" content="https://hcd.now.sh/events" />    
+<meta name="description" content="Desc for Events" />
+<meta property="og:description" content="Desc for Events" />
+<meta property="og:title" content="Events | Human-Centered Design @ IIIT-Delhi" />
+<title>Events | Human-Centered Design @ IIIT-Delhi</title>
+{% endblock %}
+<div class="container py-5 bg-white">
+    <div class="d-flex flex-row">
+        <h4 class="ml-md-2 mt-4 animated fadeIn font-weight-bold">Events</h4>
+    </div>
+    <div class="mt-4 ml-md-2">
+        <div class="card-columns">
+            {% for option in eventsJS %}
+                <div onclick="window.location.href='/events/{{option}}'" class="card text-pointer">
+                    <img src="" class="card-img-top" data-src="{{eventsJS.get(option)['Image']}}" alt="{{option}}">
+                    <div class="card-body">
+                        <h5 class="ml-2 mt-3 text-gray">{{option}}</h5>
+                        <p class="ml-2 mt-3 text-gray ellipis-3">{{eventsJS.get(option)['Content']}}</p>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block scripts %}
+<script>
+    $(document).ready(function(){
+        $('.event').each(function(){
+            $(this).attr('src', $(this).attr('data-src'));
+        });
+        $('.card-img-top').each(function(){
+            $(this).attr('src', $(this).attr('data-src'));
+        });
+    });
+</script>
+{% endblock %}

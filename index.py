@@ -1,8 +1,9 @@
 import re
 from course_list import courseJson
-from student import studentpolicyJSON
-from flask import Flask, render_template, request, jsonify, abort
-from research_list import labsJSON, facultyJson, researchJson, studentsJSON2017, studentsJSON2018, publicationsJSON
+from events import eventsJSON
+from flask import Flask, render_template, request, jsonify, abort, redirect
+from student import studentpolicyJSON, studentsJSON2017, studentsJSON2018, studentsJSON2019
+from research_list import labsJSON, facultyJson, researchJson, publicationsJSON, projectsJSON, staffJson, phd_scholarsJSON
 
 app = Flask(__name__)
 app.config['TEMPLATES_AUTO_RELOAD'] = True
@@ -10,7 +11,22 @@ app.url_map.strict_slashes=False
 
 @app.route("/")
 def index():
-    return render_template('index.html')
+    event1= next(iter(eventsJSON))
+    temp= render_template('index.html', event1= event1, event1_details= eventsJSON.get(event1)['Image'])
+    return re.sub(' +', ' ', ''.join(temp.split('\n')))
+
+@app.route("/events/")
+def events():
+    temp= render_template('events.html', eventsJS= eventsJSON)
+    return re.sub(' +', ' ', ''.join(temp.split('\n')))
+
+@app.route("/events/<string:number_1>")
+def each_event(number_1):
+    if len(number_1)>=1:
+        temp= render_template('research_projects_each.html', project_head= number_1, project_detail= eventsJSON.get(number_1))
+        return re.sub(' +', ' ', ''.join(temp.split('\n')))
+    temp= render_template('events.html', eventsJS= eventsJSON)
+    return re.sub(' +', ' ', ''.join(temp.split('\n')))
 
 @app.route("/student-policy/")
 def policy():
@@ -19,23 +35,40 @@ def policy():
 
 @app.route("/btech-courses/")
 def courses():
-    return render_template('courses.html', courses_list= courseJson)
+    temp= render_template('courses.html', courses_list= courseJson)
+    return re.sub(' +', ' ', ''.join(temp.split('\n')))
 
 @app.route("/phd/")
 def coursesphd():
     return render_template('phd.html')
 
-@app.route("/research/")
+@app.route("/research-areas/")
 def research():
-    return render_template('research.html')
+    temp= render_template('research.html')
+    return re.sub(' +', ' ', ''.join(temp.split('\n')))
 
 @app.route("/research-publications/")
 def research_publications():
-    return render_template('research_publications.html', research_list= publicationsJSON)
+    temp= render_template('research_publications.html', research_list= publicationsJSON)
+    return re.sub(' +', ' ', ''.join(temp.split('\n')))
 
 @app.route("/research-labs/")
 def research_labs():
-    return render_template('research_labs.html', labs_list= labsJSON)
+    temp= render_template('research_labs.html', labs_list= labsJSON)
+    return re.sub(' +', ' ', ''.join(temp.split('\n')))
+
+@app.route("/research-projects/")
+def redirect_project():
+    temp= render_template('research_projects.html', projects_list= projectsJSON)
+    return re.sub(' +', ' ', ''.join(temp.split('\n')))
+
+@app.route("/research-projects/<string:number_1>")
+def research_projects(number_1):
+    if len(number_1)>=1:
+        temp= render_template('research_projects_each.html', project_head= number_1, project_detail= projectsJSON.get(number_1))
+        return re.sub(' +', ' ', ''.join(temp.split('\n')))
+    temp= render_template('research_projects.html', projects_list= projectsJSON)
+    return re.sub(' +', ' ', ''.join(temp.split('\n')))
 
 @app.route("/contact/")
 def contact():
@@ -47,9 +80,24 @@ def faculty():
     temp= render_template('faculty.html', faculty_list= facultyJson, tags= request.args.get('tags'))
     return re.sub(' +', ' ', ''.join(temp.split('\n')))
 
+@app.route("/thesis-defense/")
+def thesis():
+    temp= render_template('thesis.html')
+    return re.sub(' +', ' ', ''.join(temp.split('\n')))
+
 @app.route("/students/")
 def students():
-    temp= render_template('students.html', students_list= studentsJSON2017, students_list_1= studentsJSON2018, year= request.args.get('year'))
+    temp= render_template('students.html', students_list= studentsJSON2017, students_list_1= studentsJSON2018, students_list_2= studentsJSON2019, year= request.args.get('year'))
+    return re.sub(' +', ' ', ''.join(temp.split('\n')))
+
+@app.route("/phd-scholars/")
+def scholars():
+    temp= render_template('scholars.html', phd_scholars= phd_scholarsJSON)
+    return re.sub(' +', ' ', ''.join(temp.split('\n')))
+
+@app.route("/staff/")
+def staff():
+    temp= render_template('staff.html', faculty_list= staffJson, tags= request.args.get('tags'))
     return re.sub(' +', ' ', ''.join(temp.split('\n')))
 
 @app.errorhandler(404)

@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block content %}
+{% block meta %}
+<link rel="canonical" href="https://hcd.now.sh/contact" />
+<meta property="og:url" content="https://hcd.now.sh/contact" />    
+<meta name="description" content="Contact us at Human-Centered Design @ IIIT-Delhi" />
+<meta property="og:description" content="Contact us at Human-Centered Design @ IIIT-Delhi" />
+<meta property="og:title" content="Thesis Defense | Human-Centered Design @ IIIT-Delhi" />
+<title>Thesis Defense | Human-Centered Design @ IIIT-Delhi</title>
+{% endblock %}
+<div id="thesis" class="py-5 container-fluid">
+    <div class="py-4 container">
+        <div class="ml-md-2 row">
+            <h4 class="animated fadeIn text-dark font-weight-bold">Coming Soon!</h4>
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block scripts %}
+<script>
+    function handlespace(){
+        let i= $('#footer').height();
+        if($(window).width()>768){
+            $("#thesis").css('height', 'calc( 100vh - 70px - ' + i.toString()+'px )');
+        }
+        else{
+            $("#thesis").css('height', 'auto');
+        }
+    }
+    $(window).resize(()=>{handlespace()});
+    $(document).ready(()=>{handlespace()});
+</script>
+{% endblock %}

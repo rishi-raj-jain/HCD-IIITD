@@ -57,17 +57,11 @@ researchJson=[{
 
 labsJSON=[
     {
-        'Lab_Name': 'Audio-Visual Lab',
-        'Lab_Location': 'A-102, Research & Development Block, IIITD',
-        'Lab_Email': 'abhijeet@iiitd.ac.in',
-        'Lab_Description': 'The audio-visual lab has a multi-channel sound driver by Focusrite and 10 speakers with individual control. Multiple projects related to audio space orientation, data sonification and interaction-based sound control have been done here by students. Students have done game development projects where they have placed sonic objects in the environment controlled by the multi-channel expansion which enhances the game experience. The lab can be used for a better experience in Virtual Reality by installing HTC Vive with the sonic architecture. A project called Hand.Cannot. Erase was using Xbox Kinect to track the movement of the hand and convert the position of the hand to the source of the sound making it seem like the user’s hand was the speaker.',
-        'logo': 'audio.svg',
-        'spacing': '0'
-    },{
         'Lab_Name': 'Design & Innovation Lab',
         'Lab_Location': 'B-004, Research & Development Block, IIITD',
         'Lab_Email': 'abhijeet@iiitd.ac.in',
         'Lab_Description': 'The Design & Innovation Lab gives Engineering students majoring in Electronics or IT to explore working with hand and power tools as well as various machines and thus helping them become better-rounded as engineers.',
+        'Lab_Website': 'https://dilab.iiitd.ac.in/',
         'logo': 'dail.svg',
         'spacing': '0'
     },{
@@ -75,6 +69,7 @@ labsJSON=[
         'Lab_Location': 'A-403, Research & Development Block, IIITD',
         'Lab_Email': 'livinglab@iiitd.ac.in',
         'Lab_Description': 'Understanding people’s attitudes towards and uses of technology is an essential aspect of successful design. Living lab specializes in research that explores the interrelationships between people, society and technology. We conduct empirical research using a variety of qualitative methods to identify requirements, improve usefulness and usability and identify implications for how new technologies transform social life.',
+        'Lab_Website': 'https://livinglab.iiitd.edu.in/',
         'logo': 'living.svg',
         'spacing': '0'
     },{
@@ -82,13 +77,15 @@ labsJSON=[
         'Lab_Location': 'A-413, Research & Development Block, IIITD',
         'Lab_Email': 'melangelab@outlook.com',
         'Lab_Description': 'We are a group of Dynamic & Socially-committed Researchers working in Public Health & Mobile Computing for Technology based intervention.',
+        'Lab_Website': 'https://melangeresearch.com/',
         'logo': 'melange.svg',
-        'spacing': '5'
+        'spacing': '0'
     },{
         'Lab_Name': 'MIDAS Lab',
         'Lab_Location': 'A-415, Research & Development Block, IIITD',
         'Lab_Email': 'midas@iiitd.ac.in',
         'Lab_Description': 'MIDAS is a group of researchers at IIIT-Delhi who study, analyze, and build different multimedia systems for society leveraging multimodal information. MIDAS stands for Multimodal Digital Media Analysis Lab. \n MIDAS includes work on: \n · Machine Learning \n · Multimedia Content Processing \n · Natural Language Processing \n · Image Processing \n · Multimodal Computing \n · Data Science \n · Social Media Computing \n · Internet of Things',
+        'Lab_Website': 'http://midas.iiitd.edu.in/',
         'logo': 'midas.svg',
         'spacing': '5'
     },{
@@ -96,8 +93,20 @@ labsJSON=[
         'Lab_Location': 'A-416, Research & Development Block, IIITD',
         'Lab_Email': 'weave-lab-admin@iiitd.ac.in',
         'Lab_Description': 'At Weave Lab we weave interactivity into everyday objects and experiences. We envision as well as discover through critical observations new opportunities for human-computer interactions. Through our extensive research on material and technologies, we prototype manifestations of our ideas, which we then iteratively improve. Our applied research approach interweaves basic research with which we contribute to the advancement of the technologies we leverage.',
+        'Lab_Website': 'http://weave.iiitd.edu.in/',
         'logo': 'weave.svg',
         'spacing': '5'
+    }
+]
+
+staffJson=[
+    {
+        'Name': 'Jyoti Singh',
+        'Post': 'Junior Manager (HCD)',
+        'image': 'https://media-exp1.licdn.com/dms/image/C5603AQHBGAdWITA4ig/profile-displayphoto-shrink_800_800/0?e=1594252800&v=beta&t=4pqSbMgCgI03rZILHTllvc7AMAjOIe_CtpMSVLD6ZT8',
+        'email': 'jyoti@iiitd.ac.in',
+        'linkedin': 'https://www.linkedin.com/in/jyoti-singh92',
+        'twitter': 'https://twitter.com/js_9228?lang=en'
     }
 ]
 
@@ -108,7 +117,7 @@ facultyJson=[
         'Degree': 'PhD, Georgia Institute of Technology',
         'link': 'https://www.iiitd.ac.in/aman',
         'image': 'amanparnami-min.svg',
-        'researchInterests': 'Wearable Computing, Design Research, Education Technology'
+        'researchInterests': 'Maker-Oriented Learning, Human-Computer Interaction, Wearable Computing, Interactive Product Design'
     },
     {
         'Name': 'Aman Samuel',
@@ -116,7 +125,7 @@ facultyJson=[
         'Degree': 'MBA, University of Madras',
         'link': 'https://www.linkedin.com/in/aman-samuel-b5942a121/?originalSubdomain=in',
         'image': 'Aman Samuel-min.svg',
-        'researchInterests': 'Different Criteria, Design Research, Education Technology'
+        'researchInterests': 'Game Design, Digital Audio, Audio-Visual'
     },
     {
         'Name': 'Anoop Ratn',
@@ -124,7 +133,7 @@ facultyJson=[
         'Degree': 'MFA, Teerthankar Mahaveer University',
         'link': 'https://www.iiitd.ac.in/people/visiting-faculty',
         'image': 'Anoop-min.svg',
-        'researchInterests': 'Another Criteria, Design Research, Education Technology'
+        'researchInterests': 'Animation Film Making, Gaming, Concept Arts'
     },
     {
         'Name': 'Grace Eden',
@@ -132,7 +141,7 @@ facultyJson=[
         'Degree': 'DPhil, University of Oxford',
         'link': 'https://www.iiitd.ac.in/grace',
         'image': 'Grace-min.svg',
-        'researchInterests': 'Wearable Computing, Design Research, Education Technology'
+        'researchInterests': 'Human-Computer Interaction, Human-Centered Artificial Intelligence, Speculative Design, Qualitative Research in HCI'
     },
     {
         'Name': 'Indrani De Parker',
@@ -140,7 +149,7 @@ facultyJson=[
         'Degree': 'PhD Scholar, IDC, IITB, Mumbai',
         'link': 'https://www.iiitd.ac.in/people/visiting-faculty',
         'image': 'Indrani-min.svg',
-        'researchInterests': 'Wearable Computing, Design Research, Education Technology'
+        'researchInterests': 'Communication Designer, Design Educator'
     },
     {
         'Name': 'Jainendra Shukla',
@@ -148,15 +157,7 @@ facultyJson=[
         'Degree': 'PhD, Universitat Rovira i Virgili (URV)',
         'link': 'https://www.iiitd.ac.in/jainendra',
         'image': 'Jainendra-min.svg',
-        'researchInterests': 'Wearable Computing, Design Research, Education Technology'
-    },
-    {
-        'Name': 'Pushpendra Singh',
-        'Post': 'Professor (CSE, HCD)',
-        'Degree': 'PhD, Inria-Rennes, University de Rennes 1',
-        'link': 'https://www.iiitd.ac.in/pushpendra',
-        'image': 'Pushpendra-min.svg',
-        'researchInterests': 'Link Design, Design Research, Education Technology'
+        'researchInterests': 'Social Robotics, Affective Computing'
     },
     {
         'Name': 'Manohar Khushalani',
@@ -164,7 +165,15 @@ facultyJson=[
         'Degree': 'PhD, Universitat Rovira i Virgili (URV)',
         'link': 'https://www.iiitd.ac.in/people/visiting-faculty',
         'image': 'Manohar-min.svg',
-        'researchInterests': 'Wearable Computing, Design Research, Education Technology'
+        'researchInterests': 'Animation & Graphics, Film Making and Radio Podcasting'
+    },
+    {
+        'Name': 'Pushpendra Singh',
+        'Post': 'Professor (CSE, HCD)',
+        'Degree': 'PhD, Inria-Rennes, University de Rennes 1',
+        'link': 'https://www.iiitd.ac.in/pushpendra',
+        'image': 'Pushpendra-min.svg',
+        'researchInterests': 'Operating Systems, Human-Computer Interaction, Computer Networks, Mobile Computing'
     },
     {
         'Name': 'Rahul Mohanani',
@@ -172,7 +181,7 @@ facultyJson=[
         'Degree': 'PhD, University of Oulu',
         'link': 'https://www.iiitd.ac.in/rahulm',
         'image': 'rahulm-min.svg',
-        'researchInterests': 'Text Computing, Design Research, Education Technology'
+        'researchInterests': 'Human aspects of Software Engineering'
     },
     {
         'Name': 'Rajiv Ratn Shah',
@@ -180,507 +189,16 @@ facultyJson=[
         'Degree': 'PhD, National University of Singapore',
         'link': 'https://www.iiitd.ac.in/rajivratn',
         'image': 'Rajiv-min.svg',
-        'researchInterests': 'Wearable Computing, Design Research, Education Technology'
+        'researchInterests': 'Human-Computer Interaction, Information Retrieval, Multimedia Computing & Applications'
     },
     {
         'Name': 'Vibha Narula Gupta',
         'Post': 'Guest Faculty, HCD',
-        'Degree': '',
+        'Degree': 'Masters in Industrial Design, NID, Ahmedabad, India',
         'link': 'https://www.iiitd.ac.in/people/visiting-faculty',
         'image': 'Vibha-min.svg',
-        'researchInterests': 'Wearable Computing, Design Research, Education Technology'
+        'researchInterests': 'Communication Designer, Design Educator'
     },
-]
-
-studentsJSON2018=[
-    {
-        'Name': 'ABHISHEK ANIL',
-        'Link': 'abhishek18272@iiitd.ac.in',
-        'image': 'user'
-    },
-    {
-        'Name': 'ADITYA RASTOGI',
-        'Link': 'aditya18273@iiitd.ac.in',
-        'image': 'user'
-    },
-    {
-        'Name': 'ADITYA SHARMA',
-        'Link': 'aditya18274@iiitd.ac.in',
-        'image': 'user'
-    },
-    {
-        'Name': 'Advika Singh',
-        'Link': 'advika18275@iiitd.ac.in',
-        'image': 'user'
-    },
-    {
-        'Name': 'AMAN AGGARWAL',
-        'Link': 'aman18327@iiitd.ac.in',
-        'image': 'user'
-    },
-    {
-        'Name': 'ANEESHA LAKRA',
-        'Link': 'aneesha18277@iiitd.ac.in',
-        'image': 'user'
-    },
-    {
-        'Name': 'Angad Yadav',
-        'Link': 'angad17279@iiitd.ac.in',
-        'image': 'user'
-    },
-    {
-        'Name': 'Arnav',
-        'Link': 'arnav18278@iiitd.ac.in',
-        'image': 'user'
-    },
-    {
-        'Name': 'Arunesh',
-        'Link': 'arunesh18279@iiitd.ac.in',
-        'image': 'user'
-    },
-    {
-        'Name': 'BHAVYA CHOPRA',
-        'Link': 'bhavya18333@iiitd.ac.in',
-        'image': 'user'
-    },
-    {
-        'Name': 'BHUNESH',
-        'Link': 'bhunesh18280@iiitd.ac.in',
-        'image': 'user'
-    },
-    {
-        'Name': 'DHRUV YADAV',
-        'Link': 'dhruv18281@iiitd.ac.in',
-        'image': 'user'
-    },
-    {
-        'Name': 'GAGAN MALIK',
-        'Link': 'gagan18283@iiitd.ac.in',
-        'image': 'user'
-    },
-    {
-        'Name': 'HARMAN',
-        'Link': 'harman18284@iiitd.ac.in',
-        'image': 'user'
-    },
-    {
-        'Name': 'HARSH KUMAR',
-        'Link': 'harsh18285@iiitd.ac.in',
-        'image': 'user'
-    },
-    {
-        'Name': 'HIMANSHU YADAV',
-        'Link': 'himanshu18286@iiitd.ac.in',
-        'image': 'user'
-    },
-    {
-        'Name': 'Jasmine',
-        'Link': 'jasmine18287@iiitd.ac.in',
-        'image': 'user'
-    },
-    {
-        'Name': 'KAIMAN YADAV',
-        'Link': 'kaiman18288@iiitd.ac.in',
-        'image': 'user'
-    },
-    {
-        'Name': 'KHANDADE LIMBRAJ OM',
-        'Link': 'khandade18289@iiitd.ac.in',
-        'image': 'user'
-    },
-    {
-        'Name': 'Khushali',
-        'Link': 'khushali18290@iiitd.ac.in',
-        'image': 'user'
-    },
-    {
-        'Name': 'KIRTI',
-        'Link': 'kirti18291@iiitd.ac.in',
-        'image': 'user'
-    },
-    {
-        'Name': 'Kshitij Agrawal',
-        'Link': 'kshitij18292@iiitd.ac.in',
-        'image': 'user'
-    },
-    {
-        'Name': 'KUNAL ANAND',
-        'Link': 'kunal18293@iiitd.ac.in',
-        'image': 'user'
-    },
-    {
-        'Name': 'MANAK BISHT',
-        'Link': 'manak18340@iiitd.ac.in',
-        'image': 'user'
-    },
-    {
-        'Name': 'MANAN JAIN',
-        'Link': 'manan18294@iiitd.ac.in',
-        'image': 'user'
-    },
-    {
-        'Name': 'Manavjeet Singh',
-        'Link': 'manavjeet18295@iiitd.ac.in',
-        'image': 'user'
-    },
-    {
-        'Name': 'MUKUL TOMAR',
-        'Link': 'mukul18296@iiitd.ac.in',
-        'image': 'user'
-    },
-    {
-        'Name': 'Muskan Aggarwal',
-        'Link': 'muskan18297@iiitd.ac.in',
-        'image': 'user'
-    },
-    {
-        'Name': 'NIKHIL YADAV',
-        'Link': 'nikhil18298@iiitd.ac.in',
-        'image': 'user'
-    },
-    {
-        'Name': 'Nishant',
-        'Link': 'nishant18299@iiitd.ac.in',
-        'image': 'user'
-    },
-    {
-        'Name': 'NISHANT GROVER',
-        'Link': 'nishant18399@iiitd.ac.in',
-        'image': 'user'
-    },
-    {
-        'Name': 'PEEYUSH JAIN',
-        'Link': 'peeyush18402@iiitd.ac.in',
-        'image': 'user'
-    },
-    {
-        'Name': 'RACHIT BHAYANA',
-        'Link': 'rachit18301@iiitd.ac.in',
-        'image': 'user'
-    },
-    {
-        'Name': 'Rachit Mittal',
-        'Link': 'rachit18302@iiitd.ac.in',
-        'image': 'user'
-    },
-    {
-        'Name': 'Rakshita Anand',
-        'Link': 'rakshita17308@iiitd.ac.in',
-        'image': 'user'
-    },
-    {
-        'Name': 'Rishabh',
-        'Link': 'rishabh18303@iiitd.ac.in',
-        'image': 'user'
-    },
-    {
-        'Name': 'RISHI RAJ JAIN',
-        'Link': 'rishi18304@iiitd.ac.in',
-        'image': 'user'
-    },
-    {
-        'Name': 'RITIK GARG',
-        'Link': 'ritik18305@iiitd.ac.in',
-        'image': 'user'
-    },
-    {
-        'Name': 'RITWIK KAR',
-        'Link': 'ritwik18306@iiitd.ac.in',
-        'image': 'user'
-    },
-    {
-        'Name': 'RUSHIL THAREJA',
-        'Link': 'rushil18408@iiitd.ac.in',
-        'image': 'user'
-    },
-    {
-        'Name': 'SARTHAK ARORA',
-        'Link': 'sarthak18307@iiitd.ac.in',
-        'image': 'user'
-    },
-    {
-        'Name': 'SHANEY WARIS',
-        'Link': 'shaney18308@iiitd.ac.in',
-        'image': 'user'
-    },
-    {
-        'Name': 'SHIVAM',
-        'Link': 'shivam18309@iiitd.ac.in',
-        'image': 'user'
-    },
-    {
-        'Name': 'Shivang',
-        'Link': 'shivang18310@iiitd.ac.in',
-        'image': 'user'
-    },
-    {
-        'Name': 'SHOURYA PATHAK',
-        'Link': 'shourya18311@iiitd.ac.in',
-        'image': 'user'
-    },
-    {
-        'Name': 'SHRIKANT GARG',
-        'Link': 'shrikant18312@iiitd.ac.in',
-        'image': 'user'
-    },
-    {
-        'Name': 'SIddharth Sadhwani',
-        'Link': 'siddharth18313@iiitd.ac.in',
-        'image': 'user'
-    },
-    {
-        'Name': 'Siddharth V',
-        'Link': 'siddharth18314@iiitd.ac.in',
-        'image': 'user'
-    },
-    {
-        'Name': 'Smera Goel',
-        'Link': 'smera18315@iiitd.ac.in',
-        'image': 'user'
-    },
-    {
-        'Name': 'SNIGDHA GUPTA',
-        'Link': 'snigdha18316@iiitd.ac.in',
-        'image': 'user'
-    },
-    {
-        'Name': 'Sonali',
-        'Link': 'sonali18317@iiitd.ac.in',
-        'image': 'user'
-    },
-    {
-        'Name': 'Sonali Supriya',
-        'Link': 'sonali18318@iiitd.ac.in',
-        'image': 'user'
-    },
-    {
-        'Name': 'Srijan Jain',
-        'Link': 'srijan18319@iiitd.ac.in',
-        'image': 'user'
-    },
-    {
-        'Name': 'TANUPRIYA DAS',
-        'Link': 'tanupriya18320@iiitd.ac.in',
-        'image': 'user'
-    },
-    {
-        'Name': 'Udbhav Gupta',
-        'Link': 'udbhav17319@iiitd.ac.in',
-        'image': 'user'
-    },
-    {
-        'Name': 'Utsav',
-        'Link': 'utsav18321@iiitd.ac.in',
-        'image': 'user'
-    },
-]
-
-studentsJSON2017=[
-    {
-        'Name': 'Angel Walia',
-        'Link': 'angel17132@iiitd.ac.in',
-        'image': 'user'
-    },
-    {
-        'Name': 'Anand',
-        'Link': 'anand17218@iiitd.ac.in',
-        'image': 'amanparnami-min.svg'
-    },
-    {
-        'Name': 'Dashmesh Singh',
-        'Link': 'dashmesh17228@iiitd.ac.in',
-        'image': 'Aman Samuel-min.svg'
-    },
-    {
-        'Name': 'Aakash Sehrawat',
-        'Link': 'aakash17275@iiitd.ac.in',
-        'image': 'Anoop-min.svg'
-    },
-    {
-        'Name': 'Akshat Jain',
-        'Link': 'akshat17277@iiitd.ac.in',
-        'image': 'Grace-min.svg'
-    },
-    {
-        'Name': 'Aman Rehman',
-        'Link': 'aman17278@iiitd.ac.in',
-        'image': 'Indrani-min.svg'
-    },
-    {
-        'Name': 'Anish Bhardwaj',
-        'Link': 'anish17281@iiitd.ac.in',
-        'image': 'Jainendra-min.svg'
-    },
-    {
-        'Name': 'Apratim Ankit',
-        'Link': 'apratim17282@iiitd.ac.in',
-        'image': 'Manohar-min.svg'
-    },
-    {
-        'Name': 'Atul Anand',
-        'Link': 'atul17284@iiitd.ac.in',
-        'image': 'rahulm-min.svg'
-    },
-    {
-        'Name': 'Avyakt Gupta',
-        'Link': 'avyakt17285@iiitd.ac.in',
-        'image': 'Rajiv-min.svg'
-    },
-    {
-        'Name': 'Ayush Verma',
-        'Link': 'ayush17286@iiitd.ac.in',
-        'image': 'Vibha-min.svg'
-    },
-    {
-        'Name': 'Chirayu Prasad',
-        'Link': 'chirayu17287@iiitd.ac.in',
-        'image': 'Vibha-min.svg'
-    },
-    {
-        'Name': 'Gaurav Gautam',
-        'Link': 'gaurav17289@iiitd.ac.in',
-        'image': 'Vibha-min.svg'
-    },
-    {
-        'Name': 'Himanshu Singh',
-        'Link': 'himanshu17291@iiitd.ac.in',
-        'image': 'Vibha-min.svg'
-    },
-    {
-        'Name': 'Himanshu Singh',
-        'Link': 'himanshu17292@iiitd.ac.in',
-        'image': 'Vibha-min.svg'
-    },
-    {
-        'Name': 'Jatin Singhal',
-        'Link': 'jatin17293@iiitd.ac.in',
-        'image': 'Vibha-min.svg'
-    },
-    {
-        'Name': 'Kanupriya Singh',
-        'Link': 'kanupriya17294@iiitd.ac.in',
-        'image': 'Vibha-min.svg'
-    },
-    {
-        'Name': 'Kritika',
-        'Link': 'kritika17295@iiitd.ac.in',
-        'image': 'Vibha-min.svg'
-    },
-    {
-        'Name': 'Kyzyl Monteiro John',
-        'Link': 'kyzyl17296@iiitd.ac.in',
-        'image': 'Vibha-min.svg'
-    },
-    {
-        'Name': 'Mayank Jain',
-        'Link': 'mayank17297@iiitd.ac.in',
-        'image': 'Vibha-min.svg'
-    },
-    {
-        'Name': 'Mayank Rohilla',
-        'Link': 'mayank17299@iiitd.ac.in',
-        'image': 'Vibha-min.svg'
-    },
-    {
-        'Name': 'Meeha Tewari',
-        'Link': 'meeha17300@iiitd.ac.in',
-        'image': 'Vibha-min.svg'
-    },
-    {
-        'Name': 'Nikhil Kumar',
-        'Link': 'nikhil17301@iiitd.ac.in',
-        'image': 'Vibha-min.svg'
-    },
-    {
-        'Name': 'Nishtha Singhal',
-        'Link': 'nishtha17302@iiitd.ac.in',
-        'image': 'Vibha-min.svg'
-    },
-    {
-        'Name': 'Piyush Vashisht',
-        'Link': 'piyush17303@iiitd.ac.in',
-        'image': 'Vibha-min.svg'
-    },
-    {
-        'Name': 'Porvil',
-        'Link': 'porvil17304@iiitd.ac.in',
-        'image': 'Vibha-min.svg'
-    },
-    {
-        'Name': 'Pragya Singh',
-        'Link': 'pragya17305@iiitd.ac.in',
-        'image': 'Vibha-min.svg'
-    },
-    {
-        'Name': 'Prakhar Goel',
-        'Link': 'prakhar17306@iiitd.ac.in',
-        'image': 'Vibha-min.svg'
-    },
-    {
-        'Name': 'Pushpraj',
-        'Link': 'pushpraj17307@iiitd.ac.in',
-        'image': 'Vibha-min.svg'
-    },
-    {
-        'Name': 'Riya Singh',
-        'Link': 'riya17309@iiitd.ac.in',
-        'image': 'Vibha-min.svg'
-    },
-    {
-        'Name': 'Royal Tomar',
-        'Link': 'royal17310@iiitd.ac.in',
-        'image': 'Vibha-min.svg'
-    },
-    {
-        'Name': 'Sanchit Mittal',
-        'Link': 'sanchit17312@iiitd.ac.in',
-        'image': 'Vibha-min.svg'
-    },
-    {
-        'Name': 'Shaurya Singh',
-        'Link': 'shaurya17313@iiitd.ac.in',
-        'image': 'Vibha-min.svg'
-    },
-    {
-        'Name': 'Shivankar Sharma',
-        'Link': 'shivankar17314@iiitd.ac.in',
-        'image': 'Vibha-min.svg'
-    },
-    {
-        'Name': 'Shruti Dabas',
-        'Link': 'shruti17315@iiitd.ac.in',
-        'image': 'Vibha-min.svg'
-    },
-    {
-        'Name': 'Sounak Gupta',
-        'Link': 'sounak17317@iiitd.ac.in',
-        'image': 'Vibha-min.svg'
-    },
-    {
-        'Name': 'Tushar Kadian',
-        'Link': 'tushar17318@iiitd.ac.in',
-        'image': 'Vibha-min.svg'
-    },
-    {
-        'Name': 'Vaibhav Sarda',
-        'Link': 'vaibhav17320@iiitd.ac.in',
-        'image': 'Vibha-min.svg'
-    },
-    {
-        'Name': 'Varnika Kairon',
-        'Link': 'varnika17321@iiitd.ac.in',
-        'image': 'Vibha-min.svg'
-    },
-    {
-        'Name': 'Vishnu Mohan',
-        'Link': 'vishnu17322@iiitd.ac.in',
-        'image': 'Vibha-min.svg'
-    },
-    {
-        'Name': 'Zubair Aslam',
-        'Link': 'zubair17323@iiitd.ac.in',
-        'image': 'Vibha-min.svg'
-    }
 ]
 
 publicationsJSON= [
@@ -702,11 +220,11 @@ publicationsJSON= [
         'List': [
             {
                 'Owner': 'Mrinmoy Chakrabarty, Makoto Wada',
-                'Text': '"Perceptual effects of fast and automatic visual ensemble statistics from faces in individuals with typical development and autism spectrum conditions", in Scientific Reports, February 2020 [Nature Publishing Group]. (Published)'
+                'Text': '"Perceptual effects of fast and automatic visual ensemble statistics from faces in individuals with typical development and autism spectrum conditions", in Scientific Reports, February 2019 [Nature Publishing Group]. (Published)'
             },
             {
                 'Owner': 'Mrinmoy Chakrabarty, Makoto Wada',
-                'Text': '"Perceptual effects of fast and automatic visual ensemble statistics from faces in individuals with typical development and autism spectrum conditions", in Scientific Reports, February 2020 [Nature Publishing Group]. (Published)'
+                'Text': '"Perceptual effects of fast and automatic visual ensemble statistics from faces in individuals with typical development and autism spectrum conditions", in Scientific Reports, February 2019 [Nature Publishing Group]. (Published)'
             },
         ]
     },
@@ -714,12 +232,12 @@ publicationsJSON= [
         'Year_Publication': '18',
         'List': [
             {
-                'Owner': 'Mrinmoy Chakrabarty, Makoto Wada',
-                'Text': '"Perceptual effects of fast and automatic visual ensemble statistics from faces in individuals with typical development and autism spectrum conditions", in Scientific Reports, February 2020 [Nature Publishing Group]. (Published)'
+                'Owner': 'Chakrabarty, Makoto Wada',
+                'Text': '"Perceptual effects of fast and automatic visual ensemble statistics from faces in individuals with typical development and autism spectrum conditions", in Scientific Reports, February 2018 [Nature Publishing Group]. (Published)'
             },
             {
-                'Owner': 'Mrinmoy Chakrabarty, Makoto Wada',
-                'Text': '"Perceptual effects of fast and automatic visual ensemble statistics from faces in individuals with typical development and autism spectrum conditions", in Scientific Reports, February 2020 [Nature Publishing Group]. (Published)'
+                'Owner': 'Chakrabarty, Makoto Wada',
+                'Text': '"Perceptual effects of fast and automatic visual ensemble statistics from faces in individuals with typical development and autism spectrum conditions", in Scientific Reports, February 2018 [Nature Publishing Group]. (Published)'
             },
         ]
     },
@@ -728,12 +246,85 @@ publicationsJSON= [
         'List': [
             {
                 'Owner': 'Mrinmoy Chakrabarty, Makoto Wada',
-                'Text': '"Perceptual effects of fast and automatic visual ensemble statistics from faces in individuals with typical development and autism spectrum conditions", in Scientific Reports, February 2020 [Nature Publishing Group]. (Published)'
+                'Text': '"Perceptual effects of fast and automatic visual ensemble statistics from faces in individuals with typical development and autism spectrum conditions", in Scientific Reports, February 2017 [Nature Publishing Group]. (Published)'
             },
             {
                 'Owner': 'Mrinmoy Chakrabarty, Makoto Wada',
-                'Text': '"Perceptual effects of fast and automatic visual ensemble statistics from faces in individuals with typical development and autism spectrum conditions", in Scientific Reports, February 2020 [Nature Publishing Group]. (Published)'
+                'Text': '"Perceptual effects of fast and automatic visual ensemble statistics from faces in individuals with typical development and autism spectrum conditions", in Scientific Reports, February 2017 [Nature Publishing Group]. (Published)'
             },
         ]
     },
+]
+
+projectsJSON= {
+    'PUMA: Biodesign': {
+        'Content': 'Milan Design Week 2018: Living and Breathing the Future of Performance'
+    },
+    'Connected Lighting for Caring Cities': {
+        'Content': 'Exploring the role of smart dynamic lighting in creating rich and inviting public spaces'
+    },
+    'PUMA: Making sports dynamic': {
+        'Content': 'Revolutionizing the next generation of sportswearDedicated websiteThe MIT Design Lab and PUMA have come together to c...'
+    },
+    'Bradesco: The Future of BIA': {
+        'Content': 'Reimaging virtual agent and envision future financial experience impacted by AI'
+    },
+    'Augmented Health and Safety: Future Vision': {
+        'Content': 'Exploring how disruptive technologies will transform health and safety practices in the energy industry.'
+    },
+    'MIT Atlas Center': {
+        'Content': 'Rethinking and redesigning the service center experience.'
+    }
+}
+
+phd_scholarsJSON= [
+    {
+        'Name': 'Abhijeet Mishra',
+        'Since': 'August 2009',
+        'email': 'abhijeet@iiitd.ac.in',
+        'Area': 'Novel Sensing, Interaction Design',
+        'Supervisor': 'Dr. Aman Parnami' 
+    },{
+        'Name': 'Anupriya Tuli',
+        'Since': 'August 2009',
+        'email': 'anupriyat@iiitd.ac.in',
+        'Area': 'Leveraging ICT for Menstrual Health Education',
+        'Supervisor': 'Dr. Pushpendra Singh' 
+    },{
+        'Name': 'Asra Sakeen Wani',
+        'Since': 'December 2018',
+        'email': 'asraw@iiitd.ac.in',
+        'Area': 'Human-Computer Interaction',
+        'Supervisor': 'Dr. Pushpendra Singh' 
+    },{
+        'Name': 'Deepika Yadav',
+        'Since': 'July 2014',
+        'email': 'deepikay@iiitd.ac.in',
+        'Area': 'Human-Computer Interaction',
+        'Supervisor': 'Dr. Pushpendra Singh' 
+    },{
+        'Name': 'Jasmeet Kaur',
+        'Since': 'July 2018',
+        'email': 'jasmeetk@iiitd.ac.in',
+        'Area': 'Human-Computer Interaction',
+        'Supervisor': 'Dr. Pushpendra Singh' 
+    },{
+        'Name': 'Manideepa Mukherjee',
+        'Since': 'January 2015',
+        'email': 'manideepam@iiitd.ac.in',
+        'Area': 'Electronics & Communication Engineering/HCI for Social Good',
+        'Supervisor': 'Dr. Aman Parnami' 
+    },{
+        'Name': 'Manshul V Belani',
+        'Since': 'January 2018',
+        'email': 'manshulb@iiitd.ac.in',
+        'Area': 'Electronics & Communication Engineering/HCI for Social Good',
+        'Supervisor': 'Dr. Aman Parnami' 
+    },{
+        'Name': 'Vishal Singh Sengar',
+        'Since': 'August 2019',
+        'email': 'vishals@iiitd.ac.in',
+        'Area': 'Human-Computer Interaction & Product Design',
+        'Supervisor': 'Dr. Aman Parnami' 
+    }
 ]

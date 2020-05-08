@@ -4,145 +4,218 @@
 <meta name="description" content="Welcome to IIIT Delhi’s Department of Human-Centered Design. With an increasing focus on user experience, the importance of Human-Computer Interaction (HCI), Interaction Design, and Design Thinking are also increasing rapidly in IT-based products and services. Digital media is at the heart of many aspects of design in areas like social media, gaming, virtual/augmented reality, etc." />
 <meta property="og:description" content="Welcome to IIIT Delhi’s Department of Human-Centered Design. With an increasing focus on user experience, the importance of Human-Computer Interaction (HCI), Interaction Design, and Design Thinking are also increasing rapidly in IT-based products and services. Digital media is at the heart of many aspects of design in areas like social media, gaming, virtual/augmented reality, etc." />
 <meta property="og:title" content="Department of Human-Centered Design, IIIT-Delhi" />
-<meta property="og:url" content="https://hcd.now.sh/" />    
+<meta property="og:url" content="https://hcd.now.sh/" />
+<title>Department of Human-Centered Design, IIIT-Delhi</title>
 {% endblock %}
 {% block content %}
-<img alt="header" id="header" src="" class="w-100 h-100">
-<div class="container-fluid bg-white py-5">
-    <div class="container">
-        <div class="row">
-            <div id="about_text" class="col-12 col-md-6">
-                <h1 class="border-bottom">About Us</h1>
-                <h4 class="mt-3 gara-proreg" style="line-height: 1.45em;">
-                    Welcome to IIIT Delhi’s Department of Human-Centered Design. With an increasing focus on user experience, the importance of Human-Computer Interaction (HCI), Interaction Design, and Design Thinking are also increasing rapidly in IT-based products and services. Digital media is at the heart of many aspects of design in areas like social media, gaming, virtual/augmented reality, etc.
-                </h4>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.3.8/css/swiper.min.css">
+<style> 
+    .swiper-container {
+        width: auto;
+        height: 500px;
+        max-width: 100%;
+        max-height: 100%;
+    }
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+    .resize-box{
+        transform: scale(1.1);
+    }
+    @media screen and (max-width: 768px){
+        .resize-box{
+            transform: scale(1);
+        }
+    }
+    .height-img{
+        height: 500px !important;
+    }
+    @media screen and (max-width: 678px){
+        .height-img{
+            height: 250px !important;
+        }
+    }
+    .swiper-button-next{
+        color: white;
+        transform: scale(0.7);
+    }
+    .swiper-button-prev{
+        color: white;
+        transform: scale(0.7);
+    }
+</style>  
+
+<!-- Swiper -->
+<div class="container mt-5">
+    <div class="swiper-container height-img">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="p-3 w-100 h-100 d-flex align-items-end justify-content-start" style="background: radial-gradient(transparent, transparent, #000000), url('https://images.unsplash.com/photo-1543269865-cbf427effbad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80'); background-size: cover;">
+                    <!-- <h3 class="desc-swiper text-white font-weight-lighter p-2 bg-green shadow rounded">
+                        Lorem ipsum is a Dummy text
+                    </h3> -->
+                </div>
             </div>
-            <div class="col-12 col-md-6 mt-3 mt-md-0 text-center">
-                <img alt="HCD_Building" id="about_image" src="" style="max-height: 400px; width: auto; max-width: 100%;">
+            <div class="swiper-slide">
+                <div class="p-3 w-100 h-100 d-flex align-items-end justify-content-center" style="background: radial-gradient(transparent, transparent, #000000), url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80'); background-size: cover;">
+                    <!-- <h3 class="desc-swiper text-white font-weight-lighter p-2 bg-green shadow rounded">
+                        Lorem ipsum is a Dummy text
+                    </h3> -->
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="p-3 w-100 h-100 d-flex align-items-end justify-content-end" style="background: radial-gradient(transparent, transparent, #000000), url('https://images.unsplash.com/photo-1576267423445-b2e0074d68a4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80'); background-size: cover;">
+                    <!-- <h3 class="desc-swiper text-white font-weight-lighter p-2 bg-green shadow rounded">
+                        Lorem ipsum is a Dummy text
+                    </h3> -->
+                </div>
+            </div>
+        </div>
+        <!-- Add Arrows -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+</div>
+<div class="container py-3 py-md-5">
+    <div class="row d-md-flex align-items-stretch justify-content-center">
+        <div class="mt-3 mt-md-0 col-12 col-md-6 d-flex align-items-center justify-content-center">
+            <div id="about_us" class="w-100 h-100 p-3 p-md-5 rounded bg-green" style="box-shadow:0 .5rem 1rem rgba(0,0,0,.3)!important">
+                <h4 class="text-white">About Us</h4>
+                <a style="border-top-width: 5px !important;" class="border-white border-top">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                <p style="font-size: 22px !important;" class="text-white">
+                    We at HCD@IIITD, focus on finding innovative solutions to challenges one faces every time a new technology is adopted by the masses. We offer an interdisciplinary undergraduate program in Computer Science and Design (B.Tech), that aims to produce the next-generation engineers having robust skills related to Computer Animation, Game Design, Digital Media Design and Editing, VR/AR, to name a few. Our research students (PhDs), on the other hand, push the boundaries of Human-Machine Interaction, Design and the pertinent underlying challenges relevant to physics, mathematics, human psychology, vision, to only count a few
+                </p>
+            </div>
+        </div>
+        <div class="mt-3 mt-md-0 col-12 col-md-6 d-md-flex align-items-center justify-content-center">
+            <div id="news_updates" class="w-100 h-100 p-3 p-md-5 rounded" style="border: solid 1px gray; border-style: dashed;">
+                <h4 class="text-green">News & Updates</h4>
+                <div style="height: 5px !important;" class="hcd-gradient w-25"></div>
+                <div class="w-100 h-100">
+                    <p class="h-100">
+                        <marquee behavior="scroll" direction="up" onmouseout="this.start();" onmouseover="this.stop();" scrollamount="5" style="height: 200px;">
+                            <p style="padding-top: 10px;">
+                                <a class="text-green" href="https://www.iiitd.ac.in/admission/mtech/2020/cse-ece-details">M.Tech. Fee details have been updated.</a>
+                            </p>
+                            <p style="padding-top: 10px;">
+                                <a class="text-green" href="https://www.codechef.com/IIITDS20">Sample Coding Test has been started in Codechef platform. Click here to participate.</a>
+                            </p>
+                            <p style="padding-top: 10px;">
+                                <a class="text-green" href="https://www.iiitd.ac.in/admission/mtech/2020/cse-ece-details">M.Tech. Fee details have been updated.</a>
+                            </p>
+                            <p style="padding-top: 10px;">
+                                <a class="text-green" href="https://www.codechef.com/IIITDS20">Sample Coding Test has been started in Codechef platform. Click here to participate.</a>
+                            </p>
+                            <p style="padding-top: 10px;">
+                                <a class="text-green" href="https://www.iiitd.ac.in/admission/mtech/2020/cse-ece-details">M.Tech. Fee details have been updated.</a>
+                            </p>
+                            <p style="padding-top: 10px;">
+                                <a class="text-green" href="https://www.codechef.com/IIITDS20">Sample Coding Test has been started in Codechef platform. Click here to participate.</a>
+                            </p>
+                            <p style="padding-top: 10px;">
+                                <a class="text-green" href="https://www.iiitd.ac.in/admission/mtech/2020/cse-ece-details">M.Tech. Fee details have been updated.</a>
+                            </p>
+                            <p style="padding-top: 10px;">
+                                <a class="text-green" href="https://www.codechef.com/IIITDS20">Sample Coding Test has been started in Codechef platform. Click here to participate.</a>
+                            </p>
+                        </marquee>
+                    </p>
+                </div>
             </div>
         </div>
     </div>
 </div>
-<div class="container-fluid bg-white">
-    <div class="container mb-5">
-        <div class="row">
-            <div class="home_submain animated fadeIn col-12 mt-5 mt-md-0">
-                <div onmouseover="this.style.cursor='pointer'" class="shadow w-100 h-100 p-5" style="border-style: dashed; border-color: #707070; border-width: 0.02cm;">
-                    <div class="row">
-                        <div class="onexpand col-12 col-md-4">
-                            <div class="d-flex justify-content-center align-items-start">
-                                <img id='expanded_image' src="../static/images/news.svg" style="max-width: 70px;">
-                            </div>
-                            <div class="row-content text-center">
-                                <h4 id="expanded_header" class="mt-3">News</h4>
-                                <p id="expanded_text_left" class="mt-1">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua</p>
-                            </div>
-                            <div onclick="replace('')" class="d-flex justify-content-center align-items-center">
-                                <button class="btn btn-lg bg-white text-dark">Close</button>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-8 toexpand" style="overflow: scroll;">
-                            <div id="expanded_text_main" class="row-content">
-                                <h5 class="mt-0 gara-proreg"><span class="font-weight-bold">·</span> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut</h5>
-                                <h5 class="mt-3 gara-proreg"><span class="font-weight-bold">·</span> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut</h5>
-                                <h5 class="mt-3 gara-proreg"><span class="font-weight-bold">·</span> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut</h5>
-                                <h5 class="mt-3 gara-proreg"><span class="font-weight-bold">·</span> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut</h5>    
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
+<div style="height: 5px;" class="mt-5 container hcd-gradient"></div>
+
+<div class="container px-4 px-md-0 mt-4 py-5" style="border-top-width: 5px !important;">
+    <div class="row">
+        <div class="col-12 d-sm-flex align-items-center justify-content-between px-0 px-md-5">
+            <h3 class="text-green">
+                Recent Events And Publications 
+            </h3>
+            <a onclick="window.location.href='/events/'" class="text-pointer mt-5 mt-md-0 text-green">
+                See All &nbsp;  
+                <svg xmlns="http://www.w3.org/2000/svg" width="21.7" height="21.15" viewBox="0 0 21.7 21.15">
+                    <path id="Icon_awesome-arrow-right" data-name="Icon awesome-arrow-right" d="M9.226,4.064,10.3,2.989a1.158,1.158,0,0,1,1.642,0l9.415,9.41a1.158,1.158,0,0,1,0,1.642l-9.415,9.415a1.158,1.158,0,0,1-1.642,0L9.226,22.381a1.164,1.164,0,0,1,.019-1.661l5.836-5.56H1.162A1.16,1.16,0,0,1,0,14v-1.55a1.16,1.16,0,0,1,1.162-1.162H15.081L9.246,5.725A1.155,1.155,0,0,1,9.226,4.064Z" transform="translate(0 -2.647)" fill="#01c0cf"/>
+                </svg>
+            </a>
+        </div>
+    </div>
+    <div class="row mt-3">
+        <div class="col-12 col-lg-6 p-0 p-md-5">
+            <div class="single_event h-100 w-100 d-flex align-items-end justify-content-center" aria-placeholder="{{event1_details}}" 
+            style="background-size: cover; background-position: center; min-height: 250px;">
+                <a class="no-transform-imp" href="/events/{{event1}}">
+                    <h3 class="text-white font-weight-bold mb-3">View Event →</h3>
+                </a>
             </div>
-            <div class="col-12 col-md-4 mt-5 itemlab">
-                <div onmouseout="this.classList.remove('shadow_'); this.classList.add('shadow');" onmouseover="this.classList.add('shadow_');this.classList.remove('shadow');" class="home_main shadow w-100 bg-white h-100 p-5" style="border-style: dashed; border-color: #707070; border-width: 0.02cm;">
-                    <div class="d-flex justify-content-center align-items-center" style="height: 70px;" >
-                        <img alt="News" src="../static/images/news.svg" style="max-height: 100%; max-width: 100%;">
-                    </div>
-                    <div class="mt-3 mb-1 row-content text-center">
-                        <h4 class="font-weight-bolder mt-3 gara-proreg">Latest News</h4>
-                        <p class="mt-3 gara-proreg ellipis-3">
-                            In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Wikipedia
-                        </p>
-                    </div>
-                    <div onclick="replace('news')" class="d-flex justify-content-center align-items-center">
-                        <button class="rounded-0 text-dark btn bg-white">
-                            Open
-                            <svg class="bi bi-arrow-right" fill="currentColor" height="2em" viewBox="0 0 20 20" width="2em" xmlns="http://www.w3.org/2000/svg"><path _ngcontent-c1="" clip-rule="evenodd" d="M12.146 6.646a.5.5 0 01.708 0l3 3a.5.5 0 010 .708l-3 3a.5.5 0 01-.708-.708L14.793 10l-2.647-2.646a.5.5 0 010-.708z" fill-rule="evenodd"></path><path  clip-rule="evenodd" d="M4 10a.5.5 0 01.5-.5H15a.5.5 0 010 1H4.5A.5.5 0 014 10z" fill-rule="evenodd"></path></svg>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-4 mt-5 itemlab">
-                <div onmouseout="this.classList.remove('shadow_'); this.classList.add('shadow');" onmouseover="this.classList.add('shadow_');this.classList.remove('shadow');" class="home_main shadow w-100 bg-white h-100 p-5" style="border-style: dashed; border-color: #707070; border-width: 0.02cm;">
-                    <div class="d-flex justify-content-center align-items-center" style="height: 70px;" >
-                        <img alt="Events" src="../static/images/events.svg" style="max-height: 100%; max-width: 100%;">
-                    </div>
-                    <div class="mt-3 mb-1 row-content text-center">
-                        <h4 class="font-weight-bolder mt-3 gara-proreg">Upcoming Events</h4>
-                        <p class="mt-3 gara-proreg ellipis-3">
-                            In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Wikipedia
-                        </p>
-                    </div>
-                    <div onclick="replace('events')" class="d-flex justify-content-center align-items-center">
-                        <button class="rounded-0 text-dark btn bg-white">
-                            Open
-                            <svg class="bi bi-arrow-right" fill="currentColor" height="2em" viewBox="0 0 20 20" width="2em" xmlns="http://www.w3.org/2000/svg"><path _ngcontent-c1="" clip-rule="evenodd" d="M12.146 6.646a.5.5 0 01.708 0l3 3a.5.5 0 010 .708l-3 3a.5.5 0 01-.708-.708L14.793 10l-2.647-2.646a.5.5 0 010-.708z" fill-rule="evenodd"></path><path  clip-rule="evenodd" d="M4 10a.5.5 0 01.5-.5H15a.5.5 0 010 1H4.5A.5.5 0 014 10z" fill-rule="evenodd"></path></svg>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-4 mt-5 itemlab">
-                <div onmouseout="this.classList.remove('shadow_'); this.classList.add('shadow');" onmouseover="this.classList.add('shadow_');this.classList.remove('shadow');" class="home_main shadow w-100 bg-white h-100 p-5" style="border-style: dashed; border-color: #707070; border-width: 0.02cm;">
-                    <div class="d-flex justify-content-center align-items-center" style="height: 70px;" >
-                        <img alt="Publications" src="../static/images/publications.svg" style="max-height: 100%; max-width: 100%;">
-                    </div>
-                    <div class="mt-3 mb-1 row-content text-center">
-                        <h4 class="font-weight-bolder mt-3 gara-proreg">Recent Publications</h4>
-                        <p class="mt-3 gara-proreg ellipis-3">
-                            In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Wikipedia
-                        </p>
-                    </div>
-                    <div onclick="replace('publications')" class="d-flex justify-content-center align-items-center">
-                        <button class="rounded-0 text-dark btn bg-white">
-                            Open
-                            <svg class="bi bi-arrow-right" fill="currentColor" height="2em" viewBox="0 0 20 20" width="2em" xmlns="http://www.w3.org/2000/svg"><path _ngcontent-c1="" clip-rule="evenodd" d="M12.146 6.646a.5.5 0 01.708 0l3 3a.5.5 0 010 .708l-3 3a.5.5 0 01-.708-.708L14.793 10l-2.647-2.646a.5.5 0 010-.708z" fill-rule="evenodd"></path><path  clip-rule="evenodd" d="M4 10a.5.5 0 01.5-.5H15a.5.5 0 010 1H4.5A.5.5 0 014 10z" fill-rule="evenodd"></path></svg>
-                        </button>
-                    </div>
-                </div>
-            </div>
+        </div>
+        <div class="col-12 col-lg-6 text-left d-flex align-items-start justify-content-center">
+            <ul class="list-unstyled p-4">
+                <li>
+                    <small>30-20-02</small>
+                    <h5>Lorem ipsum is a Dummy text</h5>
+                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptu … </p>
+                </li>
+                <li>
+                    <small>30-20-02</small>
+                    <h5>Lorem ipsum is a Dummy text</h5>
+                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptu … </p>
+                </li>
+                <li>
+                    <small>30-20-02</small>
+                    <h5>Lorem ipsum is a Dummy text</h5>
+                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptu … </p>
+                </li>
+            </ul>
         </div>
     </div>
 </div>
+
 {% endblock %}
 {% block scripts %}
-        <script type="text/javascript">
-            $(document).ready(function(){
-                setTimeout(()=>{
-                    $('#header').attr('src', 'https://www.iiitd.ac.in/sites/all/themes/impact_theme/images/riise.jpg');
-                    // $('#about_image').css({'height': $('#about_text').height()});
-                    $('#about_image').attr('src', 'https://ia.iiitd.ac.in/assets/images/facilities/2.JPG');
-                }, 200);
+    <script type="text/javascript">
+        let swiper;
+        $(document).ready(function () {
+            textswiper();
+            swiper = new Swiper('.swiper-container', {
+                loop: true,
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev'
+                },
             });
-            $(".home_submain").toggle();
-            function replace(string_home){
-                $(".home_submain").toggle(); $(".home_main").toggle();
-                if(string_home==='news'){
-                    handle_change('Latest News', 'news.svg', '\n\n\n\n');
-                }
-                else if(string_home==='events'){ 
-                    handle_change('Upcoming Events', 'events.svg', '\n\n\n\n');
-                }
-                else if(string_home==='publications'){ 
-                    handle_change('Recent Publications', 'publications.svg', '\n\n\n\n');
-                }
-                $(".toexpand").height($(".onexpand").height());
-                if(($(".toexpand").is(":visible"))){
-                    $('html, body').animate({scrollTop: $('.home_submain').offset().top}, 1000);
-                }
+            let image_str= "{{event1_details}}";
+            setTimeout(()=>{
+                $('.single_event').css({'background-image': 'linear-gradient(#00000060, #00000060), url("'+image_str+'")'});
+            }, 100);
+        });
+        $(window).resize(function(){
+            textswiper();
+        });
+        function textswiper(){
+            if($(window).width()<768){
+                $('.desc-swiper').addClass('h6');
             }
-            function handle_change(header, imageSrc, leftText){
-                $('#expanded_header').text(header); 
-                $('#expanded_image').attr('src', '../static/images/'+imageSrc+'');
-                $('#expanded_text_left').text(leftText);
+            else{
+                $('.desc-swiper').removeClass('h6');
             }
-        </script>
+        }
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.3.8/js/swiper.min.js"></script>
 {% endblock %}

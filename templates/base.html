@@ -18,18 +18,17 @@
         <link rel="apple-touch-icon-precomposed" href="../static/images/apple-180.svg" />
         <meta name="google-site-verification" content="7AFyHB1J8USPbEllVeNd5PoN55C-7uhBo8bOe-O797k" />
         <script type="application/ld+json">
-            {"url":"https://hcd.now.sh/","headline":"Department of Human-Centered Design, IIIT-Delhi","name":"Department of Human-Centered Design, IIIT-Delhi","description":"Welcome to IIIT Delhi’s Department of Human-Centered Design. With an increasing focus on user experience, the importance of Human-Computer Interaction (HCI), Interaction Design, and Design Thinking are also increasing rapidly in IT-based products and services. Digital media is at the heart of many aspects of design in areas like social media, gaming, virtual/augmented reality, etc.","@type":"WebSite","@context":"https://schema.org"}
-        </script>
-        <!-- <script>
-            if(!(window.doNotTrack === "1" || navigator.doNotTrack === "1" || navigator.doNotTrack === "yes" || navigator.msDoNotTrack === "1")) {
-                (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-                })(window,document,'script','https://www.google-analytics.com/analytics.js','ga'); 
-                ga('create', 'UA-XXXXXXXXX-1', 'auto');
-                ga('send', 'pageview');
+            {
+              "@id": "https://hcd.now.sh/",
+              "@context" : "http://schema.org",
+              "@type" : "Website",
+              "name" : "Department of Human-Centered Design, IIIT-Delhi",
+              "description": "Welcome to IIIT Delhi’s Department of Human-Centered Design. With an increasing focus on user experience, the importance of Human-Computer Interaction (HCI), Interaction Design, and Design Thinking are also increasing rapidly in IT-based products and services. Digital media is at the heart of many aspects of design in areas like social media, gaming, virtual/augmented reality, etc.",
+              "url" : "https://hcd.now.sh/",
+              "logo": "https://hcd.now.sh/static/images/logo-white.svg",
+              "sameAs" : ["https://www.facebook.com/hcdzine","https://twitter.com/hcd_IIITD","https://www.linkedin.com/in/human-centered-design-hcd-43b3a7180/"]
             }
-        </script> -->
+        </script>
         <!-- Web app manifest -->
         <meta name="theme-color" content="#40ADA7">
         <link rel="manifest" href="{{ url_for('static', filename='manifest.json') }}">
@@ -37,8 +36,6 @@
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="apple-mobile-web-app-status-bar-style" content="black">
         <meta name="format-detection" content="telephone=no">
-        <!-- Title -->
-        <title>Department of Human-Centered Design, IIIT-Delhi</title>
         <!-- DNS Prefetch -->
         <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
         <link rel="preconnect" href="https://maps.googleapis.com" crossorigin>
@@ -61,6 +58,7 @@
         {% endblock %}
         {% include "footer.html" %}
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha384-vk5WoKIaW/vJyUAd9n/wmopsmNhiy+L2Z+SBxGYnUkunIxVxAv/UtMOhba/xskxh" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
         {% block scripts %}
         {% endblock %}
