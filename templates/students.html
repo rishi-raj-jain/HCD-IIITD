@@ -12,9 +12,9 @@
     <div class="mt-5 d-flex flex-column align-items-center justify-content-center">
         <h4 class="mt-3 text-dark font-weight-bold animated fadeIn">B.Tech. Students</h4>
         <div class="bt-group d-flex flex-row">
-            <button onclick="show_batch('2019');" type="button" class="button-2019 mt-3 ml-1 btn btn-sm btn-outline-green">Batch: 2019</button>
-            <button onclick="show_batch('2018');" type="button" class="button-2018 mt-3 ml-1 btn btn-sm btn-outline-green">Batch: 2018</button>
-            <button onclick="show_batch('2017');" type="button" class="button-2017 mt-3 ml-1 btn btn-sm btn-outline-green">Batch: 2017</button>
+            <button onclick="show_batch('2019');" type="button" class="button-2019 mt-3 ml-1 btn btn-md btn-outline-green">Batch: 2019</button>
+            <button onclick="show_batch('2018');" type="button" class="button-2018 mt-3 ml-1 btn btn-md btn-outline-green">Batch: 2018</button>
+            <button onclick="show_batch('2017');" type="button" class="button-2017 mt-3 ml-1 btn btn-md btn-outline-green">Batch: 2017</button>
         </div>
     </div>
     <div class="mt-5 animated faster fadeIn students 2019">
@@ -86,8 +86,8 @@
             $(this).addClass('d-none');
         });
         $('.bt-group button').each(function(){
-            $(this).removeClass('mt-3 btn btn-sm btn-outline-green bg-green text-white');
-            $(this).addClass('mt-3 btn btn-sm btn-outline-green');
+            $(this).removeClass('mt-3 btn btn-md btn-outline-green bg-green text-white');
+            $(this).addClass('mt-3 btn btn-md btn-outline-green');
             console.log($(this));
         });
         $('.button-'+batch).removeClass('btn-outline-green');

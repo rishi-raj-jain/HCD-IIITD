@@ -28,20 +28,46 @@
         position: absolute;
         height: 100px;
         color: inherit;
-        background: none;
+        background: transparent !important;
         border: none;
         z-index: 100;
     }
     .main-content .owl-theme .custom-nav .owl-prev i, .main-content .owl-theme .custom-nav .owl-next i {
         font-size: 2.5rem;
-        color: #cecece;
+        color: #000;
     }
     .main-content .owl-theme .custom-nav .owl-prev {
-        right: 100%;
+        right: 95%;
     }
     .main-content .owl-theme .custom-nav .owl-next {
-        left: 100%;
+        left: 95%;
     }
+
+    .main-content .owl-theme .custom-nav-1 {
+        position: absolute;
+        top: 40%;
+        left: 0;
+        right: 0;
+    }
+    .main-content .owl-theme .custom-nav-1 .owl-prev, .main-content .owl-theme .custom-nav-1 .owl-next {
+        position: absolute;
+        height: 100px;
+        color: inherit;
+        background: transparent !important;
+        border: none;
+        z-index: 100;
+    }
+    .main-content .owl-theme .custom-nav-1 .owl-prev i, .main-content .owl-theme .custom-nav-1 .owl-next i {
+        font-size: 2.5rem;
+        color: #000;
+    }
+    .main-content .owl-theme .custom-nav-1 .owl-prev {
+        right: 95%;
+    }
+    .main-content .owl-theme .custom-nav-1 .owl-next {
+        left: 95%;
+    }
+    
     .row-content{
         min-height: 700px !important;
     }
@@ -70,6 +96,14 @@
             right: unset;
         }
         .main-content .owl-theme .custom-nav .owl-next {
+            right: 0;
+            left: unset;
+        }
+        .main-content .owl-theme .custom-nav-1 .owl-prev {
+            left: 0;
+            right: unset;
+        }
+        .main-content .owl-theme .custom-nav-1 .owl-next {
             right: 0;
             left: unset;
         }
@@ -105,8 +139,6 @@
                       <div role="text-gray separator" class="dropdown-divider"></div>
                       <a class="text-gray dropdown-item" href="#live_courses">Live Courses</a>
                       <div role="text-gray separator" class="dropdown-divider"></div>
-                      <a class="text-gray dropdown-item" href="#course_co">Course Coordinator</a>
-                      <div role="text-gray separator" class="dropdown-divider"></div>
                       <a class="text-gray dropdown-item" href="#archive">Archive</a>
                     </div>
                   </li>
@@ -126,8 +158,6 @@
                   return false;" class="h5 text-gray nav-link" href="#all_courses">All Courses</a>
                   <a onclick="event.preventDefault(); setTimeout(()=>{ $('#mai-content').animate({ scrollTop: $('#live_courses').offset().top + $('#mai-content').scrollTop() - 240 }, 'fast');}, 0); 
                   return false;" class="h5 text-gray nav-link" href="#live_courses">Live Courses</a>
-                  <a onclick="event.preventDefault(); setTimeout(()=>{ $('#mai-content').animate({ scrollTop: $('#course_co').offset().top + $('#mai-content').scrollTop() - 200 }, 'fast');}, 0); 
-                  return false;" class="h5 text-gray nav-link" href="#course_co">Course Coordinator</a>
                   <a onclick="event.preventDefault(); setTimeout(()=>{ $('#mai-content').animate({ scrollTop: $('#archive').offset().top + $('#mai-content').scrollTop() }, 'fast');}, 0); 
                   return false;" class="h5 text-gray nav-link" href="#archive">Archive</a>
                 </nav>
@@ -279,7 +309,7 @@
                 <p class="ml-3 text-white btn-lg animated flipInX btn hcd-gradient h3">
                     SSH Courses
                 </p>
-                <div class="p-4 p-md-0 mt-3 owl-carousel owl-theme">
+                <div class="p-4 p-md-0 mt-3 owl-carousel owl_js_0 owl-theme">
                     {% for option in courses_list %}
                     <div class="shadow item bg-white text-dark p-4">
                         <h4 class="font-weight-bold text-green" style="font-size: 22px;">
@@ -306,7 +336,7 @@
                 <p class="ml-3 text-white btn-lg animated flipInX btn hcd-gradient h3">
                     Live Courses
                 </p>
-                <div class="p-4 p-md-0 mt-3 owl-carousel owl-theme">
+                <div class="p-4 p-md-0 mt-3 owl-carousel owl_js_1 owl-theme">
                     {% for option in courses_list %}
                     <div class="shadow item bg-white text-dark p-4">
                         <h4 class="font-weight-bold text-green" style="font-size: 22px;">
@@ -324,40 +354,8 @@
                 </div>
                 <div class="owl-theme">
                     <div class="owl-controls">
-                        <div class="custom-nav owl-nav"></div>
+                        <div class="custom-nav-1 owl-nav"></div>
                     </div>
-                </div>
-            </div>
-        
-            <div id="course_co" class="p-2 mt-5 row row-content">
-                <div class="col-12 d-flex flex-column align-items-center flex-md-row">
-                    <div style="height: 100px; width: 100px; background: url('https://www.iiitd.ac.in/sites/default/files/public/faculty/amanpranami_0.jpg'); background-size: cover;" class="rounded-circle"></div>
-                    <div class="col text-center text-md-left">
-                        <h4>
-                            Name of the faculty
-                        </h4>
-                        <h5>
-                            Assistant Professor
-                        </h5>
-                        <h6>
-                            Email: <a href="mailto:someone@gmail.com">someone@gmail.com</a>
-                        </h6>
-                        <h6>
-                            Office Hours: A1 - A2
-                        </h6>
-                    </div>
-                </div>
-                <div class="col-12">
-                    <h4 class="mt-5">
-                        Message from Course Coordinator
-                    </h4>
-                    <h5 class="gara-proreg">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-                        laborum.
-                    </h5>
                 </div>
             </div>
         
@@ -394,7 +392,7 @@
 {% block scripts %}
 <script>
     $(document).ready(function(){
-        $('.owl-carousel').owlCarousel({
+        $('.owl_js_0').owlCarousel({
             items:4,
             lazyLoad:true,
             loop:true,
@@ -408,10 +406,25 @@
                     items: 1,
                 },
                 900:{
-                    items:3,
+                    items: 3
+                }
+            }
+        });
+        $('.owl_js_1').owlCarousel({
+            items:4,
+            lazyLoad:true,
+            loop:true,
+            autoHeight:true,
+            dots: false,
+            navText: ['<svg width="50" aria-hidden="true" focusable="false" data-prefix="fad" data-icon="chevron-circle-left" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class=""><g class="fa-group"><path fill="#ffffff" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm72.5 349.6a23.9 23.9 0 0 1 0 33.9l-17 17a23.9 23.9 0 0 1-33.9 0L142.1 273a24 24 0 0 1 0-34l135.5-135.5a23.9 23.9 0 0 1 33.9 0l17 17a23.9 23.9 0 0 1 0 33.9L226.9 256z" class="fa-white"></path><path fill="#40ADA7" d="M142.1 239l135.5-135.5a23.9 23.9 0 0 1 33.9 0l17 17a23.9 23.9 0 0 1 0 33.9L226.9 256l101.6 101.6a23.9 23.9 0 0 1 0 33.9l-17 17a23.9 23.9 0 0 1-33.9 0L142.1 273a24 24 0 0 1 0-34z"></path></g></svg>', '<svg width="50" aria-hidden="true" focusable="false" data-prefix="fad" data-icon="chevron-circle-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class=""><g class="fa-group"><path fill="#ffffff" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm113.9 265L234.4 408.5a23.9 23.9 0 0 1-33.9 0l-17-17a23.9 23.9 0 0 1 0-33.9L285.1 256 183.5 154.4a23.9 23.9 0 0 1 0-33.9l17-17a23.9 23.9 0 0 1 33.9 0L369.9 239a24 24 0 0 1 0 34z"></path><path fill="#40ADA7" d="M369.9 273L234.4 408.5a23.9 23.9 0 0 1-33.9 0l-17-17a23.9 23.9 0 0 1 0-33.9L285.1 256 183.5 154.4a23.9 23.9 0 0 1 0-33.9l17-17a23.9 23.9 0 0 1 33.9 0L369.9 239a24 24 0 0 1 0 34z"></path></g></svg>'],
+            navContainer: '.main-content .custom-nav-1',
+            margin:1,
+            responsive:{
+                0:{
+                    items: 1,
                 },
-                1080:{
-                    items:4
+                900:{
+                    items: 3 
                 }
             }
         });
@@ -430,18 +443,6 @@
         });
         $(".center .item").addClass('bg-green');
         $(".center .item").removeClass('text-dark');
-        $(".center .item").addClass('text-white');
-        $(".owl-next").click(function(){
-            $(".active .item").each(function(){
-                $(this).removeClass('bg-green');
-                $(this).addClass('bg-white');
-                $(this).removeClass('text-white');
-                $(this).addClass('text-dark');
-            });
-            $(".center .item").addClass('bg-green');
-            $(".center .item").removeClass('text-dark');
-            $(".center .item").addClass('text-white');
-        });
         $('.owl-prev').click();
         $('.owl-next').click();
     });

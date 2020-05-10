@@ -78,9 +78,9 @@
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 4; /* number of lines to show */
 }
-.container{
+/* .container{
     max-width: 1400px !important;
-}
+} */
 .shadow_hover{
     box-shadow: 5px 5px #f5f6f6;
 }
