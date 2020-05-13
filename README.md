@@ -1,14 +1,11 @@
-# HCD-IIITD Website  <img src="https://hcd.iiitd.ac.in/wp-content/uploads/2019/06/cropped-HCD-Logo-15081.svg" height="50">
+# Human-Centered Design, IIIT-Delhi's Website  
+<img src="https://hcd.now.sh/static/images/logo-white.svg" height="70">
 
 ### About this Repository
+This repo contains flask code for the website!
 
-This repo contains the java code for a working E-Cart:
-
-|Directory               |Component|
-|------------------------|-----------------------------------------------|
 
 ### Contributing
-
 First, read the [contribution guidelines](CONTRIBUTING.md). Ensure you understand the code.
 #### Setup
 
