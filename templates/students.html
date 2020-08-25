@@ -1,11 +1,14 @@
 {% extends "base.html" %}
 {% block meta %}
-<link rel="canonical" href="https://hcd.now.sh/students" />
-<meta property="og:url" content="https://hcd.now.sh/students" />    
-<meta name="description" content="Descrption for B.Tech CSD{{ ', Batch' if year }} {{ year or '' }}" />
-<meta property="og:description" content="Descrption for B.Tech CSD{{ ', Batch' if year }} {{ year or '' }}" />
-<meta property="og:title" content="B.Tech. Students{{ ', Batch' if year }} {{ year or '' }} | Human-Centered Design @ IIIT-Delhi" />
-<title>B.Tech. Students{{ ', Batch' if year }} {{ year or '' }} | Human-Centered Design @ IIIT-Delhi</title>
+    <title>B.Tech. Students{{ ', Batch' if year }} {{ year or '' }} | Human-Centered Design @ IIIT-Delhi</title>
+    <meta name="title" property="title" content="B.Tech. Students{{ ', Batch' if year }} {{ year or '' }} | Human-Centered Design @ IIIT-Delhi" />
+    <meta name="og:title" property="og:title" content="B.Tech. Students{{ ', Batch' if year }} {{ year or '' }} | Human-Centered Design @ IIIT-Delhi" />
+    <meta name="twitter:title" property="twitter:title" content="B.Tech. Students{{ ', Batch' if year }} {{ year or '' }} | Human-Centered Design @ IIIT-Delhi" />
+    <meta name="description" property="description" content="{{pageDescr}}" />
+    <meta name="og:description" property="og:description" content="{{pageDescr}}" />
+    <meta name="twitter:description" property="twitter:description" content="{{pageDescr}}" />
+    <meta name="og:url" property="og:url" content="https://hcd.iiitd.ac.in/{{slug}}" />
+    <meta name="twitter:url" property="twitter:url" content="https://hcd.iiitd.ac.in/{{slug}}" />
 {% endblock %}
 {% block content %}
 <div class="container mb-5 bg-white">

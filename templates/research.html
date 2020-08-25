@@ -1,13 +1,16 @@
 {% extends "base.html" %}
-{% block content %}
 {% block meta %}
-<link rel="canonical" href="https://hcd.now.sh/research" />
-<meta property="og:url" content="https://hcd.now.sh/research" />    
-<meta name="description" content="Desc for B.Tech CSD" />
-<meta property="og:description" content="Desc for B.Tech CSD" />
-<meta property="og:title" content="B.Tech. Courses | Human-Centered Design @ IIIT-Delhi" />
-<title>Research Areas | Human-Centered Design @ IIIT-Delhi</title>
+    <title>{{pageTitle}}</title>
+    <meta name="title" property="title" content="{{pageTitle}}" />
+    <meta name="og:title" property="og:title" content="{{pageTitle}}" />
+    <meta name="twitter:title" property="twitter:title" content="{{pageTitle}}" />
+    <meta name="description" property="description" content="{{pageDescr}}" />
+    <meta name="og:description" property="og:description" content="{{pageDescr}}" />
+    <meta name="twitter:description" property="twitter:description" content="{{pageDescr}}" />
+    <meta name="og:url" property="og:url" content="https://hcd.iiitd.ac.in/{{slug}}" />
+    <meta name="twitter:url" property="twitter:url" content="https://hcd.iiitd.ac.in/{{slug}}" />
 {% endblock %}
+{% block content %}
 <style>
     .active {
         -webkit-box-shadow: 0 0 3px rgba(218, 218, 218, 0.739);

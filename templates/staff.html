@@ -1,68 +1,71 @@
 {% extends "base.html" %}
 {% block content %}
-{% block meta %}
-<link rel="canonical" href="https://hcd.now.sh/staff" />
-<meta property="og:url" content="https://hcd.now.sh/staff" />    
-<meta name="description" content="Desc for Staff HCD" />
-<meta property="og:description" content="Desc for Staff HCD" />
-<meta property="og:title" content="Staff | Human-Centered Design @ IIIT-Delhi" />
-<title>Staff | Human-Centered Design @ IIIT-Delhi</title>
-{% endblock %}
-<div class="container py-5 bg-white">
-    <h4 class="mt-4 text-center animated fadeIn font-weight-bold">Staff</h4>
-    <div class="px-2">
-        <div class="row d-md-flex align-items-center justify-content-center">
-            {% for option in faculty_list %}
-                <div class="mt-3 col-12 col-md-4 col-lg-3 rounded itemlab {{option.Name.split(' ')[0]}}_{{option.Name.split(' ')[1]}} {{option.researchInterests}}" aria-label="{{option.Name}}">
-                    <div class="rounded py-3 home_main border w-100 h-100" style="border-radius: 10px; border-color: #65656530 !important;">
-                        <div onmouseover="this.timer=setTimeout(()=>{this.onclick()}, 1000);" onmouseout="if(this.timer)window.clearTimeout(this.timer);" onclick="show_inner('{{option.Name.split(' ')[0]}}_{{option.Name.split(' ')[1]}}')" class="d-flex justify-content-center align-items-start" style="height: calc( 100vh /5 );" >
-                            <img alt="{{option.Name}}" class="staff rounded-circle" src='' data-src="{{option.image}}" style="max-height: 100%; max-width: 100%;">
-                        </div>
-                        <div class="mt-4 row-content text-center">
-                            <h4 onmouseover="this.timer=setTimeout(()=>{this.onclick()}, 1000);" onmouseout="if(this.timer)window.clearTimeout(this.timer);" onclick="show_inner('{{option.Name.split(' ')[0]}}_{{option.Name.split(' ')[1]}}')" class="font-weight-bolder mt-3 text-green">{{option.Name}}</h4>
-                            <h6 onmouseover="this.timer=setTimeout(()=>{this.onclick()}, 1000);" onmouseout="if(this.timer)window.clearTimeout(this.timer);" onclick="show_inner('{{option.Name.split(' ')[0]}}_{{option.Name.split(' ')[1]}}')" class="font-weight-bold text-green">{{option.Post}}</h6>
-                        </div>
-                        <div class="mt-4 d-flex align-items-center justify-content-center">
-                            <ul class="list-unstyled">
-                                <a aria-label="email hcd" rel='noopener noreferrer' href="mailto:{{option.email}}" class="text-decoration-none mr-2" target="_blank">                    
-                                    <svg height='30' width='30' id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 39.39 31.51"><defs><style>.cls-1{fill:url(#linear-gradient);}</style><linearGradient id="linear-gradient" x1="10.53" y1="24.6" x2="11.82" y2="24.6" gradientTransform="matrix(30, 0, 0, -24, -315, 609)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#48bd9f"/><stop offset="1" stop-color="#17becd"/></linearGradient></defs><path id="Icon_material-email" data-name="Icon material-email" class="cls-1" d="M35.71,2.94H4.2A3.94,3.94,0,0,0,.28,6.88l0,23.64A4,4,0,0,0,4.2,34.46H35.71a4,4,0,0,0,3.94-3.94V6.88A4,4,0,0,0,35.71,2.94Zm0,7.88L20,20.67,4.2,10.82V6.88L20,16.73,35.71,6.88Z" transform="translate(-0.26 -2.94)"/></svg>                                
-                                </a>
-                                <a aria-label="twitter hcd" rel='noopener noreferrer' href="{{option.twitter}}" class="text-decoration-none mr-2" target="_blank">
-                                    <svg id="Group_657" data-name="Group 657" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30" viewBox="0 0 37.222 37.222">
-                                        <defs>
-                                          <linearGradient id="linear-gradient" x1="0.021" y1="0.527" x2="0.967" y2="0.5" gradientUnits="objectBoundingBox">
-                                            <stop offset="0" stop-color="#00d3a8"/>
-                                            <stop offset="1" stop-color="#01c0cf"/>
-                                          </linearGradient>
-                                        </defs>
-                                        <path id="Path_1256" data-name="Path 1256" d="M584.9,207.878a18.611,18.611,0,1,0-18.609,18.611A18.612,18.612,0,0,0,584.9,207.878Z" transform="translate(-547.678 -189.267)" fill="url(#linear-gradient)"/>
-                                        <path id="Path_1257" data-name="Path 1257" d="M598.352,233.355a8.66,8.66,0,0,1-2.329.624,4.551,4.551,0,0,0,1.89-2.351.07.07,0,0,0-.1-.086,8.682,8.682,0,0,1-2.658,1.017,4.362,4.362,0,0,0-3.238-1.445,4.509,4.509,0,0,0-4.434,4.576,4.792,4.792,0,0,0,.115,1.043,12.471,12.471,0,0,1-9.118-4.754.024.024,0,0,0-.04,0,4.706,4.706,0,0,0-.582,2.269,4.62,4.62,0,0,0,1.9,3.753.029.029,0,0,1-.016.052,4.325,4.325,0,0,1-1.878-.548.022.022,0,0,0-.034.021,6.463,6.463,0,0,0,.3,1.675,4.533,4.533,0,0,0,3.258,2.83,4.448,4.448,0,0,1-1.171.162,4.231,4.231,0,0,1-.8-.078.025.025,0,0,0-.028.034,4.464,4.464,0,0,0,4.055,3.134.028.028,0,0,1,.016.05,8.707,8.707,0,0,1-5.449,1.913,8.811,8.811,0,0,1-1.056-.063,12.276,12.276,0,0,0,6.8,2.055,12.019,12.019,0,0,0,8.308-3.144,13.571,13.571,0,0,0,4.008-7.114,13.155,13.155,0,0,0,.3-2.763c0-.2,0-.4-.014-.591a9.144,9.144,0,0,0,2.077-2.167A.07.07,0,0,0,598.352,233.355Z" transform="translate(-569.155 -220.541)" fill="#fff"/>
-                                    </svg>
-                                </a>
-                                <a aria-label="linkedin hcd" rel='noopener noreferrer' href="{{option.linkedin}}" class="text-decoration-none mr-2" target="_blank">
-                                    <svg id="Group_664" data-name="Group 664" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30" viewBox="0 0 38.221 37.181">
-                                        <defs>
-                                          <linearGradient id="linear-gradient" x1="0.029" y1="0.5" x2="1" y2="0.5" gradientUnits="objectBoundingBox">
-                                            <stop offset="0" stop-color="#00d3a8"/>
-                                            <stop offset="1" stop-color="#01c0cf"/>
-                                          </linearGradient>
-                                        </defs>
-                                        <path id="Path_1344" data-name="Path 1344" d="M368.194,408.083a19.118,19.118,0,1,0-19.109,18.591A18.855,18.855,0,0,0,368.194,408.083Z" transform="translate(-329.973 -389.492)" fill="url(#linear-gradient)"/>
-                                        <g id="Group_663" data-name="Group 663" transform="translate(10.011 7.686)">
-                                          <rect id="Rectangle_1560" data-name="Rectangle 1560" width="4.424" height="12.643" transform="translate(0 6.321)" fill="#fff"/>
-                                          <path id="Path_1345" data-name="Path 1345" d="M369.8,420.023a2.213,2.213,0,1,0,2.212,2.212A2.215,2.215,0,0,0,369.8,420.023Z" transform="translate(-367.592 -420.023)" fill="#fff"/>
-                                          <path id="Path_1346" data-name="Path 1346" d="M405.725,447.661c-.3-2.383-1.49-3.884-4.711-3.884-2.286,0-3.2.357-3.72,1.354h0v-1.354h-3.581V456.42H397.4V449.8c0-1.652.313-2.9,2.355-2.9,2.014,0,2.175,1.536,2.175,3.007v6.511h3.8S405.795,448.218,405.725,447.661Z" transform="translate(-386.761 -437.455)" fill="#fff"/>
-                                        </g>
-                                    </svg>
-                                </a>
-                            </ul>
+    {% block meta %}
+        <title>{{pageTitle}}</title>
+        <meta name="title" property="title" content="{{pageTitle}}" />
+        <meta name="og:title" property="og:title" content="{{pageTitle}}" />
+        <meta name="twitter:title" property="twitter:title" content="{{pageTitle}}" />
+        <meta name="description" property="description" content="{{pageDescr}}" />
+        <meta name="og:description" property="og:description" content="{{pageDescr}}" />
+        <meta name="twitter:description" property="twitter:description" content="{{pageDescr}}" />
+        <meta name="og:url" property="og:url" content="https://hcd.iiitd.ac.in/{{slug}}" />
+        <meta name="twitter:url" property="twitter:url" content="https://hcd.iiitd.ac.in/{{slug}}" />
+    {% endblock %}
+    <div class="container py-5 bg-white">
+        <h4 class="mt-4 text-center animated fadeIn font-weight-bold">Staff</h4>
+        <div class="px-2">
+            <div class="row d-md-flex align-items-center justify-content-center">
+                {% for option in faculty_list %}
+                    <div class="mt-3 col-12 col-md-4 col-lg-3 rounded itemlab {{option.Name.split(' ')[0]}}_{{option.Name.split(' ')[1]}} {{option.researchInterests}}" aria-label="{{option.Name}}">
+                        <div class="rounded py-3 home_main border w-100 h-100" style="border-radius: 10px; border-color: #65656530 !important;">
+                            <div onmouseover="this.timer=setTimeout(()=>{this.onclick()}, 1000);" onmouseout="if(this.timer)window.clearTimeout(this.timer);" onclick="show_inner('{{option.Name.split(' ')[0]}}_{{option.Name.split(' ')[1]}}')" class="d-flex justify-content-center align-items-start" style="height: calc( 100vh /5 );" >
+                                <img alt="{{option.Name}}" class="staff rounded-circle" src='' data-src="{{option.image}}" style="max-height: 100%; max-width: 100%;">
+                            </div>
+                            <div class="mt-4 row-content text-center">
+                                <h4 onmouseover="this.timer=setTimeout(()=>{this.onclick()}, 1000);" onmouseout="if(this.timer)window.clearTimeout(this.timer);" onclick="show_inner('{{option.Name.split(' ')[0]}}_{{option.Name.split(' ')[1]}}')" class="font-weight-bolder mt-3 text-green">{{option.Name}}</h4>
+                                <h6 onmouseover="this.timer=setTimeout(()=>{this.onclick()}, 1000);" onmouseout="if(this.timer)window.clearTimeout(this.timer);" onclick="show_inner('{{option.Name.split(' ')[0]}}_{{option.Name.split(' ')[1]}}')" class="font-weight-bold text-green">{{option.Post}}</h6>
+                            </div>
+                            <div class="mt-4 d-flex align-items-center justify-content-center">
+                                <ul class="list-unstyled">
+                                    <a aria-label="email hcd" rel='noopener noreferrer' href="mailto:{{option.email}}" class="text-decoration-none mr-2" target="_blank">                    
+                                        <svg height='30' width='30' id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 39.39 31.51"><defs><style>.cls-1{fill:url(#linear-gradient);}</style><linearGradient id="linear-gradient" x1="10.53" y1="24.6" x2="11.82" y2="24.6" gradientTransform="matrix(30, 0, 0, -24, -315, 609)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#48bd9f"/><stop offset="1" stop-color="#17becd"/></linearGradient></defs><path id="Icon_material-email" data-name="Icon material-email" class="cls-1" d="M35.71,2.94H4.2A3.94,3.94,0,0,0,.28,6.88l0,23.64A4,4,0,0,0,4.2,34.46H35.71a4,4,0,0,0,3.94-3.94V6.88A4,4,0,0,0,35.71,2.94Zm0,7.88L20,20.67,4.2,10.82V6.88L20,16.73,35.71,6.88Z" transform="translate(-0.26 -2.94)"/></svg>                                
+                                    </a>
+                                    <a aria-label="twitter hcd" rel='noopener noreferrer' href="{{option.twitter}}" class="text-decoration-none mr-2" target="_blank">
+                                        <svg id="Group_657" data-name="Group 657" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30" viewBox="0 0 37.222 37.222">
+                                            <defs>
+                                            <linearGradient id="linear-gradient" x1="0.021" y1="0.527" x2="0.967" y2="0.5" gradientUnits="objectBoundingBox">
+                                                <stop offset="0" stop-color="#00d3a8"/>
+                                                <stop offset="1" stop-color="#01c0cf"/>
+                                            </linearGradient>
+                                            </defs>
+                                            <path id="Path_1256" data-name="Path 1256" d="M584.9,207.878a18.611,18.611,0,1,0-18.609,18.611A18.612,18.612,0,0,0,584.9,207.878Z" transform="translate(-547.678 -189.267)" fill="url(#linear-gradient)"/>
+                                            <path id="Path_1257" data-name="Path 1257" d="M598.352,233.355a8.66,8.66,0,0,1-2.329.624,4.551,4.551,0,0,0,1.89-2.351.07.07,0,0,0-.1-.086,8.682,8.682,0,0,1-2.658,1.017,4.362,4.362,0,0,0-3.238-1.445,4.509,4.509,0,0,0-4.434,4.576,4.792,4.792,0,0,0,.115,1.043,12.471,12.471,0,0,1-9.118-4.754.024.024,0,0,0-.04,0,4.706,4.706,0,0,0-.582,2.269,4.62,4.62,0,0,0,1.9,3.753.029.029,0,0,1-.016.052,4.325,4.325,0,0,1-1.878-.548.022.022,0,0,0-.034.021,6.463,6.463,0,0,0,.3,1.675,4.533,4.533,0,0,0,3.258,2.83,4.448,4.448,0,0,1-1.171.162,4.231,4.231,0,0,1-.8-.078.025.025,0,0,0-.028.034,4.464,4.464,0,0,0,4.055,3.134.028.028,0,0,1,.016.05,8.707,8.707,0,0,1-5.449,1.913,8.811,8.811,0,0,1-1.056-.063,12.276,12.276,0,0,0,6.8,2.055,12.019,12.019,0,0,0,8.308-3.144,13.571,13.571,0,0,0,4.008-7.114,13.155,13.155,0,0,0,.3-2.763c0-.2,0-.4-.014-.591a9.144,9.144,0,0,0,2.077-2.167A.07.07,0,0,0,598.352,233.355Z" transform="translate(-569.155 -220.541)" fill="#fff"/>
+                                        </svg>
+                                    </a>
+                                    <a aria-label="linkedin hcd" rel='noopener noreferrer' href="{{option.linkedin}}" class="text-decoration-none mr-2" target="_blank">
+                                        <svg id="Group_664" data-name="Group 664" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30" viewBox="0 0 38.221 37.181">
+                                            <defs>
+                                            <linearGradient id="linear-gradient" x1="0.029" y1="0.5" x2="1" y2="0.5" gradientUnits="objectBoundingBox">
+                                                <stop offset="0" stop-color="#00d3a8"/>
+                                                <stop offset="1" stop-color="#01c0cf"/>
+                                            </linearGradient>
+                                            </defs>
+                                            <path id="Path_1344" data-name="Path 1344" d="M368.194,408.083a19.118,19.118,0,1,0-19.109,18.591A18.855,18.855,0,0,0,368.194,408.083Z" transform="translate(-329.973 -389.492)" fill="url(#linear-gradient)"/>
+                                            <g id="Group_663" data-name="Group 663" transform="translate(10.011 7.686)">
+                                            <rect id="Rectangle_1560" data-name="Rectangle 1560" width="4.424" height="12.643" transform="translate(0 6.321)" fill="#fff"/>
+                                            <path id="Path_1345" data-name="Path 1345" d="M369.8,420.023a2.213,2.213,0,1,0,2.212,2.212A2.215,2.215,0,0,0,369.8,420.023Z" transform="translate(-367.592 -420.023)" fill="#fff"/>
+                                            <path id="Path_1346" data-name="Path 1346" d="M405.725,447.661c-.3-2.383-1.49-3.884-4.711-3.884-2.286,0-3.2.357-3.72,1.354h0v-1.354h-3.581V456.42H397.4V449.8c0-1.652.313-2.9,2.355-2.9,2.014,0,2.175,1.536,2.175,3.007v6.511h3.8S405.795,448.218,405.725,447.661Z" transform="translate(-386.761 -437.455)" fill="#fff"/>
+                                            </g>
+                                        </svg>
+                                    </a>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                </div>
-            {% endfor %}
-        </div>  
+                {% endfor %}
+            </div>  
+        </div>
     </div>
-</div>
 {% endblock %}
 {% block scripts %}
 <script>

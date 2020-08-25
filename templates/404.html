@@ -1,14 +1,22 @@
 {% extends "base.html" %}
-{% block content %}
 {% block meta %}
-<link rel="canonical" href="https://hcd.now.sh/" />
-<meta name="description" content="Welcome to IIIT Delhi’s Department of Human-Centered Design. With an increasing focus on user experience, the importance of Human-Computer Interaction (HCI), Interaction Design, and Design Thinking are also increasing rapidly in IT-based products and services. Digital media is at the heart of many aspects of design in areas like social media, gaming, virtual/augmented reality, etc." />
-<meta property="og:description" content="Welcome to IIIT Delhi’s Department of Human-Centered Design. With an increasing focus on user experience, the importance of Human-Computer Interaction (HCI), Interaction Design, and Design Thinking are also increasing rapidly in IT-based products and services. Digital media is at the heart of many aspects of design in areas like social media, gaming, virtual/augmented reality, etc." />
-<meta property="og:title" content="Department of Human-Centered Design, IIIT-Delhi" />
-<meta property="og:url" content="https://hcd.now.sh/" />    
+    <title>{{pageTitle}}</title>
+    <meta name="title" property="title" content="{{pageTitle}}" />
+    <meta name="og:title" property="og:title" content="{{pageTitle}}" />
+    <meta name="twitter:title" property="twitter:title" content="{{pageTitle}}" />
+    <meta name="description" property="description" content="{{pageDescr}}" />
+    <meta name="og:description" property="og:description" content="{{pageDescr}}" />
+    <meta name="twitter:description" property="twitter:description" content="{{pageDescr}}" />
+    <meta name="og:url" property="og:url" content="https://hcd.iiitd.ac.in/{{slug}}" />
+    <meta name="twitter:url" property="twitter:url" content="https://hcd.iiitd.ac.in/{{slug}}" />
 {% endblock %}
+{% block content %}
 <div class="container text-center d-flex flex-column align-items-center justify-content-center">
-<img style="max-width: 50vw; max-height: 100vh;" src="../static/images/404.svg">
-<p class="mb-5 h5 text-gray"><b>Oops!</b> Looks like you are lost go back to <a href="/" class="text-green border-bottom">Home</a>?</p>
+    <img style="max-width: 50vw; max-height: 100vh;" src="../static/images/404.svg">
+    <p class="mb-5 h5 text-gray">
+        <b>Oops!</b> 
+        Looks like you are lost go back to 
+        <a href="/" class="text-green border-bottom">Home</a>?
+    </p>
 </div>
 {% endblock %}

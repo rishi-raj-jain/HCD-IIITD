@@ -1,4 +1,4 @@
-# /robots.txt for https://hcd.now.sh
 User-agent: *
-Sitemap: https://hcd.now.sh/sitemap.xml/
 Allow: /
+
+Sitemap: https://hcd.iiitd.ac.in/sitemap.xml

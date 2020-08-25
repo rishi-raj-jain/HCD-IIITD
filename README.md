@@ -1,5 +1,5 @@
 # Human-Centered Design, IIIT-Delhi's Website  
-<img src="https://hcd.now.sh/static/images/logo-white.svg" height="70">
+<img src="https://hcd.iiitd.ac.in/static/images/logo-white.svg" height="70">
 
 ### About this Repository
 This repo contains flask code for the website!

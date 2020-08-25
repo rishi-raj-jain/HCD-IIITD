@@ -1,7 +1,6 @@
-/* Add the decaration on top */
 @font-face { 
     font-family: 'AGaramondPro-Regular';
-    src: url('../fonts/AGaramondPro-Regular.eot'); /* IE9 Compat Modes */
+    src: url('../fonts/AGaramondPro-Regular.eot');
     src: 
        url('../fonts/AGaramondPro-Regular.woff2') format('woff2'), /* Super Modern Browsers */
        url('../fonts/AGaramondPro-Regular.woff') format('woff'), /* Pretty Modern Browsers */
@@ -76,11 +75,8 @@
     text-overflow: ellipsis;
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 4; /* number of lines to show */
+    -webkit-line-clamp: 4;
 }
-/* .container{
-    max-width: 1400px !important;
-} */
 .shadow_hover{
     box-shadow: 5px 5px #f5f6f6;
 }

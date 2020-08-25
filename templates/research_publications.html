@@ -1,12 +1,16 @@
 {% extends "base.html" %}
-{% block content %}
 {% block meta %}
-<link rel="canonical" href="https://hcd.now.sh/research-publications" />
-<meta property="og:url" content="https://hcd.now.sh/research-publications" />    
-<meta name="description" content="Desc for B.Tech CSD" />
-<meta property="og:description" content="Desc for B.Tech CSD" />
-<meta property="og:title" content="B.Tech. Courses | Human-Centered Design @ IIIT-Delhi" />
-<title>Research Publications | Human-Centered Design @ IIIT-Delhi</title>
+    <title>{{pageTitle}}</title>
+    <meta name="title" property="title" content="{{pageTitle}}" />
+    <meta name="og:title" property="og:title" content="{{pageTitle}}" />
+    <meta name="twitter:title" property="twitter:title" content="{{pageTitle}}" />
+    <meta name="description" property="description" content="{{pageDescr}}" />
+    <meta name="og:description" property="og:description" content="{{pageDescr}}" />
+    <meta name="twitter:description" property="twitter:description" content="{{pageDescr}}" />
+    <meta name="og:url" property="og:url" content="https://hcd.iiitd.ac.in/{{slug}}" />
+    <meta name="twitter:url" property="twitter:url" content="https://hcd.iiitd.ac.in/{{slug}}" />
+{% endblock %}
+{% block content %}
 <style>
     .fix-publications{
         max-height: 700px; 
@@ -32,7 +36,6 @@
         }   
     }
 </style>
-{% endblock %}
 <ul class="scrolltoptop d-md-none mt-3 w-100" style="z-index: 10;">
     <span class="d-flex justify-content-between">
         <span></span>
@@ -49,17 +52,15 @@
     <div class="col-12">
         <div class="row">
             <div class="mt-3 col-12 col-md-3 order-0">
-                <!-- <ul class="list-unstyled w-100"> -->
-                    <div class="w-100">
-                        <h6 class="text-gray">Filters</h6>
-                    </div>
-                    <div class="btn-group-horizontal" role="group" aria-label="Vertical button group">
-                        <button onclick="$('#myInput').val('2020'); myFunction(); $('html, body').animate({ scrollTop: $('.fix-publications').offset().top - ($(window).width()<768 ? 130 : 1000) }, 'slow');" type="button" class="mt-3 btn btn-sm btn-outline-green">2020</button>
-                        <button onclick="$('#myInput').val('2019'); myFunction(); $('html, body').animate({ scrollTop: $('.fix-publications').offset().top - ($(window).width()<768 ? 130 : 1000) }, 'slow');" type="button" class="mt-3 btn btn-sm btn-outline-green">2019</button>
-                        <button onclick="$('#myInput').val('2018'); myFunction(); $('html, body').animate({ scrollTop: $('.fix-publications').offset().top - ($(window).width()<768 ? 130 : 1000) }, 'slow');" type="button" class="mt-3 btn btn-sm btn-outline-green">2018</button>
-                        <button onclick="$('#myInput').val('2017'); myFunction(); $('html, body').animate({ scrollTop: $('.fix-publications').offset().top - ($(window).width()<768 ? 130 : 1000) }, 'slow');" type="button" class="mt-3 btn btn-sm btn-outline-green">2017</button>
-                    </div>
-                <!-- </ul> -->
+                <div class="w-100">
+                    <h6 class="text-gray">Filters</h6>
+                </div>
+                <div class="btn-group-horizontal" role="group" aria-label="Vertical button group">
+                    <button onclick="$('#myInput').val('2020'); myFunction(); $('html, body').animate({ scrollTop: $('.fix-publications').offset().top - ($(window).width()<768 ? 130 : 1000) }, 'slow');" type="button" class="mt-3 btn btn-sm btn-outline-green">2020</button>
+                    <button onclick="$('#myInput').val('2019'); myFunction(); $('html, body').animate({ scrollTop: $('.fix-publications').offset().top - ($(window).width()<768 ? 130 : 1000) }, 'slow');" type="button" class="mt-3 btn btn-sm btn-outline-green">2019</button>
+                    <button onclick="$('#myInput').val('2018'); myFunction(); $('html, body').animate({ scrollTop: $('.fix-publications').offset().top - ($(window).width()<768 ? 130 : 1000) }, 'slow');" type="button" class="mt-3 btn btn-sm btn-outline-green">2018</button>
+                    <button onclick="$('#myInput').val('2017'); myFunction(); $('html, body').animate({ scrollTop: $('.fix-publications').offset().top - ($(window).width()<768 ? 130 : 1000) }, 'slow');" type="button" class="mt-3 btn btn-sm btn-outline-green">2017</button>
+                </div>
             </div>
             <div class="mt-4 mt-md-3 col-12 col-md-9 order-1">
                 <div class="row fix-publications">

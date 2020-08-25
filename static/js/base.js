@@ -81,13 +81,3 @@ function togglemenu(param_id){
         }
     }
 }
-// $(window).click(function(e){
-//     let y= e.pageY;
-//     let selector= $('#menu');
-//     let menu_start_y= selector.offset().top;
-//     let menu_end_y= menu_start_y + selector.height();
-//     if(!(y<menu_end_y && y>menu_start_y)){
-//         $('#menu').hide();
-//         check_menu_id="";
-//     }
-// });

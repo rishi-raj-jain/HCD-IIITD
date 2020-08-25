@@ -1,11 +1,14 @@
 {% extends "base.html" %}
 {% block meta %}
-<link rel="canonical" href="https://hcd.now.sh/" />
-<meta name="description" content="Welcome to IIIT Delhi’s Department of Human-Centered Design. With an increasing focus on user experience, the importance of Human-Computer Interaction (HCI), Interaction Design, and Design Thinking are also increasing rapidly in IT-based products and services. Digital media is at the heart of many aspects of design in areas like social media, gaming, virtual/augmented reality, etc." />
-<meta property="og:description" content="Welcome to IIIT Delhi’s Department of Human-Centered Design. With an increasing focus on user experience, the importance of Human-Computer Interaction (HCI), Interaction Design, and Design Thinking are also increasing rapidly in IT-based products and services. Digital media is at the heart of many aspects of design in areas like social media, gaming, virtual/augmented reality, etc." />
-<meta property="og:title" content="Department of Human-Centered Design, IIIT-Delhi" />
-<meta property="og:url" content="https://hcd.now.sh/" />
-<title>Department of Human-Centered Design, IIIT-Delhi</title>
+    <title>{{pageTitle}}</title>
+    <meta name="title" property="title" content="{{pageTitle}}" />
+    <meta name="og:title" property="og:title" content="{{pageTitle}}" />
+    <meta name="twitter:title" property="twitter:title" content="{{pageTitle}}" />
+    <meta name="description" property="description" content="{{pageDescr}}" />
+    <meta name="og:description" property="og:description" content="{{pageDescr}}" />
+    <meta name="twitter:description" property="twitter:description" content="{{pageDescr}}" />
+    <meta name="og:url" property="og:url" content="https://hcd.iiitd.ac.in/{{slug}}" />
+    <meta name="twitter:url" property="twitter:url" content="https://hcd.iiitd.ac.in/{{slug}}" />
 {% endblock %}
 {% block content %}
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.3.8/css/swiper.min.css">
@@ -65,23 +68,23 @@
         <div class="swiper-wrapper">
             <div class="swiper-slide">
                 <div class="p-3 w-100 h-100 d-flex align-items-end justify-content-start" style="background: radial-gradient(transparent, transparent, #000000), url('https://images.unsplash.com/photo-1543269865-cbf427effbad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80'); background-size: cover;">
-                    <!-- <h3 class="desc-swiper text-white font-weight-lighter p-2 bg-green shadow rounded">
+                    <h3 class="desc-swiper text-white font-weight-lighter p-2 bg-green shadow rounded">
                         Lorem ipsum is a Dummy text
-                    </h3> -->
+                    </h3>
                 </div>
             </div>
             <div class="swiper-slide">
                 <div class="p-3 w-100 h-100 d-flex align-items-end justify-content-center" style="background: radial-gradient(transparent, transparent, #000000), url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80'); background-size: cover;">
-                    <!-- <h3 class="desc-swiper text-white font-weight-lighter p-2 bg-green shadow rounded">
+                    <h3 class="desc-swiper text-white font-weight-lighter p-2 bg-green shadow rounded">
                         Lorem ipsum is a Dummy text
-                    </h3> -->
+                    </h3>
                 </div>
             </div>
             <div class="swiper-slide">
                 <div class="p-3 w-100 h-100 d-flex align-items-end justify-content-end" style="background: radial-gradient(transparent, transparent, #000000), url('https://images.unsplash.com/photo-1576267423445-b2e0074d68a4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80'); background-size: cover;">
-                    <!-- <h3 class="desc-swiper text-white font-weight-lighter p-2 bg-green shadow rounded">
+                    <h3 class="desc-swiper text-white font-weight-lighter p-2 bg-green shadow rounded">
                         Lorem ipsum is a Dummy text
-                    </h3> -->
+                    </h3>
                 </div>
             </div>
         </div>

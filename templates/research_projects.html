@@ -1,13 +1,16 @@
 {% extends "base.html" %}
-{% block content %}
 {% block meta %}
-<link rel="canonical" href="https://hcd.now.sh/research-labs" />
-<meta property="og:url" content="https://hcd.now.sh/research-labs" />    
-<meta name="description" content="Desc for B.Tech CSD" />
-<meta property="og:description" content="Desc for B.Tech CSD" />
-<meta property="og:title" content="B.Tech. Courses | Human-Centered Design @ IIIT-Delhi" />
-<title>Research Projects | Human-Centered Design @ IIIT-Delhi</title>
+    <title>{{pageTitle}}</title>
+    <meta name="title" property="title" content="{{pageTitle}}" />
+    <meta name="og:title" property="og:title" content="{{pageTitle}}" />
+    <meta name="twitter:title" property="twitter:title" content="{{pageTitle}}" />
+    <meta name="description" property="description" content="{{pageDescr}}" />
+    <meta name="og:description" property="og:description" content="{{pageDescr}}" />
+    <meta name="twitter:description" property="twitter:description" content="{{pageDescr}}" />
+    <meta name="og:url" property="og:url" content="https://hcd.iiitd.ac.in/{{slug}}" />
+    <meta name="twitter:url" property="twitter:url" content="https://hcd.iiitd.ac.in/{{slug}}" />
 {% endblock %}
+{% block content %}
 <div class="container py-5 bg-white">
     <div class="d-flex flex-row">
         <h4 class="ml-md-2 mt-4 animated flipInX font-weight-bold">Research Projects</h4>

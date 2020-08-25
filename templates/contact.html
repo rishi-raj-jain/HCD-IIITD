@@ -1,13 +1,16 @@
 {% extends "base.html" %}
-{% block content %}
 {% block meta %}
-<link rel="canonical" href="https://hcd.now.sh/contact" />
-<meta property="og:url" content="https://hcd.now.sh/contact" />    
-<meta name="description" content="Contact us at Human-Centered Design @ IIIT-Delhi" />
-<meta property="og:description" content="Contact us at Human-Centered Design @ IIIT-Delhi" />
-<meta property="og:title" content="Contact | Human-Centered Design @ IIIT-Delhi" />
-<title>Contact Us | Human-Centered Design @ IIIT-Delhi</title>
+    <title>{{pageTitle}}</title>
+    <meta name="title" property="title" content="{{pageTitle}}" />
+    <meta name="og:title" property="og:title" content="{{pageTitle}}" />
+    <meta name="twitter:title" property="twitter:title" content="{{pageTitle}}" />
+    <meta name="description" property="description" content="{{pageDescr}}" />
+    <meta name="og:description" property="og:description" content="{{pageDescr}}" />
+    <meta name="twitter:description" property="twitter:description" content="{{pageDescr}}" />
+    <meta name="og:url" property="og:url" content="https://hcd.iiitd.ac.in/{{slug}}" />
+    <meta name="twitter:url" property="twitter:url" content="https://hcd.iiitd.ac.in/{{slug}}" />
 {% endblock %}
+{% block content %}
 <div class="container mt-3" id="contact_page" style="height: auto !important;">
     <div class="row py-3 d-md-flex align-items-center justify-content-center h-100">
         <div class="col-12 col-md-5 py-3 order-1">

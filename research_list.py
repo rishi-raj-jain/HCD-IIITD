@@ -1,4 +1,5 @@
-researchJson=[{
+researchJson=[
+    {
         'Course_Name': 'Introduction to Engineering Design',
         'Code': 'DES130',
         'Course_Text': 'Introduction to Engineering Design is a core, multidisciplinary course offered with an aim to ignite the young minds with concepts in design and innovation. Using the tools and skills learnt in the lab, the students participate in a project challenge to build functional prototypes in the field of intelligent buildings, automotive, and robotics which will provide solutions to real life problems.'

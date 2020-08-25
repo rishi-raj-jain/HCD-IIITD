@@ -1,12 +1,15 @@
 {% extends "base.html" %}
 {% block content %}
 {% block meta %}
-<link rel="canonical" href="https://hcd.now.sh/contact" />
-<meta property="og:url" content="https://hcd.now.sh/contact" />    
-<meta name="description" content="Contact us at Human-Centered Design @ IIIT-Delhi" />
-<meta property="og:description" content="Contact us at Human-Centered Design @ IIIT-Delhi" />
-<meta property="og:title" content="Thesis Defense | Human-Centered Design @ IIIT-Delhi" />
-<title>Thesis Defense | Human-Centered Design @ IIIT-Delhi</title>
+    <title>{{pageTitle}}</title>
+    <meta name="title" property="title" content="{{pageTitle}}" />
+    <meta name="og:title" property="og:title" content="{{pageTitle}}" />
+    <meta name="twitter:title" property="twitter:title" content="{{pageTitle}}" />
+    <meta name="description" property="description" content="{{pageDescr}}" />
+    <meta name="og:description" property="og:description" content="{{pageDescr}}" />
+    <meta name="twitter:description" property="twitter:description" content="{{pageDescr}}" />
+    <meta name="og:url" property="og:url" content="https://hcd.iiitd.ac.in/{{slug}}" />
+    <meta name="twitter:url" property="twitter:url" content="https://hcd.iiitd.ac.in/{{slug}}" />
 {% endblock %}
 <div id="thesis" class="py-5 container-fluid">
     <div class="py-4 container">
@@ -21,10 +24,10 @@
     function handlespace(){
         let i= $('#footer').height();
         if($(window).width()>768){
-            $("#thesis").css('height', 'calc( 100vh - 70px - ' + i.toString()+'px )');
+            $("#thesis").css('min-height', 'calc( 100vh - 70px - ' + i.toString()+'px )');
         }
         else{
-            $("#thesis").css('height', 'auto');
+            $("#thesis").css('min-height', 'auto');
         }
     }
     $(window).resize(()=>{handlespace()});

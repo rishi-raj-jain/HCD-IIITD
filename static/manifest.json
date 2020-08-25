@@ -5,22 +5,22 @@
   "background_color": "#40ADA7",
   "icons": [
     {
-      "src": "https://images-six.now.sh/icon-64.png",
+      "src": "/icon-64.png",
       "type": "image/png",
       "sizes": "64x64"
     },
     {
-      "src": "https://images-six.now.sh/icon-96.png",
+      "src": "https://hcd.iiitd.ac.in/icon-96.png",
       "type": "image/png",
       "sizes": "96x96"
     },
     {
-      "src": "https://images-six.now.sh/icon-192.png",
+      "src": "https://hcd.iiitd.ac.in/icon-192.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "https://images-six.now.sh/icon-512.png",
+      "src": "https://hcd.iiitd.ac.in/icon-512.png",
       "type": "image/png",
       "sizes": "512x512"
     }

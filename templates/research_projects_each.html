@@ -1,14 +1,16 @@
 {% extends "base.html" %}
-{% block content %}
 {% block meta %}
-<link rel="canonical" href="https://hcd.now.sh/student-policy" />
-<meta property="og:url" content="https://hcd.now.sh/student-policy" />    
-<meta name="description" content="Desc for {{project_head}}" />
-<meta property="og:description" content="Desc for {{project_head}}" />
-<meta property="og:title" content="{{project_head}} | Human-Centered Design @ IIIT-Delhi" />
-<title>{{project_head}} | Department of Human-Centered Design</title>
+    <title>{{pageTitle}}</title>
+    <meta name="title" property="title" content="{{pageTitle}}" />
+    <meta name="og:title" property="og:title" content="{{pageTitle}}" />
+    <meta name="twitter:title" property="twitter:title" content="{{pageTitle}}" />
+    <meta name="description" property="description" content="{{pageDescr}}" />
+    <meta name="og:description" property="og:description" content="{{pageDescr}}" />
+    <meta name="twitter:description" property="twitter:description" content="{{pageDescr}}" />
+    <meta name="og:url" property="og:url" content="https://hcd.iiitd.ac.in/{{slug}}" />
+    <meta name="twitter:url" property="twitter:url" content="https://hcd.iiitd.ac.in/{{slug}}" />
 {% endblock %}
-
+{% block content %}
 {% if project_detail %}
 <div class="container-fluid py-5">
     <div class="container">
@@ -32,8 +34,4 @@
     </div>
 </div>
 {% endif %}
-
-{% endblock %}
-{% block scripts %}
-<script></script>
 {% endblock %}
