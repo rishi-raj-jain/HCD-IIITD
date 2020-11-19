@@ -1,3 +1,5 @@
+import sys
+from flask_frozen import Freezer
 from course_list import courseJson
 from events import eventsJSON
 from flask import Flask, render_template, request, jsonify, abort, redirect
@@ -7,6 +9,7 @@ from research_list import labsJSON, facultyJson, researchJson, publicationsJSON,
 app = Flask(__name__)
 app.config['TEMPLATES_AUTO_RELOAD'] = True
 app.url_map.strict_slashes=False
+freezer = Freezer(app)
 
 @app.route("/")
 def index():
@@ -30,7 +33,12 @@ def events():
         slug= 'events'
     )
 
-@app.route("/events/<string:number_1>")
+@freezer.register_generator
+def each_event():
+    for event in eventsJSON:
+        yield {'number_1': event}
+
+@app.route("/events/<string:number_1>/")
 def each_event(number_1):
     if len(number_1)>=1:
         return render_template(
@@ -117,7 +125,12 @@ def redirect_project():
         slug= 'research-projects'
     )
 
-@app.route("/research-projects/<string:number_1>")
+@freezer.register_generator
+def research_projects():
+    for event in projectsJSON:
+        yield {'number_1': event}
+
+@app.route("/research-projects/<string:number_1>/")
 def research_projects(number_1):
     if len(number_1)>=1:
         return render_template(
@@ -214,4 +227,7 @@ def sw():
     return app.send_static_file('service-worker.js'), 200, {'Content-Type': 'text/javascript'}
 
 if __name__ == "__main__":
-    app.run(debug= True, port= 4000)
+    if len(sys.argv)>1 and sys.argv[1]=="build":
+        freezer.freeze()
+    else:
+        app.run(debug=True, port=4000)

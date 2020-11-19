@@ -29,7 +29,7 @@
                 <ul class="list-unstyled">
                     <li class="d-flex align-items-center justify-content-center">
                         <a aria-label="contact" href="/contact" class="no-transform-imp">
-                            <img alt="contact icon" class="ml-2 ml-md-1" src="../static/img/Icon metro-contacts-mail.svg">
+                            <img alt="contact icon" class="ml-2 ml-md-1" src="{{ url_for('static', filename='img/Icon metro-contacts-mail.svg') }}">
                         </a>
                         <a aria-label="contact" href="/contact" class="text-green no-transform-imp">
                             &nbsp;&nbsp;Contact Us
@@ -63,7 +63,7 @@
     
     <div class="container mt-2">
         <div class="d-flex align-items-center justify-content-between">
-            <a href="/"><img src="../static/images/logoleft.svg" style="height: 50px;" alt="Indraprastha Institute Of Information Technology, Delhi"><img class="ml-2" src="../static/images/logo-white.svg" style="width: 100px;" alt="Human Centered Design"></a>
+            <a href="/"><img src="{{ url_for('static', filename='images/logoleft.svg') }}" style="height: 50px;" alt="Indraprastha Institute Of Information Technology, Delhi"><img class="ml-2" src="{{ url_for('static', filename='images/logo-white.svg') }}" style="width: 100px;" alt="Human Centered Design"></a>
             <div class="d-flex">
                 <div class="dropdown d-none d-lg-block">
                     <button class="btn text-pointer px-3 text-white font-12" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -134,11 +134,11 @@
                         <input aria-label="Search Desktop" style="border-radius: 5px !important;" class="animated fadeIn faster shadow btn btn-lg btn-white bg-white no-transform text-gray w-100" type="text" name="query" placeholder="Search">
                         <input class="d-none" type="submit" value="search" id="tosearch_desktop">
                     </form>
-                    <img src="../static/images/search.svg" height="30px" style="margin-top: 0.8em; position: absolute; left: 10px;" alt="Search Bar">
+                    <img src="{{ url_for('static', filename='images/search.svg') }}" height="30px" style="margin-top: 0.8em; position: absolute; left: 10px;" alt="Search Bar">
                 </div>
             </a>
             <a onclick="togglemenu('null')" class="d-lg-none" onmouseover="this.style.cursor='pointer'">
-                <img id="nav_menu" src="../static/images/menu.svg" height="35px" alt="Navigation Menu">
+                <img id="nav_menu" src="{{ url_for('static', filename='images/menu.svg') }}" height="35px" alt="Navigation Menu">
             </a>
         </div>
     </div>
@@ -157,7 +157,7 @@
                             <input class="animated fadeIn faster btn btn-lg btn-white bg-white no-transform text-gray w-100" style="border-radius: 5px !important;" type="text" name="query" placeholder="Search">
                             <input class="d-none" type="submit" value="search" id="tosearch_mobile">
                         </form>
-                        <img src="../static/images/search.svg" height="30px" style="margin-top: 0.8em; position: absolute; left: 10px;" alt="Search Bar">
+                        <img src="{{ url_for('static', filename='images/search.svg') }}" height="30px" style="margin-top: 0.8em; position: absolute; left: 10px;" alt="Search Bar">
                     </div>
                 </div>
             </div>
@@ -166,7 +166,7 @@
                     <li class="mt-3"> 
                         <button id="Academics_Inner" onclick="handleinnermenu('Academics', this.id);" class="menu-option-1 btn btn-block btn-white btn-lg text-pointer rounded">
                             Academics&nbsp;&nbsp;
-                            <img id="academics_svg" style="padding-bottom: 0.2em;" src="../static/images/arrow.svg">
+                            <img id="academics_svg" style="padding-bottom: 0.2em;" src="{{ url_for('static', filename='images/arrow.svg') }}">
                         </button>
                     </li>
                     <li id="academics_innermenu" class="d-none mt-2 animated fadeIn">
@@ -188,7 +188,7 @@
                     <li class="mt-3"> 
                         <button id="Research_Inner" onclick="handleinnermenu('Research', this.id);" class="menu-option-2 btn btn-block btn-white btn-lg text-pointer rounded">
                             Research&nbsp;&nbsp;
-                            <img id="research_svg" style="padding-bottom: 0.2em;" src="../static/images/arrow.svg">
+                            <img id="research_svg" style="padding-bottom: 0.2em;" src="{{ url_for('static', filename='images/arrow.svg') }}">
                         </button>
                     </li>
                     <li id="research_innermenu" class="d-none mt-2 animated fadeIn">
@@ -209,7 +209,7 @@
                     </li>
                     <li class="mt-3"> 
                         <button id="People_Inner" onclick="handleinnermenu('People', this.id);" class="menu-option-3 btn btn-block btn-white btn-lg text-pointer rounded">
-                            People&nbsp;&nbsp;<img id="people_svg" style="padding-bottom: 0.2em;" src="../static/images/arrow.svg">
+                            People&nbsp;&nbsp;<img id="people_svg" style="padding-bottom: 0.2em;" src="{{ url_for('static', filename='images/arrow.svg') }}">
                         </button>
                     </li>
                     <li id="people_innermenu" class="d-none mt-2 animated fadeIn">
@@ -271,13 +271,13 @@
                         <li class="w-100">Follow Us</li>
                         <li class="w-100 mt-1">
                             <a rel='noopener noreferrer' href="https://twitter.com/hcd_IIITD" class="text-decoration-none" target="_blank">
-                                <img src="../static/images/twitter_svg.svg" height="40">
+                                <img src="{{ url_for('static', filename='images/twitter_svg.svg') }}" height="40">
                             </a>
                             <a rel='noopener noreferrer' href="https://www.facebook.com/hcdzine" class="text-decoration-none" target="_blank">
-                                <img src="../static/images/facebook_hcd.svg" height="40">
+                                <img src="{{ url_for('static', filename='images/facebook_hcd.svg') }}" height="40">
                             </a>
                             <a rel='noopener noreferrer' href="https://www.linkedin.com/in/human-centered-design-hcd-43b3a7180/" class="text-decoration-none" target="_blank">
-                                <img src="../static/images/linkedin_hcd.svg" height="40">
+                                <img src="{{ url_for('static', filename='images/linkedin_hcd.svg') }}" height="40">
                             </a>
                         </li>
                     </ul>
